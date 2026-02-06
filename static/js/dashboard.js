@@ -5,6 +5,7 @@ let lastToastId = 0;
 /* ================= TOAST NOTIFICATIONS ================= */
 
 
+
 function showToast(message, type = "info") {
     const container = document.getElementById("toast-container");
     if (!container) return;
@@ -14,7 +15,6 @@ function showToast(message, type = "info") {
     toast.textContent = message;
 
     container.appendChild(toast);
-
     setTimeout(() => toast.classList.add("show"), 10);
 
     setTimeout(() => {
@@ -22,6 +22,7 @@ function showToast(message, type = "info") {
         setTimeout(() => toast.remove(), 300);
     }, 3000);
 }
+
 /* ================= MARKET DATA ================= */
 
 async function fetchMarketData() {
@@ -30,6 +31,7 @@ async function fetchMarketData() {
 
     latestData = data;
 
+    // Move red-alert rows to top
     data.sort((a, b) => {
         if (a.is_red_alert && !b.is_red_alert) return -1;
         if (!a.is_red_alert && b.is_red_alert) return 1;
@@ -62,6 +64,8 @@ async function fetchMarketData() {
 
         if (row.is_red_alert) tr.className = "alert-row";
 
+        tr.style.cursor = "pointer"; // ✅ cursor fix
+
         tr.innerHTML = `
             <td>${row.symbol}</td>
             <td class="num">${format(row.live_volume)}</td>
@@ -70,12 +74,13 @@ async function fetchMarketData() {
             <td class="num">${format(row.monthly_avg)}</td>
             <td class="num">${row.volume_intensity}</td>
             <td>${row.user_alert_hit ? "ALERT" : "NORMAL"}</td>
-        `;
+       `;
 
         tr.onclick = () => openChart(row.symbol);
         tbody.appendChild(tr);
     });
 }
+
 
 /* ================= SYSTEM LOGS ================= */
 
@@ -94,10 +99,14 @@ async function fetchLogs() {
         div.textContent = `[${log.time}] ${log.message}`;
         logBox.appendChild(div);
 
-        if (!seenLogs.has(key) &&
-            (log.message.includes("ALERT CREATED") ||
-             log.message.includes("ALERT TRIGGERED"))) {
-
+        if (
+            !seenLogs.has(key) &&
+            (
+                log.message.includes("ALERT CREATED") ||
+                log.message.includes("ALERT TRIGGERED") ||
+                log.message.includes("INSTITUTIONAL")
+            )
+        ) {
             seenLogs.add(key);
             showToast(log.message, "danger");
         }
@@ -176,17 +185,41 @@ async function openChart(symbol) {
         layout: {
             background: { color: "#020617" },
             textColor: "#d1d5db",
+            fontSize: 12,
+            fontFamily: "Inter, system-ui"
         },
         grid: {
             vertLines: { color: "#1f2937" },
             horzLines: { color: "#1f2937" },
         },
+        crosshair: {
+            mode: LightweightCharts.CrosshairMode.Normal,
+            vertLine: {
+                color: "#64748b",
+                width: 1,
+                style: LightweightCharts.LineStyle.Dashed,
+            },
+            horzLine: {
+                color: "#64748b",
+                width: 1,
+                style: LightweightCharts.LineStyle.Dashed,
+            },
+        },
         timeScale: {
             timeVisible: true,
             secondsVisible: false,
-        }
+            borderColor: "#1f2937",
+        },
+        rightPriceScale: {
+            scaleMargins: {
+                top: 0.15,
+                bottom: 0.15,
+            },
+            borderColor: "#1f2937",
+        },
     });
 
+    // ✅ CORRECT API FOR YOUR CDN
     volumeSeries = chart.addSeries(
         LightweightCharts.HistogramSeries,
         {
@@ -200,16 +233,27 @@ async function openChart(symbol) {
 
     volumeSeries.setData(historical);
     chart.timeScale().fitContent();
+
+    window.addEventListener("resize", () => {
+        chart.applyOptions({
+            width: container.clientWidth,
+            height: container.clientHeight,
+        });
+    });
 }
 
 function closeChart() {
     document.getElementById("chartModal").classList.add("hidden");
 }
 
+/* ================= HELPERS ================= */
+
 function format(val) {
     if (val == null) return "-";
     return val.toLocaleString();
 }
+
+/* ================= POLLING ================= */
 
 setInterval(fetchMarketData, 1000);
 setInterval(fetchLogs, 1500);
