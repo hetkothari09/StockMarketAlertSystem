@@ -1,4 +1,5 @@
 from datetime import datetime, time
+import random
 
 class Storage:
     def __init__(self):
@@ -7,8 +8,7 @@ class Storage:
         self.symbol_data = {}
         self.logs = []
 
-        self.alerts = {}  # symbol → list[VolumeAlert]
-
+        self.alerts = {}
         self.window_alerted_today = set()
         self._last_day = None
 
@@ -18,13 +18,12 @@ class Storage:
         return max(0, int((now - window_start).total_seconds() / 60))
 
     def window_minutes(self):
-        return 30  # 9:15 → 10:30
-    
+        return 30
 
     def in_window(self):
         now = datetime.now().time()
         return time(14, 45) <= now <= time(15, 15)
-    
+
     def reset_if_new_day(self):
         today = datetime.now().date()
         if self._last_day != today:
@@ -33,6 +32,7 @@ class Storage:
                 row["window_volume"] = 0
                 row["window_alert_hit"] = False
                 row["user_alert_hit"] = False
+                row["is_red_alert"] = False
             self._last_day = today
 
     def register_stock(self, token, symbol):
@@ -41,7 +41,8 @@ class Storage:
             "live_volume": 0,
             "window_volume": 0,
             "window_alert_hit": False,
-            "user_alert_hit": False,  
+            "user_alert_hit": False,
+            "is_red_alert": False,
             "window_zscore": None
         })
 
@@ -53,11 +54,20 @@ class Storage:
         if not symbol:
             return
 
+        row = self.symbol_data[symbol]
+
+        # ============================
+        # 🔧 TEST MODE: MARKET CLOSED
+        # ============================
+        if ttq == 0:
+            prev = self.last_ttq.get(token, random.randint(500_0000, 1_0000_000))
+            fake_increment = random.randint(20_000, 150_000)
+            ttq = prev + fake_increment
+
         prev = self.last_ttq.get(token, 0)
         delta = max(ttq - prev, 0)
         self.last_ttq[token] = ttq
 
-        row = self.symbol_data[symbol]
         row["live_volume"] = ttq
 
         if self.in_window():
@@ -72,9 +82,10 @@ class Storage:
         return self.alerts.get(symbol, [])
 
     # -------- UI --------
+
     def get_historical_series(self, symbol):
         return self.symbol_data.get(symbol, {}).get("historical_series", [])
-    
+
     def add_log(self, msg):
         self.logs.append({
             "time": datetime.now().strftime("%H:%M:%S"),
@@ -85,13 +96,15 @@ class Storage:
     def get_logs(self):
         return self.logs
 
-    # def get_all_volumes(self):
-    #     return [{"symbol": s, **v} for s, v in self.symbol_data.items()]
     def get_all_volumes(self):
         rows = []
 
         for symbol, row in self.symbol_data.items():
-            if row.get("window_alert_hit") or row.get("user_alert_hit"):
+            row["is_red_alert"] = bool(
+                row.get("window_alert_hit") or row.get("user_alert_hit")
+            )
+
+            if row.get("user_alert_hit"):
                 row["status"] = "ALERT"
             else:
                 row["status"] = "NORMAL"

@@ -1,7 +1,27 @@
 let latestData = [];
 let dropdownInitialized = false;
-let lastAlertSeen = null;
+let lastToastId = 0;
 
+/* ================= TOAST NOTIFICATIONS ================= */
+
+
+function showToast(message, type = "info") {
+    const container = document.getElementById("toast-container");
+    if (!container) return;
+
+    const toast = document.createElement("div");
+    toast.className = `toast toast-${type}`;
+    toast.textContent = message;
+
+    container.appendChild(toast);
+
+    setTimeout(() => toast.classList.add("show"), 10);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
 /* ================= MARKET DATA ================= */
 
 async function fetchMarketData() {
@@ -9,11 +29,10 @@ async function fetchMarketData() {
     let data = await res.json();
 
     latestData = data;
-    
-    // 🔥 Move user-alert-hit rows to top
+
     data.sort((a, b) => {
-        if (a.user_alert_hit && !b.user_alert_hit) return -1;
-        if (!a.user_alert_hit && b.user_alert_hit) return 1;
+        if (a.is_red_alert && !b.is_red_alert) return -1;
+        if (!a.is_red_alert && b.is_red_alert) return 1;
         return 0;
     });
 
@@ -23,19 +42,16 @@ async function fetchMarketData() {
     const alertSelect = document.getElementById("alert-symbol");
     const compareSelect = document.getElementById("compare-symbol");
 
-    // Populate dropdowns only once
     if (!dropdownInitialized) {
         alertSelect.innerHTML = "";
         compareSelect.innerHTML = "";
 
         data.forEach(row => {
-            const opt1 = document.createElement("option");
-            opt1.value = row.symbol;
-            opt1.textContent = row.symbol;
-            alertSelect.appendChild(opt1);
-
-            const opt2 = opt1.cloneNode(true);
-            compareSelect.appendChild(opt2);
+            const opt = document.createElement("option");
+            opt.value = row.symbol;
+            opt.textContent = row.symbol;
+            alertSelect.appendChild(opt);
+            compareSelect.appendChild(opt.cloneNode(true));
         });
 
         dropdownInitialized = true;
@@ -44,25 +60,7 @@ async function fetchMarketData() {
     data.forEach(row => {
         const tr = document.createElement("tr");
 
-        let statusClass = "status-normal";
-        let statusText = "NORMAL";
-
-        /* User alerts ONLY */
-        if (row.user_alert_hit) {
-            statusClass = "alert-row";
-            statusText = "ALERT";
-        }
-        /* Full-day volume comparison ONLY */
-        else if (row.weekly_avg && row.live_volume > row.weekly_avg * 1.5) {
-            statusClass = "status-high";
-            statusText = "VERY HIGH VOL";
-        }
-        else if (row.weekly_avg && row.live_volume > row.weekly_avg) {
-            statusClass = "status-high";
-            statusText = "HIGH VOL";
-        }
-
-        tr.className = statusClass;
+        if (row.is_red_alert) tr.className = "alert-row";
 
         tr.innerHTML = `
             <td>${row.symbol}</td>
@@ -70,13 +68,11 @@ async function fetchMarketData() {
             <td class="num">${format(row.prev_day)}</td>
             <td class="num">${format(row.weekly_avg)}</td>
             <td class="num">${format(row.monthly_avg)}</td>
-            <td class="num">${row.volume_intensity || "WAITING"}</td>
-            <td class="${statusClass}">${statusText}</td>
+            <td class="num">${row.volume_intensity}</td>
+            <td>${row.user_alert_hit ? "ALERT" : "NORMAL"}</td>
         `;
 
-        tr.addEventListener("click", () => openChart(row.symbol));
-        tr.style.cursor = "pointer";
-
+        tr.onclick = () => openChart(row.symbol);
         tbody.appendChild(tr);
     });
 }
@@ -91,18 +87,19 @@ async function fetchLogs() {
     logBox.innerHTML = "";
 
     logs.slice().reverse().forEach(log => {
+        const key = `${log.time}-${log.message}`;
+
         const div = document.createElement("div");
         div.className = "log";
         div.textContent = `[${log.time}] ${log.message}`;
         logBox.appendChild(div);
 
-        // 🔔 POPUP for new alert
-        if (
-            log.message.includes("ALERT TRIGGERED") &&
-            log.message !== lastAlertSeen
-        ) {
-            lastAlertSeen = log.message;
-            alert(log.message);
+        if (!seenLogs.has(key) &&
+            (log.message.includes("ALERT CREATED") ||
+             log.message.includes("ALERT TRIGGERED"))) {
+
+            seenLogs.add(key);
+            showToast(log.message, "danger");
         }
     });
 }
@@ -123,7 +120,7 @@ async function createAlert() {
 
     if (rightType === "FIXED" || rightType === "MULTIPLIER_WEEKLY") {
         if (!rightValueRaw) {
-            alert("Please enter a value / multiplier");
+            showToast("Please enter a value / multiplier", "warn");
             return;
         }
         payload.right_value = parseFloat(rightValueRaw);
@@ -134,6 +131,8 @@ async function createAlert() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
     });
+
+    showToast(`Alert created for ${symbol}`, "success");
 
     document.getElementById("alert-right-value").value = "";
 }
@@ -171,7 +170,7 @@ async function openChart(symbol) {
     const container = document.getElementById("chartContainer");
     container.innerHTML = "";
 
-    const chart = LightweightCharts.createChart(container, {
+    chart = LightweightCharts.createChart(container, {
         width: container.clientWidth,
         height: container.clientHeight,
         layout: {
@@ -182,83 +181,35 @@ async function openChart(symbol) {
             vertLines: { color: "#1f2937" },
             horzLines: { color: "#1f2937" },
         },
-        crosshair: {
-            mode: LightweightCharts.CrosshairMode.Normal,
-            vertLine: {
-                color: "#64748b",
-                width: 1,
-                style: LightweightCharts.LineStyle.Dashed,
-                labelBackgroundColor: "#020617",
-            },
-            horzLine: {
-                color: "#64748b",
-                width: 1,
-                style: LightweightCharts.LineStyle.Dashed,
-                labelBackgroundColor: "#020617",
-            },
-        },
         timeScale: {
             timeVisible: true,
             secondsVisible: false,
-            borderColor: "#1f2937",
-        },
-        rightPriceScale: {
-            scaleMargins: {
-                top: 0.15,
-                bottom: 0.15,
-            },
-            borderColor: "#1f2937",
-        },
-        handleScroll: {
-            mouseWheel: true,
-            pressedMouseMove: true,
-        },
-        handleScale: {
-            axisPressedMouseMove: true,
-            mouseWheel: true,
-            pinch: true,
-        },
+        }
     });
 
-    const volumeSeries = chart.addSeries(
+    volumeSeries = chart.addSeries(
         LightweightCharts.HistogramSeries,
         {
             color: "#3b82f6",
             priceFormat: { type: "volume" },
-            priceScaleId: "right",
         }
     );
 
     const res = await fetch(`/historical/${symbol}`);
     const historical = await res.json();
 
-    if (!historical || historical.length === 0) {
-        console.warn("No historical data for", symbol);
-        return;
-    }
-
     volumeSeries.setData(historical);
     chart.timeScale().fitContent();
-
-    window.addEventListener("resize", () => {
-        chart.applyOptions({
-            width: container.clientWidth,
-            height: container.clientHeight,
-        });
-    });
 }
+
 function closeChart() {
     document.getElementById("chartModal").classList.add("hidden");
 }
 
-/* ================= HELPERS ================= */
-
 function format(val) {
-    if (val === null || val === undefined) return "-";
+    if (val == null) return "-";
     return val.toLocaleString();
 }
-
-/* ================= POLLING ================= */
 
 setInterval(fetchMarketData, 1000);
 setInterval(fetchLogs, 1500);

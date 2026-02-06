@@ -1,5 +1,5 @@
 import threading
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 
 from storage import Storage
 from websocket_client import MTWebSocketClient
@@ -7,7 +7,6 @@ from marketdata_handler import MarketDataHandler
 from config import NIFTY50_STOCKS
 from alert_engine import VolumeAlert
 from historical_volume import HistoricalVolumeLoader
-from flask import request
 
 storage = Storage()
 handler = MarketDataHandler(storage=storage)
@@ -19,16 +18,11 @@ hist = loader.load()
 
 for symbol, metrics in hist.items():
     storage.set_historical_metrics(symbol, metrics)
-    
-# storage.add_alert("ADANIENT", VolumeAlert("ADANIENT", 4_38_000))
-# storage.add_alert("APOLLOHOSP", VolumeAlert("APOLLOHOSP", 93090))
-# storage.add_alert("INFY", VolumeAlert("INFY", 2_000_000))
-
 
 for stock in NIFTY50_STOCKS:
-    token=stock['token']
-    symbol=stock['symbol']
-    exchange = stock['exchange']
+    token = stock["token"]
+    symbol = stock["symbol"]
+    exchange = stock["exchange"]
 
     storage.register_stock(symbol=symbol, token=token)
     ws.add_subscription(symbol=symbol, token=token, exchange=exchange)
@@ -56,14 +50,17 @@ def add_alert():
 
     storage.add_alert(data["symbol"], alert)
 
-    # 🔥 IMMEDIATE EVALUATION
     row = storage.symbol_data.get(data["symbol"])
-    if row:
-        if alert.should_trigger(row["live_volume"], row):
-            alert.mark_triggered()
-            storage.add_log(
-                f"🚨 ALERT TRIGGERED IMMEDIATELY: {data['symbol']}"
-            )
+
+    # 🔥 IMMEDIATE EVALUATION (FIXED)
+    if row and alert.should_trigger(row["live_volume"], row):
+        alert.mark_triggered()
+        row["user_alert_hit"] = True
+        row["is_red_alert"] = True
+
+        storage.add_log(
+            f"ALERT TRIGGERED IMMEDIATELY: {data['symbol']}"
+        )
 
     storage.add_log(
         f"ALERT CREATED: {data['symbol']} {data['operator']} {data['right_type']}"
@@ -73,15 +70,7 @@ def add_alert():
 
 @app.route("/historical/<symbol>")
 def historical(symbol):
-    """
-    Returns:
-    [
-      { "time": "2024-11-01", "volume": 1234567 },
-      { "time": "2024-11-02", "volume": 1456789 }
-    ]
-    """
-    data = storage.get_historical_series(symbol)
-    return jsonify(data)
+    return jsonify(storage.get_historical_series(symbol))
 
 @app.route("/data")
 def data():

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Volume Analytics Terminal</title>
 
-    <!-- Important for layout & charts -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -19,7 +18,16 @@
     <div class="logo">📈 Volume Analytics</div>
 </div>
 
+<!-- 🔔 Toast Container -->
+<div id="toast-container"></div>
+
 <div class="container">
+
+    <!-- ================= LIVE ALERT STREAM ================= -->
+    <div class="panel alert-stream-panel">
+        <div class="panel-header">Live Volume Alerts</div>
+        <div id="alert-stream"></div>
+    </div>
 
     <!-- ================= Market Panel ================= -->
     <div class="panel market-panel">
@@ -46,7 +54,6 @@
         <div class="panel-header">System Logs</div>
         <div id="logs"></div>
 
-        <!-- ===== Volume Alert Builder ===== -->
         <div class="panel-header">Create Volume Alert</div>
 
         <div class="alert-grid">
@@ -65,16 +72,11 @@
                 <option value="MULTIPLIER_WEEKLY">Weekly Avg ×</option>
             </select>
 
-            <input
-                id="alert-right-value"
-                type="number"
-                placeholder="Value / Multiplier"
-            />
+            <input id="alert-right-value" type="number" placeholder="Value / Multiplier" />
 
             <button class="primary-btn" onclick="createAlert()">Create</button>
         </div>
 
-        <!-- ===== Volume Comparison ===== -->
         <div class="panel-header">Volume Comparison</div>
 
         <div class="compare-grid">
@@ -86,7 +88,7 @@
     </div>
 </div>
 
-<!-- ================= Chart Modal (GLOBAL) ================= -->
+<!-- ================= Chart Modal ================= -->
 <div id="chartModal" class="chart-modal hidden">
     <div class="chart-header">
         <span id="chartTitle"></span>
