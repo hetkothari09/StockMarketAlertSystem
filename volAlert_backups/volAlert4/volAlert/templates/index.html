@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volume Analytics Terminal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">📈 Volume Analytics</div>
+    <!-- <div class="status"></div> -->
+</div>
+
+<div class="container">
+
+    <div class="panel market-panel">
+        <div class="panel-header">NIFTY 50 – Volume Dashboard</div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Live Vol</th>
+                    <th>Prev Day</th>
+                    <th>Weekly Avg</th>
+                    <th>Monthly Avg</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="market-body"></tbody>
+        </table>
+    </div>
+
+<div class="panel logs-panel">
+    <div class="panel-header">System Logs</div>
+    <div id="logs"></div>
+
+    <!-- ===== Volume Alert Builder ===== -->
+    <div class="panel-header">Create Volume Alert</div>
+
+    <div class="alert-grid">
+        <select id="alert-symbol"></select>
+
+        <select id="alert-operator">
+            <option value=">">></option>
+            <option value=">=">>=</option>
+        </select>
+
+        <select id="alert-right-type">
+            <option value="FIXED">Fixed Volume</option>
+            <option value="PREV_DAY">Prev Day Volume</option>
+            <option value="WEEKLY_AVG">Weekly Avg</option>
+            <option value="MONTHLY_AVG">Monthly Avg</option>
+            <option value="MULTIPLIER_WEEKLY">Weekly Avg ×</option>
+        </select>
+
+        <input
+            id="alert-right-value"
+            type="number"
+            placeholder="Value / Multiplier"
+        />
+
+        <button class="primary-btn" onclick="createAlert()">Create</button>
+    </div>
+
+    <!-- ===== Volume Comparison ===== -->
+    <div class="panel-header">Volume Comparison</div>
+
+    <div class="compare-grid">
+        <select id="compare-symbol" class="compare-symbol"></select>
+        <button class="primary-btn" onclick="compareVolume()">Compare</button>
+    </div>
+
+    <div id="compare-result"></div>
+</div>
+</div>
+
+</body>
+</html>

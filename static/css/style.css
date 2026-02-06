@@ -1,0 +1,271 @@
+/* ===== Global ===== */
+
+:root {
+    --font-main: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-numbers: "Bungee", cursive;
+
+    --bg-main: #020617;
+    --bg-panel: #020617;
+    --bg-card: #020617;
+    --bg-hover: #020617;
+
+    --border-subtle: #020617;
+
+    --text-primary: #e5e7eb;
+    --text-muted: #020617;
+    --text-accent: #38bdf8;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 15px;   /* base font increased */
+}
+
+
+/* ===== Navbar ===== */
+.navbar {
+    height: 55px;
+    background: #111827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.status {
+    color: #22c55e;
+    font-size: 14px;
+}
+
+/* ===== Layout ===== */
+.container {
+    display: flex;
+    height: calc(100vh - 55px);
+}
+
+/* ===== Panels ===== */
+.panel {
+    background: #111827;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    padding: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #1f2937;
+}
+
+/* ===== Market Panel ===== */
+.market-panel {
+    flex: 3;
+    overflow: auto;
+}
+
+/* ===== Logs Panel ===== */
+.logs-panel {
+    flex: 1;
+    overflow: auto;
+    font-size: 13px;
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #020617;
+}
+
+/* th { */
+    /* font-size: 14px; */
+    /* font-weight: 600; */
+    /* align-items: center;*/
+    /* letter-spacing: 0.05em; */
+    /* text-transform: uppercase;*/
+    /* color: var(--text-muted); */
+/* } */ 
+
+/* td {
+    font-size: 16px;   /* bigger & readable */
+    /* padding: 10px 12px; */
+/*}*/
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #1f2937;
+}
+
+td {
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.num {
+    font-family: var(--font-numbers);
+    font-size: 18px;
+    letter-spacing: 0.05em;
+ 
+}
+tr:hover {
+    background-color: #020617;
+}
+
+.alert-row {
+    background-color: rgba(220, 38, 38, 0.2);
+}
+
+.status-high {
+    color: #22c55e;
+}
+
+.status-spike {
+    color: #f59e0b;
+}
+
+th:first-child,
+td:first-child {
+    text-align: left;
+}
+
+tbody tr:hover {
+    background: #1f2937;
+}
+
+/* ===== Status Colors ===== */
+.status-normal {
+    color: #9ca3af;
+}
+
+.status-high {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.status-spike {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+/* ===== Logs ===== */
+#logs {
+    padding: 10px;
+}
+
+.log {
+    margin-bottom: 8px;
+    padding: 6px;
+    background: #020617;
+    border-left: 3px solid #3b82f6;
+    font-size: 12px;
+}
+.alert-box {
+    padding: 10px;
+    display: flex;
+    gap: 6px;
+}
+
+.alert-box input, .alert-box select {
+    background: #020617;
+    color: white;
+    border: 1px solid #1f2937;
+    padding: 6px;
+}
+/* ===== Alert Builder ===== */
+.alert-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    padding: 10px;
+}
+
+.alert-grid select,
+.alert-grid input {
+    background: #020617;
+    color: #e6e6e6;
+    border: 1px solid #1f2937;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.primary-btn {
+    background: #2563eb;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ===== Comparison ===== */
+.compare-grid {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+}
+.compare-symbol {
+    background-color: #020617;
+    color: white;
+    padding: 6px;
+    border: 1px solid #1f2937;
+}
+#compare-result {
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #93c5fd;
+}
+.chart-modal {
+    position: fixed;
+    inset: 0;
+    background: #020617;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-modal.hidden {
+    display: none;
+}
+
+.chart-header {
+    padding: 10px 16px;
+    background: #020617;
+    border-bottom: 1px solid #1f2937;
+    display: flex;
+    justify-content: space-between;
+    color: #e5e7eb;
+    font-weight: bold;
+}
+
+#chartContainer {
+    flex: 1;
+}
+.status-spike {
+    color: #ff4d4f;
+    font-weight: bold;
+}
+.alert-row {
+    background: rgba(239, 68, 68, 0.15);
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { background-color: rgba(239, 68, 68, 0.15); }
+    to   { background-color: rgba(239, 68, 68, 0.35); }
+}

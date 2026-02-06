@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Volume Alert</title>
+</head>
+<body>
+
+<h2>Create Volume Alert</h2>
+
+<form id="alertForm">
+  <label>Stock</label>
+  <select name="symbol">
+  <option>INFY</option>
+  <option>TCS</option>
+  <option>RELIANCE</option>
+  </select>
+
+
+  <label>Metric</label>
+  <select name="metric_type">
+    <option value="LIVE_VOLUME">Live Volume</option>
+    <option value="VS_PREV_DAY">Prev Day</option>
+    <option value="VS_WEEKLY_AVG">Weekly Avg</option>
+    <option value="VS_MONTHLY_AVG">Monthly Avg</option>
+  </select>
+
+  <label>Operator</label>
+  <select name="operator">
+    <option value=">">></option>
+    <option value=">=">>=</option>
+  </select>
+
+  <label>Threshold</label>
+  <input type="number" step="0.1" name="threshold_value" required>
+
+  <label>Mode</label>
+  <select name="threshold_mode">
+    <option value="ABSOLUTE">Absolute</option>
+    <option value="MULTIPLIER">Multiplier</option>
+  </select>
+
+  <button type="submit">Create Alert</button>
+</form>
+
+<script>
+document.getElementById("alertForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target));
+  data.is_active = true;
+  data.threshold_value = parseFloat(data.threshold_value);
+
+  await fetch("/api/alerts", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  alert("Alert created");
+});
+</script>
+
+</body>
+</html>
