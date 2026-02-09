@@ -1,3 +1,5 @@
+import uuid
+
 class VolumeAlert:
     def __init__(self, symbol, operator, right_type, right_value=None):
         self.symbol = symbol
@@ -5,6 +7,7 @@ class VolumeAlert:
         self.right_type = right_type
         self.right_value = right_value
         self.triggered = False
+        self.id = str(uuid.uuid4())
 
     def _resolve_rhs(self, current_volume, historical):
         if self.right_type == "FIXED":
@@ -46,7 +49,7 @@ class AlertEngine:
         self.evaluate_window_spike(symbol, row, storage)
         self.evaluate_user_alerts(symbol, row, storage)
 
-    # ---------------- WINDOW SPIKE (INSTITUTIONAL) ----------------
+    # ---------------- WINDOW SPIKE ----------------
 
     def evaluate_window_spike(self, symbol, row, storage):
         if symbol in storage.window_alerted_today:
@@ -62,9 +65,6 @@ class AlertEngine:
 
         elapsed = storage.minutes_since_open()
         total_window = storage.window_minutes()
-
-        if elapsed < 10:
-            return
 
         expected_volume = mean * (elapsed / total_window)
         z_time = (vol - expected_volume) / std
@@ -98,7 +98,7 @@ class AlertEngine:
             if alert.should_trigger(row["live_volume"], row):
                 alert.mark_triggered()
                 row["user_alert_hit"] = True
-                row["status"] = "ALERT"  # ✅ ONLY user alerts set status
+                row["status"] = "ALERT"
 
                 self.notifier.notify(
                     symbol,

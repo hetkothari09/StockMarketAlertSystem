@@ -1,6 +1,7 @@
 let latestData = [];
 let dropdownInitialized = false;
 let lastToastId = 0;
+const seenLogs = new Set();
 
 /* ================= TOAST NOTIFICATIONS ================= */
 
@@ -24,6 +25,65 @@ function showToast(message, type = "info") {
 }
 
 /* ================= MARKET DATA ================= */
+function getRowPriority(row) {
+    // 🔥 HIGHEST PRIORITY: USER ALERT
+    if (row.status === "ALERT") return 4;
+
+    // Institutional / volume anomalies
+    if (row.volume_intensity === "SPIKE") return 3;
+    if (row.volume_intensity === "HIGH") return 2;
+
+    // Relative volume strength
+    if (row.status && row.status.startsWith("ABOVE")) return 1;
+
+    return 0;
+}
+
+async function fetchActiveAlerts() {
+    const res = await fetch("/alerts");
+    const alerts = await res.json();
+
+    const box = document.getElementById("user-alerts");
+    box.innerHTML = "";
+
+    if (!alerts.length) {
+        box.innerHTML = `<div class="muted">No active alerts</div>`;
+        return;
+    }
+
+    alerts.forEach(a => {
+        const div = document.createElement("div");
+        div.className = "alert-item";
+
+        div.innerHTML = `
+            <div class="alert-card">
+                <div class="alert-left">
+                    <div class="alert-symbol">${a.symbol}</div>
+                    <div class="alert-condition">
+                        ${a.operator} ${a.right_type} ${a.right_value ?? ""}
+                    </div>
+                </div>
+
+                <div class="alert-right">
+                    ${a.triggered ? `<span class="alert-fired">🔥</span>` : ""}
+                    <button class="alert-remove" onclick="removeAlert('${a.id}')">✕</button>
+                </div>
+            </div>
+        `;
+
+        box.appendChild(div);
+    });
+}
+async function removeAlert(id) {
+    await fetch("/remove-alert", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id })
+    });
+
+    showToast("Alert removed", "warn");
+    fetchActiveAlerts();
+}
 
 async function fetchMarketData() {
     const res = await fetch("/data");
@@ -33,10 +93,14 @@ async function fetchMarketData() {
 
     // Move red-alert rows to top
     data.sort((a, b) => {
-        if (a.is_red_alert && !b.is_red_alert) return -1;
-        if (!a.is_red_alert && b.is_red_alert) return 1;
-        return 0;
-    });
+    const pa = getRowPriority(a);
+    const pb = getRowPriority(b);
+
+    if (pa !== pb) return pb - pa;  // higher priority first
+
+    // Optional: secondary sort by live volume
+    return (b.live_volume || 0) - (a.live_volume || 0);
+});
 
     const tbody = document.getElementById("market-body");
     tbody.innerHTML = "";
@@ -62,19 +126,49 @@ async function fetchMarketData() {
     data.forEach(row => {
         const tr = document.createElement("tr");
 
-        if (row.is_red_alert) tr.className = "alert-row";
+        if (
+            row.status === "ALERT" ||                       // 🔥 USER ALERT
+            row.volume_intensity === "SPIKE" ||
+            row.volume_intensity === "HIGH" ||
+            (row.status && row.status.startsWith("ABOVE"))
+        ) {
+            tr.classList.add("alert-row");
+        }
 
         tr.style.cursor = "pointer"; // ✅ cursor fix
 
         tr.innerHTML = `
             <td>${row.symbol}</td>
-            <td class="num">${format(row.live_volume)}</td>
-            <td class="num">${format(row.prev_day)}</td>
-            <td class="num">${format(row.weekly_avg)}</td>
-            <td class="num">${format(row.monthly_avg)}</td>
-            <td class="num">${row.volume_intensity}</td>
-            <td>${row.user_alert_hit ? "ALERT" : "NORMAL"}</td>
-       `;
+
+            <!-- 🔥 LIVE VOLUME (PRIMARY) -->
+            <td class="num live-vol">${format(row.live_volume)}</td>
+
+            <!-- 🧊 AVERAGES (SECONDARY) -->
+            <td class="num avg">${format(row.prev_day)}</td>
+            <td class="num avg">${format(row.weekly_avg)}</td>
+            <td class="num avg">${format(row.monthly_avg)}</td>
+
+            <!-- 📊 VOLUME MOVEMENT (BADGE) -->
+            <td class="num">
+                <span class="badge ${
+                    row.volume_intensity === "SPIKE" ? "badge-spike" :
+                    row.volume_intensity === "HIGH" ? "badge-high" :
+                    row.volume_intensity === "WAITING" ? "badge-wait" :
+                    "badge-normal"
+                }">
+                    ${row.volume_intensity}
+                </span>
+            </td>
+
+            <!-- 🚨 STATUS (HEADLINE) -->
+            <td class="${
+                row.status === "ALERT" || row.status.startsWith("ABOVE")
+                    ? "status-strong"
+                    : "status-muted"
+            }">
+                ${row.status}
+            </td>
+        `;
 
         tr.onclick = () => openChart(row.symbol);
         tbody.appendChild(tr);
@@ -102,13 +196,13 @@ async function fetchLogs() {
         if (
             !seenLogs.has(key) &&
             (
+                log.message.includes("STATUS CHANGE") ||
                 log.message.includes("ALERT CREATED") ||
-                log.message.includes("ALERT TRIGGERED") ||
-                log.message.includes("INSTITUTIONAL")
+                log.message.includes("ALERT TRIGGERED")
             )
         ) {
             seenLogs.add(key);
-            showToast(log.message, "danger");
+            showToast(log.message, "info");
         }
     });
 }
@@ -194,32 +288,17 @@ async function openChart(symbol) {
         },
         crosshair: {
             mode: LightweightCharts.CrosshairMode.Normal,
-            vertLine: {
-                color: "#64748b",
-                width: 1,
-                style: LightweightCharts.LineStyle.Dashed,
-            },
-            horzLine: {
-                color: "#64748b",
-                width: 1,
-                style: LightweightCharts.LineStyle.Dashed,
-            },
         },
         timeScale: {
             timeVisible: true,
             secondsVisible: false,
-            borderColor: "#1f2937",
         },
         rightPriceScale: {
-            scaleMargins: {
-                top: 0.15,
-                bottom: 0.15,
-            },
-            borderColor: "#1f2937",
+            scaleMargins: { top: 0.2, bottom: 0.2 },
         },
     });
 
-    // ✅ CORRECT API FOR YOUR CDN
+    // ✅ STANDALONE API (FIXED)
     volumeSeries = chart.addSeries(
         LightweightCharts.HistogramSeries,
         {
@@ -229,19 +308,25 @@ async function openChart(symbol) {
     );
 
     const res = await fetch(`/historical/${symbol}`);
-    const historical = await res.json();
+
+if (!res.ok) {
+    console.error("Failed to load historical data for", symbol);
+    return;
+}
+
+const text = await res.text();
+
+// 🔥 Prevent JSON parse crash
+if (!text.startsWith("[")) {
+    console.error("Invalid historical response:", text);
+    return;
+}
+
+const historical = JSON.parse(text);
 
     volumeSeries.setData(historical);
     chart.timeScale().fitContent();
-
-    window.addEventListener("resize", () => {
-        chart.applyOptions({
-            width: container.clientWidth,
-            height: container.clientHeight,
-        });
-    });
 }
-
 function closeChart() {
     document.getElementById("chartModal").classList.add("hidden");
 }
@@ -257,3 +342,4 @@ function format(val) {
 
 setInterval(fetchMarketData, 1000);
 setInterval(fetchLogs, 1500);
+setInterval(fetchActiveAlerts, 2000);

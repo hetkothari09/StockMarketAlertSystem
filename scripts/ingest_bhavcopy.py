@@ -12,7 +12,7 @@ from datetime import date, timedelta
 # CONFIG
 # =====================================================
 
-DAYS_TO_BACKFILL = 60   # ~2 months
+DAYS_TO_BACKFILL = 365   # ~2 months
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0",
@@ -134,7 +134,7 @@ def ingest_for_date(target_date, existing):
 # =====================================================
 
 def backfill_last_two_months():
-    print("🚀 Starting 2-month bhavcopy backfill")
+    print("Starting bhavcopy backfill")
 
     existing = load_existing()
 

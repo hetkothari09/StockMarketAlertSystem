@@ -76,7 +76,10 @@ body {
 .logs-panel {
     flex: 1;
     overflow: auto;
-    font-size: 13px;
+    font-size: 20px;
+}
+div.log{
+    font-size: 16px;
 }
 
 /* ===== Table ===== */
@@ -113,8 +116,44 @@ td {
     font-weight: 500;
     
 }
+
+td.live-vol {
+    font-size: 20px;
+    font-weight: 700;
+    color: #05b339; /* near-white */
+}
+
+td.avg {
+    color: #9ca3af; /* muted gray */
+    font-size: 18px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.badge-normal { background: #1f2937; color: #9ca3af; }
+.badge-high   { background: #78350f; color: #facc15; }
+.badge-spike  { background: #7f1d1d; color: #fecaca; }
+.badge-wait   { background: #0f172a; color: #64748b; }
+
+.status-strong {
+    font-weight: 700;
+    color: #f87171;
+}
+
+.status-muted {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
 .num {
-    font-family: var(--font-numbers);
+    /* font-family: var(--font-numbers); */
     font-size: 18px;
     letter-spacing: 0.05em;
  
@@ -341,4 +380,177 @@ tbody tr:hover {
     border-radius: 4px;
     background: #ef4444;
     color: white;
+}
+
+/* ===== Live Alert Stream ===== */
+#alert-stream {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.alert-card {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.alert-card .symbol {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.alert-card .meta {
+    color: #fca5a5;
+    margin-top: 4px;
+}
+
+.alert-card .badge {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 6px;
+    font-size: 10px;
+    border-radius: 4px;
+    background: #ef4444;
+    color: white;
+}
+
+/* ===== User Alerts ===== */
+#user-alerts {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.user-alert {
+    background: #020617;
+    border: 1px solid #1f2937;
+    padding: 6px 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.user-alert button {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.alert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px;
+    border-bottom: 1px solid #1f2937;
+    font-size: 12px;
+}
+
+.danger-btn {
+    background: transparent;
+    color: #ef4444;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.danger-btn:hover {
+    color: #f87171;
+}
+
+.muted {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.toast {
+    min-width: 260px;
+    max-width: 320px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.toast-info {
+    background: #0f172a;
+    border-left: 4px solid #38bdf8;
+}
+
+.alert-row td.live-vol {
+    color: #fca5a5;
+    text-shadow: 0 0 6px rgba(248,113,113,0.4);
+}
+
+/* === ACTIVE ALERTS BOX UI === */
+
+.alert-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0b1220;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    transition: background 0.2s ease, border 0.2s ease;
+}
+
+.alert-card:hover {
+    background: #111827;
+    border-color: #374151;
+}
+
+.alert-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.alert-symbol {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e5e7eb;
+    letter-spacing: 0.5px;
+}
+
+.alert-condition {
+    font-size: 11px;
+    color: #9ca3af;
+    text-transform: uppercase;
+}
+
+.alert-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-fired {
+    font-size: 14px;
+}
+
+.alert-remove {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 4px;
+}
+
+.alert-remove:hover {
+    color: #f87171;
+}
+
+.alert-card:has(.alert-fired) {
+    border-left: 4px solid #ef4444;
 }

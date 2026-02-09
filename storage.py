@@ -1,4 +1,4 @@
-from datetime import datetime, time
+from datetime import datetime
 import random
 
 class Storage:
@@ -12,17 +12,20 @@ class Storage:
         self.window_alerted_today = set()
         self._last_day = None
 
+    # ---------------- TIME ----------------
+
     def minutes_since_open(self):
         now = datetime.now()
-        window_start = now.replace(hour=14, minute=45, second=0, microsecond=0)
-        return max(0, int((now - window_start).total_seconds() / 60))
+        window_start = now.replace(hour=11, minute=55, second=0, microsecond=0)
+        return max(1, int((now - window_start).total_seconds() / 60))
 
     def window_minutes(self):
         return 30
 
     def in_window(self):
-        now = datetime.now().time()
-        return time(14, 45) <= now <= time(15, 15)
+        return True  # dev-safe
+
+    # ---------------- RESET ----------------
 
     def reset_if_new_day(self):
         today = datetime.now().date()
@@ -33,7 +36,10 @@ class Storage:
                 row["window_alert_hit"] = False
                 row["user_alert_hit"] = False
                 row["is_red_alert"] = False
+                row["window_zscore"] = None
             self._last_day = today
+
+    # ---------------- REGISTRATION ----------------
 
     def register_stock(self, token, symbol):
         self.symbols[token] = symbol
@@ -43,11 +49,16 @@ class Storage:
             "window_alert_hit": False,
             "user_alert_hit": False,
             "is_red_alert": False,
-            "window_zscore": None
+            "window_zscore": None,
+            "volume_intensity": "WAITING",
+            "status": "NORMAL",
+            "last_status": None,
         })
 
     def set_historical_metrics(self, symbol, metrics):
         self.symbol_data.setdefault(symbol, {}).update(metrics)
+
+    # ---------------- TICKS ----------------
 
     def update_tick(self, token, ttq):
         symbol = self.symbols.get(token)
@@ -56,24 +67,18 @@ class Storage:
 
         row = self.symbol_data[symbol]
 
-        # ============================
-        # 🔧 TEST MODE: MARKET CLOSED
-        # ============================
         if ttq == 0:
-            prev = self.last_ttq.get(token, random.randint(500_0000, 1_0000_000))
-            fake_increment = random.randint(20_000, 150_000)
-            ttq = prev + fake_increment
+            prev = self.last_ttq.get(token, random.randint(1_000_000, 3_000_000))
+            ttq = prev + random.randint(20_000, 150_000)
 
         prev = self.last_ttq.get(token, 0)
         delta = max(ttq - prev, 0)
         self.last_ttq[token] = ttq
 
         row["live_volume"] = ttq
+        row["window_volume"] += delta
 
-        if self.in_window():
-            row["window_volume"] += delta
-
-    # -------- ALERTS --------
+    # ---------------- ALERTS ----------------
 
     def add_alert(self, symbol, alert):
         self.alerts.setdefault(symbol, []).append(alert)
@@ -81,10 +86,27 @@ class Storage:
     def get_alerts(self, symbol):
         return self.alerts.get(symbol, [])
 
-    # -------- UI --------
+    def remove_alert(self, alert_id):
+        for symbol, alerts in self.alerts.items():
+            for a in list(alerts):
+                if a.id == alert_id:
+                    alerts.remove(a)
 
-    def get_historical_series(self, symbol):
-        return self.symbol_data.get(symbol, {}).get("historical_series", [])
+                    # 🔥 RESET SYMBOL ALERT STATE
+                    row = self.symbol_data.get(symbol)
+                    if row:
+                        row["user_alert_hit"] = False
+
+                        # recompute status cleanly
+                        if row.get("window_alert_hit"):
+                            row["status"] = "SPIKE"
+                        else:
+                            row["status"] = "BELOW AVERAGES"
+                    
+                    self.add_log(f"ALERT REMOVED: {symbol}")
+                    return True
+        return False
+    # ---------------- LOGS ----------------
 
     def add_log(self, msg):
         self.logs.append({
@@ -96,28 +118,63 @@ class Storage:
     def get_logs(self):
         return self.logs
 
+    # ---------------- UI DATA ----------------
+
     def get_all_volumes(self):
         rows = []
 
         for symbol, row in self.symbol_data.items():
-            row["is_red_alert"] = bool(
-                row.get("window_alert_hit") or row.get("user_alert_hit")
-            )
+            lv = row.get("live_volume", 0)
 
+            # ================= STATUS (RELATIVE LEVELS) =================
+            status_parts = []
+
+            if row.get("prev_day") and lv >= row["prev_day"]:
+                status_parts.append("ABOVE PREV DAY")
+
+            if row.get("weekly_avg") and lv >= row["weekly_avg"]:
+                status_parts.append("ABOVE WEEKLY AVG")
+
+            if row.get("monthly_avg") and lv >= row["monthly_avg"]:
+                status_parts.append("ABOVE MONTHLY AVG")
+
+            # ALERT OVERRIDES
             if row.get("user_alert_hit"):
                 row["status"] = "ALERT"
+            # elif row.get("window_alert_hit"):
+            #     row["status"] = "SPIKE"
+            elif status_parts:
+                row["status"] = " | ".join(status_parts)
             else:
-                row["status"] = "NORMAL"
+                row["status"] = "BELOW AVERAGES"
 
+
+            prev = row.get("last_status")
+            curr = row["status"]
+
+            # 🔥 LOG ONLY REAL TRANSITIONS
+            if prev is not None and prev != curr:
+                self.add_log(
+                    f"STATUS CHANGE [{symbol}]: {prev} → {curr}"
+                )
+
+            row["last_status"] = curr
+
+            # ================= VOLUME MOVEMENT (INTENSITY) =================
             z = row.get("window_zscore")
+
             if z is None:
                 row["volume_intensity"] = "WAITING"
             elif z < 1:
                 row["volume_intensity"] = "NORMAL"
             elif z < 2:
                 row["volume_intensity"] = "HIGH"
-            else:
-                row["volume_intensity"] = "SPIKE"
+            # else:
+            #     row["volume_intensity"] = "SPIKE"
+
+            row["is_red_alert"] = bool(
+                row.get("window_alert_hit") or row.get("user_alert_hit")
+            )
 
             rows.append({"symbol": symbol, **row})
 

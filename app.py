@@ -68,9 +68,47 @@ def add_alert():
 
     return jsonify({"status": "ok"})
 
+@app.route("/alerts")
+def get_alerts():
+    result = []
+    for symbol, alerts in storage.alerts.items():
+        for a in alerts:
+            result.append({
+                "id": a.id,
+                "symbol": a.symbol,
+                "operator": a.operator,
+                "right_type": a.right_type,
+                "right_value": a.right_value,
+                "triggered": a.triggered
+            })
+    return jsonify(result)
+
+
+@app.route("/remove-alert", methods=["POST"])
+def remove_alert():
+    data = request.json
+    alert_id = data.get("id")
+
+    if not alert_id:
+        return jsonify({"ok": False}), 400
+
+    ok = storage.remove_alert(alert_id)
+    return jsonify({"ok": ok})
+
 @app.route("/historical/<symbol>")
 def historical(symbol):
-    return jsonify(storage.get_historical_series(symbol))
+    row = storage.symbol_data.get(symbol)
+
+    if not row:
+        return jsonify([])
+
+    series = row.get("historical_series")
+    if not series:
+        storage.add_log(f"No historical data for {symbol}")
+    if not isinstance(series, list):
+        return jsonify([])
+
+    return jsonify(series)
 
 @app.route("/data")
 def data():

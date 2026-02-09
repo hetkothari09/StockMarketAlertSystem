@@ -18,16 +18,15 @@
     <div class="logo">📈 Volume Analytics</div>
 </div>
 
-<!-- 🔔 Toast Container -->
 <div id="toast-container"></div>
 
 <div class="container">
 
     <!-- ================= LIVE ALERT STREAM ================= -->
-    <div class="panel alert-stream-panel">
+    <!-- <div class="panel alert-stream-panel">
         <div class="panel-header">Live Volume Alerts</div>
         <div id="alert-stream"></div>
-    </div>
+    </div> -->
 
     <!-- ================= Market Panel ================= -->
     <div class="panel market-panel">
@@ -58,12 +57,10 @@
 
         <div class="alert-grid">
             <select id="alert-symbol"></select>
-
             <select id="alert-operator">
                 <option value=">">></option>
                 <option value=">=">>=</option>
             </select>
-
             <select id="alert-right-type">
                 <option value="FIXED">Fixed Volume</option>
                 <option value="PREV_DAY">Prev Day Volume</option>
@@ -71,14 +68,15 @@
                 <option value="MONTHLY_AVG">Monthly Avg</option>
                 <option value="MULTIPLIER_WEEKLY">Weekly Avg ×</option>
             </select>
-
             <input id="alert-right-value" type="number" placeholder="Value / Multiplier" />
-
             <button class="primary-btn" onclick="createAlert()">Create</button>
         </div>
 
-        <div class="panel-header">Volume Comparison</div>
+        <!-- 🔥 USER ALERTS LIST -->
+        <div class="panel-header">Active Alerts</div>
+        <div id="user-alerts"></div>
 
+        <div class="panel-header">Volume Comparison</div>
         <div class="compare-grid">
             <select id="compare-symbol" class="compare-symbol"></select>
             <button class="primary-btn" onclick="compareVolume()">Compare</button>
@@ -88,7 +86,6 @@
     </div>
 </div>
 
-<!-- ================= Chart Modal ================= -->
 <div id="chartModal" class="chart-modal hidden">
     <div class="chart-header">
         <span id="chartTitle"></span>
