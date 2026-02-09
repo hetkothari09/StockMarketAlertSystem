@@ -19,7 +19,10 @@ class VolumeAlert:
         if self.right_type == "MONTHLY_AVG":
             return historical.get("monthly_avg")
         if self.right_type == "MULTIPLIER_WEEKLY":
-            return historical.get("weekly_avg") * self.right_value
+            avg = historical.get("weekly_avg")
+            if avg is not None and self.right_value is not None:
+                return avg * self.right_value
+            return None
         return None
 
     def should_trigger(self, current_volume, historical):
@@ -54,7 +57,8 @@ class AlertEngine:
     def evaluate_window_spike(self, symbol, row, storage):
         if symbol in storage.window_alerted_today:
             return
-
+        if not storage.in_selected_time_window():
+            return
         mean = row.get("window_mean")
         std = row.get("window_std")
         p90 = row.get("window_p90")

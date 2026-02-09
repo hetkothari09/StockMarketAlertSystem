@@ -95,6 +95,28 @@ async function removeAlert(id) {
     fetchActiveAlerts();
 }
 
+async function applyTimeRange() {
+    const start = document.getElementById("vol-start").value;
+    const end = document.getElementById("vol-end").value;
+
+    if (!start || !end) {
+        showToast("Invalid time range", "warn");
+        return;
+    }
+
+    const res = await fetch("/set-time-range", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ start, end })
+    });
+
+    const data = await res.json();
+
+    if (data.ok) {
+        showToast(`Volume window set: ${start} → ${end}`, "success");
+    }
+}
+
 async function fetchMarketData() {
     const res = await fetch("/data");
     let data = await res.json();

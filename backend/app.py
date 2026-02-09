@@ -1,5 +1,6 @@
 import threading
 from flask import Flask, jsonify, render_template, request
+from flask_cors import CORS
 
 from storage import Storage
 from websocket_client import MTWebSocketClient
@@ -28,6 +29,7 @@ for stock in NIFTY50_STOCKS:
     ws.add_subscription(symbol=symbol, token=token, exchange=exchange)
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def index():
@@ -39,34 +41,51 @@ def logs():
 
 @app.route("/add-alert", methods=["POST"])
 def add_alert():
-    data = request.json
+    try:
+        from datetime import datetime
+        data = request.json
+        if not data or "symbol" not in data:
+            return jsonify({"status": "error", "message": "Missing symbol"}), 400
 
-    alert = VolumeAlert(
-        symbol=data["symbol"],
-        operator=data["operator"],
-        right_type=data["right_type"],
-        right_value=data.get("right_value")
-    )
-
-    storage.add_alert(data["symbol"], alert)
-
-    row = storage.symbol_data.get(data["symbol"])
-
-    # 🔥 IMMEDIATE EVALUATION (FIXED)
-    if row and alert.should_trigger(row["live_volume"], row):
-        alert.mark_triggered()
-        row["user_alert_hit"] = True
-        row["is_red_alert"] = True
-
-        storage.add_log(
-            f"ALERT TRIGGERED IMMEDIATELY: {data['symbol']}"
+        symbol = data["symbol"]
+        
+        alert = VolumeAlert(
+            symbol=symbol,
+            operator=data.get("operator", ">"),
+            right_type=data.get("right_type", "FIXED"),
+            right_value=data.get("right_value")
         )
 
-    storage.add_log(
-        f"ALERT CREATED: {data['symbol']} {data['operator']} {data['right_type']}"
-    )
+        storage.add_alert(symbol, alert)
+        
+        row = storage.symbol_data.get(symbol)
 
-    return jsonify({"status": "ok"})
+        # Defensive check for immediate trigger
+        if row and row.get("live_volume") is not None:
+            try:
+                if alert.should_trigger(row["live_volume"], row):
+                    alert.mark_triggered()
+                    row["user_alert_hit"] = True
+                    row["is_red_alert"] = True
+                    storage.add_log(f"ALERT TRIGGERED IMMEDIATELY: {symbol}")
+            except Exception as eval_err:
+                print(f"Error evaluating immediate trigger: {eval_err}")
+
+        storage.add_log(f"ALERT CREATED: {symbol}")
+        return jsonify({"status": "ok"})
+
+    except Exception as e:
+        import traceback
+        import json
+        from datetime import datetime
+        err_detail = traceback.format_exc()
+        error_msg = f"CRITICAL ERROR IN /add-alert: {str(e)}\n{err_detail}"
+        print(error_msg)
+        try:
+            with open("backend_debug.log", "a") as f:
+                f.write(f"\n--- {datetime.now()} ---\n{error_msg}\n")
+        except: pass
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 @app.route("/alerts")
 def get_alerts():
@@ -109,6 +128,18 @@ def historical(symbol):
         return jsonify([])
 
     return jsonify(series)
+
+@app.route("/set-time-range", methods=["POST"])
+def set_time_range():
+    data = request.json
+    start = data.get("start")
+    end = data.get("end")
+
+    if not start or not end:
+        return jsonify({"ok": False}), 400
+
+    storage.set_time_range(start, end)
+    return jsonify({"ok": True, "start": start, "end": end})
 
 @app.route("/data")
 def data():

@@ -31,7 +31,14 @@
     <!-- ================= Market Panel ================= -->
     <div class="panel market-panel">
         <div class="panel-header">NIFTY 50 – Volume Dashboard</div>
+         <div class="panel-header">Volume Time Range</div>
 
+        <div class="alert-grid">
+            <input type="time" id="vol-start" value="09:30">
+            <input type="time" id="vol-end" value="10:00">
+            <button class="primary-btn" onclick="applyTimeRange()">Apply</button>
+        </div>   
+        
         <table>
             <thead>
                 <tr>

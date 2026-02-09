@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, time
 import random
 
 class Storage:
@@ -8,6 +8,11 @@ class Storage:
         self.symbol_data = {}
         self.logs = []
 
+        # 🔥 USER-SELECTED TIME RANGE
+        # 🔥 USER-SELECTED TIME RANGE
+        self.window_start_time = time(9, 15)   # Default start
+        self.window_end_time = time(15, 30)     # Default end
+
         self.alerts = {}
         self.window_alerted_today = set()
         self._last_day = None
@@ -15,15 +20,53 @@ class Storage:
     # ---------------- TIME ----------------
 
     def minutes_since_open(self):
+        """
+        Correct market open reference (09:15)
+        """
         now = datetime.now()
-        window_start = now.replace(hour=15, minute=00, second=0, microsecond=0)
-        return max(1, int((now - window_start).total_seconds() / 60))
+        market_open = now.replace(hour=9, minute=15, second=0, microsecond=0)
+        return max(1, int((now - market_open).total_seconds() / 60))
 
     def window_minutes(self):
-        return 30
+        """
+        Derived window length from selected time range
+        """
+        if not self.window_start_time or not self.window_end_time:
+            return None
 
-    def in_window(self):
-        return True  # dev-safe
+        start = datetime.combine(datetime.today(), self.window_start_time)
+        end = datetime.combine(datetime.today(), self.window_end_time)
+        return int((end - start).total_seconds() / 60)
+
+    def in_selected_time_window(self):
+        """
+        Check if current time is inside user-selected range
+        """
+        if not self.window_start_time or not self.window_end_time:
+            return True  # no restriction
+
+        now = datetime.now().time()
+        return self.window_start_time <= now <= self.window_end_time
+
+    def set_time_range(self, start_str: str, end_str: str):
+        """
+        Set user-defined time range (HH:MM → HH:MM)
+        """
+        h1, m1 = map(int, start_str.split(":"))
+        h2, m2 = map(int, end_str.split(":"))
+
+        self.window_start_time = time(h1, m1)
+        self.window_end_time = time(h2, m2)
+
+        # 🔥 RESET WINDOW STATE
+        for row in self.symbol_data.values():
+            row["window_volume"] = 0
+            row["window_zscore"] = None
+            row["window_alert_hit"] = False
+
+        self.window_alerted_today.clear()
+
+        self.add_log(f"TIME WINDOW SET: {start_str} → {end_str}")
 
     # ---------------- RESET ----------------
 
@@ -37,6 +80,7 @@ class Storage:
                 row["user_alert_hit"] = False
                 row["is_red_alert"] = False
                 row["window_zscore"] = None
+                row["last_status"] = None
             self._last_day = today
 
     # ---------------- REGISTRATION ----------------
@@ -63,6 +107,10 @@ class Storage:
     def update_tick(self, token, ttq):
         symbol = self.symbols.get(token)
         if not symbol:
+            return
+
+        # 🔥 IGNORE TICKS OUTSIDE USER TIME RANGE
+        if not self.in_selected_time_window():
             return
 
         row = self.symbol_data[symbol]
@@ -92,20 +140,15 @@ class Storage:
                 if a.id == alert_id:
                     alerts.remove(a)
 
-                    # 🔥 RESET SYMBOL ALERT STATE
                     row = self.symbol_data.get(symbol)
                     if row:
                         row["user_alert_hit"] = False
+                        row["status"] = "BELOW AVERAGES"
 
-                        # recompute status cleanly
-                        if row.get("window_alert_hit"):
-                            row["status"] = "SPIKE"
-                        else:
-                            row["status"] = "BELOW AVERAGES"
-                    
                     self.add_log(f"ALERT REMOVED: {symbol}")
                     return True
         return False
+
     # ---------------- LOGS ----------------
 
     def add_log(self, msg):
@@ -138,29 +181,22 @@ class Storage:
             if row.get("monthly_avg") and lv >= row["monthly_avg"]:
                 status_parts.append("ABOVE MONTHLY AVG")
 
-            # ALERT OVERRIDES
             if row.get("user_alert_hit"):
                 row["status"] = "ALERT"
-            # elif row.get("window_alert_hit"):
-            #     row["status"] = "SPIKE"
             elif status_parts:
                 row["status"] = " | ".join(status_parts)
             else:
                 row["status"] = "BELOW AVERAGES"
 
-
             prev = row.get("last_status")
             curr = row["status"]
 
-            # 🔥 LOG ONLY REAL TRANSITIONS
             if prev is not None and prev != curr:
-                self.add_log(
-                    f"[{symbol}]: {prev} → {curr}"
-                )
+                self.add_log(f"[{symbol}]: {prev} → {curr}")
 
             row["last_status"] = curr
 
-            # ================= VOLUME MOVEMENT (INTENSITY) =================
+            # ================= VOLUME MOVEMENT =================
             z = row.get("window_zscore")
 
             if z is None:
@@ -169,8 +205,6 @@ class Storage:
                 row["volume_intensity"] = "NORMAL"
             elif z < 2:
                 row["volume_intensity"] = "HIGH"
-            # else:
-            #     row["volume_intensity"] = "SPIKE"
 
             row["is_red_alert"] = bool(
                 row.get("window_alert_hit") or row.get("user_alert_hit")
