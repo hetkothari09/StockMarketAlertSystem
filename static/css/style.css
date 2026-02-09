@@ -199,10 +199,16 @@ tbody tr:hover {
 }
 
 /* ===== Logs ===== */
-#logs {
-    padding: 10px;
-}
+/* ===== SYSTEM LOGS (SCROLLABLE AREA) ===== */
 
+#logs {
+    max-height: 400px;        /* ✅ fixed log window height */
+    overflow-y: auto;         /* ✅ internal scroll */
+    padding: 10px;
+    font-size: 12px;
+    background: #020617;
+    border-bottom: 1px solid #1f2937;
+}
 .log {
     margin-bottom: 8px;
     padding: 6px;
@@ -424,6 +430,7 @@ tbody tr:hover {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    border: 1px solid #374151;
 }
 
 .user-alert {
@@ -553,4 +560,166 @@ tbody tr:hover {
 
 .alert-card:has(.alert-fired) {
     border-left: 4px solid #ef4444;
+}
+
+/* === ACTIVE ALERTS TABLE STYLE === */
+
+#user-alerts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Header row (optional but recommended) */
+.alert-header {
+    display: grid;
+    grid-template-columns: 70px 1fr 40px 30px;
+    padding: 6px 8px;
+    font-size: 11px;
+    color: #9ca3af;
+    border-bottom: 1px solid #1f2937;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Each alert row */
+.alert-row-box {
+    display: grid;
+    grid-template-columns: 70px 1fr 40px 30px;
+    align-items: center;
+    padding: 8px 8px;
+    background: #0b1220;
+    border: 1px solid #1f2937;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Hover feedback */
+.alert-row-box:hover {
+    background: #111827;
+    border-color: #374151;
+}
+
+/* Columns */
+.alert-col.symbol {
+    font-weight: 700;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+.alert-col.condition {
+    color: #9ca3af;
+    font-size: 11px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.alert-col.status {
+    text-align: center;
+    font-size: 13px;
+}
+
+.alert-col.action {
+    text-align: center;
+}
+
+/* Delete button */
+.alert-col.action button {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.alert-col.action button:hover {
+    color: #f87171;
+}
+
+/* === BOTTOM SYSTEM LOG CONSOLE === */
+
+/* Optional highlight for alerts */
+.log-body .alert-log {
+    color: #f87171;
+}
+
+/* ===== Alert Builder Panel (LEFT) ===== */
+.alert-builder-panel {
+    flex: 1;
+    max-width: 280px;
+    overflow: auto;
+}
+
+.market-panel {
+    flex: 3;
+}
+
+.logs-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== LOG SEVERITY COLORS ===== */
+
+.log-line {
+    padding: 3px 0;
+    white-space: nowrap;
+}
+
+.log-alert {
+    color: #f87171;
+    font-weight: 600;
+}
+
+
+.log-status {
+    color: #ffffff;
+}
+
+
+.log-info {
+    color: #93c5fd;
+}
+
+
+.log-default {
+    color: #9ca3af;
+}
+
+.log-alert {
+    border-left: 3px solid #ef4444;
+    padding-left: 6px;
+}
+
+.log-status {
+    border-left: 3px solid #facc15;
+    padding-left: 6px;
+}
+
+.log-info {
+    border-left: 3px solid #60a5fa;
+    padding-left: 6px;
+}
+
+/* ===== STATUS COLUMN COLORS ===== */
+
+.status-prev {
+    color: #facc15;        /* 🟡 Yellow */
+    font-weight: 700;
+}
+
+.status-weekly {
+    color: #fb923c;        /* 🟠 Orange */
+    font-weight: 700;
+}
+
+.status-critical {
+    color: #f87171;        /* 🔴 Red */
+    font-weight: 700;
+}
+
+.status-muted {
+    color: #9ca3af;        /* Muted gray */
+    font-size: 12px;
 }

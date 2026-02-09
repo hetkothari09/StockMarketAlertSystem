@@ -51,29 +51,39 @@ async function fetchActiveAlerts() {
         return;
     }
 
+    // 🔥 HEADER — ADD ONCE
+    const header = document.createElement("div");
+    header.className = "alert-header";
+    header.innerHTML = `
+        <div>Symbol</div>
+        <div>Condition</div>
+        <div>Status</div>
+        <div></div>
+    `;
+    box.appendChild(header);
+
+    // 🔥 ROWS — APPEND
     alerts.forEach(a => {
-        const div = document.createElement("div");
-        div.className = "alert-item";
+        const row = document.createElement("div");
+        row.className = "alert-row-box";
 
-        div.innerHTML = `
-            <div class="alert-card">
-                <div class="alert-left">
-                    <div class="alert-symbol">${a.symbol}</div>
-                    <div class="alert-condition">
-                        ${a.operator} ${a.right_type} ${a.right_value ?? ""}
-                    </div>
-                </div>
-
-                <div class="alert-right">
-                    ${a.triggered ? `<span class="alert-fired">🔥</span>` : ""}
-                    <button class="alert-remove" onclick="removeAlert('${a.id}')">✕</button>
-                </div>
+        row.innerHTML = `
+            <div class="alert-col symbol">${a.symbol}</div>
+            <div class="alert-col condition">
+                ${a.operator} ${a.right_type} ${a.right_value ?? ""}
+            </div>
+            <div class="alert-col status">
+                ${a.triggered ? "🔥" : ""}
+            </div>
+            <div class="alert-col action">
+                <button onclick="removeAlert('${a.id}')">✕</button>
             </div>
         `;
 
-        box.appendChild(div);
+        box.appendChild(row);
     });
 }
+
 async function removeAlert(id) {
     await fetch("/remove-alert", {
         method: "POST",
@@ -125,7 +135,7 @@ async function fetchMarketData() {
 
     data.forEach(row => {
         const tr = document.createElement("tr");
-
+        
         if (
             row.status === "ALERT" ||                       // 🔥 USER ALERT
             row.volume_intensity === "SPIKE" ||
@@ -189,7 +199,40 @@ async function fetchLogs() {
         const key = `${log.time}-${log.message}`;
 
         const div = document.createElement("div");
-        div.className = "log";
+        div.classList.add("log");
+
+        const msg = log.message.toUpperCase();
+
+        // 🔴 ALERT / SPIKE / INSTITUTIONAL
+        if (
+            msg.includes("ALERT") ||
+            msg.includes("SPIKE") ||
+            msg.includes("INSTITUTIONAL")
+        ) {
+            div.classList.add("log-alert");
+        }
+
+        // 🟡 STATUS CHANGES / ABOVE LEVELS
+        else if (
+            msg.includes("STATUS CHANGE") ||
+            msg.includes("ABOVE")
+        ) {
+            div.classList.add("log-status");
+        }
+
+        // 🔵 CREATION / REMOVAL / INFO
+        else if (
+            msg.includes("CREATED") ||
+            msg.includes("REMOVED")
+        ) {
+            div.classList.add("log-info");
+        }
+
+        // ⚪ DEFAULT
+        else {
+            div.classList.add("log-default");
+        }
+
         div.textContent = `[${log.time}] ${log.message}`;
         logBox.appendChild(div);
 

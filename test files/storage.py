@@ -7,25 +7,9 @@ class Storage:
         self.last_ttq = {}
         self.symbol_data = {}
         self.logs = []
-
         self.alerts = {}
         self.window_alerted_today = set()
         self._last_day = None
-
-    # ---------------- TIME ----------------
-
-    def minutes_since_open(self):
-        now = datetime.now()
-        window_start = now.replace(hour=15, minute=00, second=0, microsecond=0)
-        return max(1, int((now - window_start).total_seconds() / 60))
-
-    def window_minutes(self):
-        return 30
-
-    def in_window(self):
-        return True  # dev-safe
-
-    # ---------------- RESET ----------------
 
     def reset_if_new_day(self):
         today = datetime.now().date()
@@ -35,9 +19,35 @@ class Storage:
                 row["window_volume"] = 0
                 row["window_alert_hit"] = False
                 row["user_alert_hit"] = False
-                row["is_red_alert"] = False
                 row["window_zscore"] = None
             self._last_day = today
+
+    # ---------------- TIME ----------------
+
+    # def minutes_since_open(self):
+    #     now = datetime.now()
+    #     window_start = now.replace(hour=15, minute=00, second=0, microsecond=0)
+    #     return max(1, int((now - window_start).total_seconds() / 60))
+
+    # def window_minutes(self):
+    #     return 30
+
+    # def in_window(self):
+    #     return True  # dev-safe
+
+    # ---------------- RESET ----------------
+
+    # def reset_if_new_day(self):
+    #     today = datetime.now().date()
+    #     if self._last_day != today:
+    #         self.window_alerted_today.clear()
+    #         for row in self.symbol_data.values():
+    #             row["window_volume"] = 0
+    #             row["window_alert_hit"] = False
+    #             row["user_alert_hit"] = False
+    #             row["is_red_alert"] = False
+    #             row["window_zscore"] = None
+    #         self._last_day = today
 
     # ---------------- REGISTRATION ----------------
 
@@ -48,17 +58,13 @@ class Storage:
             "window_volume": 0,
             "window_alert_hit": False,
             "user_alert_hit": False,
-            "is_red_alert": False,
             "window_zscore": None,
-            "volume_intensity": "WAITING",
-            "status": "NORMAL",
-            "last_status": None,
+            "status": "BELOW AVERAGES",
+            "volume_intensity": "WAITING"
         })
 
     def set_historical_metrics(self, symbol, metrics):
         self.symbol_data.setdefault(symbol, {}).update(metrics)
-
-    # ---------------- TICKS ----------------
 
     def update_tick(self, token, ttq):
         symbol = self.symbols.get(token)
@@ -77,6 +83,16 @@ class Storage:
 
         row["live_volume"] = ttq
         row["window_volume"] += delta
+
+    def add_log(self, msg):
+        self.logs.append({
+            "time": datetime.now().strftime("%H:%M:%S"),
+            "message": msg
+        })
+        self.logs = self.logs[-300]
+
+    def get_logs(self):
+        return self.logs
 
     # ---------------- ALERTS ----------------
 
@@ -108,15 +124,15 @@ class Storage:
         return False
     # ---------------- LOGS ----------------
 
-    def add_log(self, msg):
-        self.logs.append({
-            "time": datetime.now().strftime("%H:%M:%S"),
-            "message": msg
-        })
-        self.logs = self.logs[-300:]
+    # def add_log(self, msg):
+    #     self.logs.append({
+    #         "time": datetime.now().strftime("%H:%M:%S"),
+    #         "message": msg
+    #     })
+    #     self.logs = self.logs[-300:]
 
-    def get_logs(self):
-        return self.logs
+    # def get_logs(self):
+    #     return self.logs
 
     # ---------------- UI DATA ----------------
 

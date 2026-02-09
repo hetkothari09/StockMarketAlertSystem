@@ -1,4 +1,8 @@
 import uuid
+from datetime import datetime, time
+
+SPIKE_THRESHOLD = 2.0
+
 
 class VolumeAlert:
     def __init__(self, symbol, operator, right_type, right_value=None):
@@ -51,41 +55,33 @@ class AlertEngine:
 
     # ---------------- WINDOW SPIKE ----------------
 
-    def evaluate_window_spike(self, symbol, row, storage):
-        if symbol in storage.window_alerted_today:
+    def evaluate_window_spike(self):
+        now = datetime.now().time()
+
+        # Only evaluate during market hours
+        if now < time(9, 15) or now > time(15, 30):
             return
 
-        mean = row.get("window_mean")
-        std = row.get("window_std")
-        p90 = row.get("window_p90")
-        vol = row.get("window_volume")
+        for symbol, row in self.storage.symbol_data.items():
+            actual = row.get("window_volume", 0)
+            mean = row.get("daily_mean")
+            std = row.get("daily_std")
 
-        if not mean or not std or std == 0:
-            return
+            if mean is None or std is None or std <= 0:
+                continue
 
-        elapsed = storage.minutes_since_open()
-        total_window = storage.window_minutes()
+            # 🔥 FULL-DAY COMPARISON
+            z = (actual - mean) / std
+            z = max(min(z, 5), -5)  # safety clamp
 
-        expected_volume = mean * (elapsed / total_window)
-        z_time = (vol - expected_volume) / std
+            row["window_zscore"] = z
 
-        row["window_zscore"] = round(z_time, 2)
-
-        if z_time < 1:
-            row["volume_intensity"] = "NORMAL"
-        elif z_time < 2:
-            row["volume_intensity"] = "HIGH"
-        else:
-            row["volume_intensity"] = "SPIKE"
-
-        if z_time >= 2.5 or vol >= p90 * (elapsed / total_window):
-            storage.window_alerted_today.add(symbol)
-            row["window_alert_hit"] = True
-
-            self.notifier.notify(
-                symbol,
-                f"UNUSUAL VOLUME | z={z_time:.2f} | vol={vol}"
-            )
+            if z >= SPIKE_THRESHOLD:
+                if not row.get("window_alert_hit"):
+                    row["window_alert_hit"] = True
+                    self.storage.add_log(
+                        f"ALERT [{symbol}]: EARLY DAY VOLUME SPIKE | z={round(z,2)} | vol={int(actual)}"
+                    )
 
     # ---------------- USER ALERTS ----------------
 
