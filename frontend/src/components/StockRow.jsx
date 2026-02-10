@@ -12,38 +12,28 @@ const StockRow = ({ stock, onClick }) => {
     const rowClass = isAlert ? "alert-row" : "";
 
     // Badge styling based on volume intensity
-    const badgeClass =
-        stock.volume_intensity === "SPIKE" ? "badge-spike" :
-            stock.volume_intensity === "HIGH" ? "badge-high" :
-                stock.volume_intensity === "WAITING" ? "badge-wait" :
-                    "badge-normal";
+    let badgeClass = "badge-normal";
+    if (stock.volume_intensity === "SPIKE") badgeClass = "badge-spike";
+    if (stock.volume_intensity === "HIGH") badgeClass = "badge-high";
+    if (stock.volume_intensity === "WAITING") badgeClass = "badge-wait";
 
     // Status text styling
-    const statusClass =
-        stock.status === "ALERT" || (stock.status && stock.status.startsWith("ABOVE"))
-            ? "status-strong"
-            : "status-muted";
+    const statusClass = (stock.status === "ALERT" || (stock.status && stock.status.startsWith("ABOVE")))
+        ? "status-strong"
+        : "status-muted";
 
     return (
-        <tr className={rowClass} onClick={onClick}>
+        <tr className={isAlert ? "alert-row" : ""} onClick={() => onClick(stock.symbol)}>
             <td>{stock.symbol}</td>
-
-            {/* Live Volume */}
             <td className="live-vol">{format(stock.live_volume)}</td>
-
-            {/* Averages */}
             <td className="avg">{format(stock.prev_day)}</td>
             <td className="avg">{format(stock.weekly_avg)}</td>
             <td className="avg">{format(stock.monthly_avg)}</td>
-
-            {/* Volume Movement Badge */}
             <td>
                 <span className={`badge ${badgeClass}`}>
                     {stock.volume_intensity}
                 </span>
             </td>
-
-            {/* Status Text */}
             <td className={statusClass}>
                 {stock.status}
             </td>

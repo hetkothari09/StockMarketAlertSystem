@@ -3,20 +3,20 @@ import useMarketData from '../hooks/useMarketData';
 import StockRow from './StockRow';
 import { getRowPriority } from '../utils/helpers';
 
-const MarketTable = ({ onStockClick }) => {
-    const marketData = useMarketData();
-
+const MarketTable = ({ marketData, hiddenSymbols, onStockClick }) => {
     const sortedData = useMemo(() => {
-        return [...marketData].sort((a, b) => {
-            const pa = getRowPriority(a);
-            const pb = getRowPriority(b);
+        return marketData
+            .filter(stock => !hiddenSymbols.has(stock.symbol))
+            .sort((a, b) => {
+                const pa = getRowPriority(a);
+                const pb = getRowPriority(b);
 
-            if (pa !== pb) return pb - pa;  // higher priority first
+                if (pa !== pb) return pb - pa;  // higher priority first
 
-            // Secondary sort by live volume
-            return (b.live_volume || 0) - (a.live_volume || 0);
-        });
-    }, [marketData]);
+                // Secondary sort by live volume
+                return (b.live_volume || 0) - (a.live_volume || 0);
+            });
+    }, [marketData, hiddenSymbols]);
 
     return (
         <div className="panel market-panel">

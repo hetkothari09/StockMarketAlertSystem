@@ -20,6 +20,13 @@ class Storage:
         self.window_alerted_today = set()
         self._last_day = None
 
+        # 🔥 ALERT SETTINGS (Toggles)
+        self.alert_settings = {
+            "above_prev_day": True,
+            "above_weekly_avg": True,
+            "above_monthly_avg": True
+        }
+
     # ---------------- HISTORY ----------------
 
     def record_volume(self, symbol, volume, timestamp=None):
@@ -170,22 +177,28 @@ class Storage:
         if not symbol:
             return
 
-        # 🔥 IGNORE TICKS OUTSIDE USER TIME RANGE
-        if not self.in_selected_time_window():
-            return
-
         row = self.symbol_data[symbol]
 
         if ttq == 0:
-            prev = self.last_ttq.get(token, random.randint(1_000_000, 3_000_000))
-            ttq = prev + random.randint(20_000, 150_000)
+            prev_val = self.last_ttq.get(token, random.randint(1_000_000, 3_000_000))
+            ttq = prev_val + random.randint(20_000, 150_000)
 
         prev = self.last_ttq.get(token, 0)
         delta = max(ttq - prev, 0)
         self.last_ttq[token] = ttq
 
+        # live_volume always updates
         row["live_volume"] = ttq
-        row["window_volume"] += delta
+
+        # window_volume ONLY adds delta if we are currently inside the window
+        # (This ensures it freezes once the window ends)
+        now = datetime.now().time()
+        is_inside = True
+        if self.window_start_time and self.window_end_time:
+            is_inside = self.window_start_time <= now <= self.window_end_time
+            
+        if is_inside:
+            row["window_volume"] += delta
 
     # ---------------- ALERTS ----------------
 
@@ -200,13 +213,16 @@ class Storage:
             for a in list(alerts):
                 if a.id == alert_id:
                     alerts.remove(a)
-
+                    self.add_log(f"ALERT REMOVED: {symbol}")
+                    
+                    # Re-evaluate status immediately
                     row = self.symbol_data.get(symbol)
                     if row:
-                        row["user_alert_hit"] = False
-                        row["status"] = "BELOW AVERAGES"
-
-                    self.add_log(f"ALERT REMOVED: {symbol}")
+                        any_hit = any(alert.evaluate(row) for alert in alerts)
+                        if not any_hit:
+                            row["user_alert_hit"] = False
+                            if row.get("status") == "ALERT":
+                                row["status"] = "BELOW AVERAGES" # Reset to default
                     return True
         return False
 
@@ -233,13 +249,13 @@ class Storage:
             # ================= STATUS (RELATIVE LEVELS) =================
             status_parts = []
 
-            if row.get("prev_day") and lv >= row["prev_day"]:
+            if self.alert_settings.get("above_prev_day") and row.get("prev_day") and lv >= row["prev_day"]:
                 status_parts.append("ABOVE PREV DAY")
 
-            if row.get("weekly_avg") and lv >= row["weekly_avg"]:
+            if self.alert_settings.get("above_weekly_avg") and row.get("weekly_avg") and lv >= row["weekly_avg"]:
                 status_parts.append("ABOVE WEEKLY AVG")
 
-            if row.get("monthly_avg") and lv >= row["monthly_avg"]:
+            if self.alert_settings.get("above_monthly_avg") and row.get("monthly_avg") and lv >= row["monthly_avg"]:
                 status_parts.append("ABOVE MONTHLY AVG")
 
             if row.get("user_alert_hit"):

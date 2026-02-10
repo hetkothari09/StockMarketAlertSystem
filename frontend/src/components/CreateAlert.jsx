@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import useMarketData from '../hooks/useMarketData';
 import { addAlert } from '../api/alerts';
+import { useToast } from './ToastContext';
 
 const CreateAlert = () => {
     const marketData = useMarketData();
+    const { showToast } = useToast();
     const [symbol, setSymbol] = useState("");
     const [operator, setOperator] = useState(">");
     const [rightType, setRightType] = useState("FIXED");
@@ -28,7 +30,7 @@ const CreateAlert = () => {
 
         await addAlert(payload);
         setRightValue(""); // Clear value
-        alert(`Alert created for ${symbol}`);
+        showToast(`Alert created for ${symbol}`, 'success');
     };
 
     return (

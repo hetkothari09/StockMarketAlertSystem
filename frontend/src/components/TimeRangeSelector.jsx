@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { setTimeRange } from '../api/market';
+import { useToast } from './ToastContext';
 
 const TimeRangeSelector = () => {
     const [start, setStart] = useState("09:30");
     const [end, setEnd] = useState("16:00");
+    const { showToast } = useToast();
 
     const handleApply = async () => {
-        await setTimeRange(start, end);
-        alert(`Time range set: ${start} - ${end}`); // Basic feedback
+        try {
+            await setTimeRange(start, end);
+            showToast(`Time range updated: ${start} - ${end}`, 'success');
+        } catch (error) {
+            showToast("Failed to update time range", 'error');
+        }
     };
 
     return (

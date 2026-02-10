@@ -26,19 +26,20 @@ OUTPUT_FILE = os.path.join(
     "historical_volumes.json"
 )
 
-# ---- Your equity universe (NIFTY etc.) ----
-NIFTY_SYMBOLS = {
-    # "ADANIENT","ADANIPORTS","APOLLOHOSP","ASIANPAINT","AXISBANK",
-    # "BAJAJ-AUTO","BAJFINANCE","BAJAJFINSV","BEL","BHARTIARTL",
-    # "CIPLA","COALINDIA","DRREDDY","EICHERMOT","GRASIM","HCLTECH",
-    # "HDFCBANK","HDFCLIFE","HINDALCO","HINDUNILVR","ICICIBANK",
-    # "INFY","ITC","JIOFIN","JSWSTEEL","KOTAKBANK","LT","M&M",
-    # "MARUTI","NESTLEIND","NTPC","ONGC","POWERGRID","RELIANCE",
-    # "SBILIFE","SBIN","SHRIRAMFIN","SUNPHARMA","TCS","TATACONSUM",
-    # "TATAMOTORS","TATASTEEL","TECHM","TITAN","TRENT",
-    # "ULTRACEMCO","WIPRO"
-    "ETERNAL", "MAXHEALTH", "INDIGO"
-}
+# ---- Try to import from project config ----
+try:
+    from config import NIFTY50_STOCKS
+    NIFTY_SYMBOLS = {s["symbol"] for s in NIFTY50_STOCKS}
+except ImportError:
+    # Fallback if run standalone from scripts/
+    try:
+        import sys
+        sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+        from config import NIFTY50_STOCKS
+        NIFTY_SYMBOLS = {s["symbol"] for s in NIFTY50_STOCKS}
+    except Exception:
+        NIFTY_SYMBOLS = set() # Empty fallback
+
 
 # =====================================================
 # SAFE JSON HELPERS
@@ -129,6 +130,25 @@ def ingest_for_date(target_date, existing):
         return True
 
     return False
+
+def run_auto_ingest():
+    """
+    Called on startup. Tries to fetch bhavcopy for the last few business days
+    to ensure we have the most recent data.
+    """
+    print("🚀 Starting auto-ingestion of recent bhavcopy...")
+    existing = load_existing()
+    today = date.today()
+    
+    # Try last 5 days until we find a valid business day bhavcopy
+    for i in range(1, 6):
+        target_date = today - timedelta(days=i)
+        success = ingest_for_date(target_date, existing)
+        if success:
+            print(f"✅ Auto-ingest successful for {target_date}")
+            break
+    else:
+        print("ℹ️ Auto-ingest: No new bhavcopy data found (already up to date or holiday).")
 
 # =====================================================
 # BACKFILL CONTROLLER

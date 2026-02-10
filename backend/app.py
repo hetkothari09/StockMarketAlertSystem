@@ -13,6 +13,14 @@ storage = Storage()
 handler = MarketDataHandler(storage=storage)
 ws = MTWebSocketClient(market_handler=handler)
 
+from scripts.ingest_bhavcopy import run_auto_ingest
+
+# ---- Auto Ingest Latest Bhavcopy ----
+try:
+    run_auto_ingest()
+except Exception as e:
+    print(f"⚠️ Auto-ingest failed: {e}")
+
 # ---- Load historical data ----
 loader = HistoricalVolumeLoader("data/historical_volumes.json")
 hist = loader.load()
@@ -33,7 +41,12 @@ CORS(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return jsonify({
+        "status": "online",
+        "service": "VolAlert Backend API",
+        "version": "2.0.0",
+        "port": 7000
+    })
 
 @app.route("/logs")
 def logs():
@@ -140,6 +153,18 @@ def set_time_range():
 
     storage.set_time_range(start, end)
     return jsonify({"ok": True, "start": start, "end": end})
+
+@app.route("/alert-settings", methods=["GET", "POST"])
+def alert_settings():
+    if request.method == "POST":
+        data = request.json
+        storage.alert_settings["above_prev_day"] = data.get("above_prev_day", storage.alert_settings["above_prev_day"])
+        storage.alert_settings["above_weekly_avg"] = data.get("above_weekly_avg", storage.alert_settings["above_weekly_avg"])
+        storage.alert_settings["above_monthly_avg"] = data.get("above_monthly_avg", storage.alert_settings["above_monthly_avg"])
+        storage.add_log(f"ALERT SETTINGS UPDATED: {storage.alert_settings}")
+        return jsonify({"ok": True, "settings": storage.alert_settings})
+    
+    return jsonify(storage.alert_settings)
 
 @app.route("/data")
 def data():

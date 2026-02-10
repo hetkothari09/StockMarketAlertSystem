@@ -57,36 +57,37 @@ class AlertEngine:
 
     def evaluate_window_spike(self, symbol, row, storage):
         if symbol in storage.window_alerted_today:
-            # print(f"DEBUG: {symbol} already alerted")
-            return
-        if not storage.in_selected_time_window():
-            # print(f"DEBUG: {symbol} not in time window")
-            return
-        mean = row.get("window_mean")
-        std = row.get("window_std")
-        p90 = row.get("window_p90")
-        vol = row.get("window_volume")
-
-        # print(f"DEBUG: {symbol} mean={mean} std={std} vol={vol}")
-
-        if not mean or not std or std == 0:
-            print(f"DEBUG: {symbol} missing stats. Mean: {mean}, Std: {std}")
             return
 
-        # Calculate elapsed minutes within the user-defined window
         now = datetime.now().time()
         start = storage.window_start_time
+        end = storage.window_end_time
+
+        if not start or not end:
+            return
+
+        # If we haven't reached the start yet, show WAITING
+        if now < start:
+            row["volume_intensity"] = "WAITING"
+            return
+
+        # If we are past the end, clamp to the end of the window
+        calc_now = min(now, end) if now >= start else start
+        
         # Convert times to minutes from midnight for easier subtraction
-        now_minutes = now.hour * 60 + now.minute
+        now_minutes = calc_now.hour * 60 + calc_now.minute
         start_minutes = start.hour * 60 + start.minute
         elapsed_in_window = max(1, now_minutes - start_minutes)
 
-        # Full trading day is 375 minutes (9:15 to 15:30)
-        # TOTAL_TRADING_MINUTES = 375
-
-        # Get total window duration from storage (User selected duration)
         total_window = storage.window_minutes()
         if not total_window or total_window == 0:
+            return
+
+        mean = row.get("window_mean")
+        std = row.get("window_std")
+        vol = row.get("window_volume")
+
+        if not mean or not std or std == 0:
             return
 
         # Expected volume for this specific window duration
@@ -141,7 +142,18 @@ class AlertEngine:
         if not alerts:
             return
 
+        settings = storage.alert_settings
         for alert in alerts:
+            # Skip if the corresponding alert type is disabled globally
+            if alert.right_type == "PREV_DAY" and not settings.get("above_prev_day"):
+                continue
+            if alert.right_type == "WEEKLY_AVG" and not settings.get("above_weekly_avg"):
+                continue
+            if alert.right_type == "MONTHLY_AVG" and not settings.get("above_monthly_avg"):
+                continue
+            if alert.right_type == "MULTIPLIER_WEEKLY" and not settings.get("above_weekly_avg"):
+                continue
+
             if alert.should_trigger(row["live_volume"], row):
                 alert.mark_triggered()
                 row["user_alert_hit"] = True

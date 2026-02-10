@@ -60953,5 +60953,235 @@
     "symbol": "MAXHEALTH",
     "date": "2025-02-10",
     "volume": 3230751
+  },
+  {
+    "symbol": "ADANIENT",
+    "date": "2026-02-09",
+    "volume": 1650899
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "date": "2026-02-09",
+    "volume": 1761025
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "date": "2026-02-09",
+    "volume": 412161
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "date": "2026-02-09",
+    "volume": 669839
+  },
+  {
+    "symbol": "AXISBANK",
+    "date": "2026-02-09",
+    "volume": 4077536
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "date": "2026-02-09",
+    "volume": 171033
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "date": "2026-02-09",
+    "volume": 4852548
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "date": "2026-02-09",
+    "volume": 431032
+  },
+  {
+    "symbol": "BEL",
+    "date": "2026-02-09",
+    "volume": 12162696
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "date": "2026-02-09",
+    "volume": 7570161
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-09",
+    "volume": 1936551
+  },
+  {
+    "symbol": "COALINDIA",
+    "date": "2026-02-09",
+    "volume": 4512635
+  },
+  {
+    "symbol": "DRREDDY",
+    "date": "2026-02-09",
+    "volume": 2111316
+  },
+  {
+    "symbol": "EICHERMOT",
+    "date": "2026-02-09",
+    "volume": 314215
+  },
+  {
+    "symbol": "GRASIM",
+    "date": "2026-02-09",
+    "volume": 681768
+  },
+  {
+    "symbol": "HCLTECH",
+    "date": "2026-02-09",
+    "volume": 1863558
+  },
+  {
+    "symbol": "HDFCBANK",
+    "date": "2026-02-09",
+    "volume": 23947829
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "date": "2026-02-09",
+    "volume": 4093084
+  },
+  {
+    "symbol": "HINDALCO",
+    "date": "2026-02-09",
+    "volume": 5294536
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "date": "2026-02-09",
+    "volume": 958484
+  },
+  {
+    "symbol": "ICICIBANK",
+    "date": "2026-02-09",
+    "volume": 7889742
+  },
+  {
+    "symbol": "INFY",
+    "date": "2026-02-09",
+    "volume": 8294615
+  },
+  {
+    "symbol": "ITC",
+    "date": "2026-02-09",
+    "volume": 20059198
+  },
+  {
+    "symbol": "JIOFIN",
+    "date": "2026-02-09",
+    "volume": 8211716
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "date": "2026-02-09",
+    "volume": 1503210
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "date": "2026-02-09",
+    "volume": 22538542
+  },
+  {
+    "symbol": "LT",
+    "date": "2026-02-09",
+    "volume": 1830267
+  },
+  {
+    "symbol": "M&M",
+    "date": "2026-02-09",
+    "volume": 1294690
+  },
+  {
+    "symbol": "MARUTI",
+    "date": "2026-02-09",
+    "volume": 200034
+  },
+  {
+    "symbol": "NESTLEIND",
+    "date": "2026-02-09",
+    "volume": 746303
+  },
+  {
+    "symbol": "NTPC",
+    "date": "2026-02-09",
+    "volume": 7983235
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-09",
+    "volume": 10824044
+  },
+  {
+    "symbol": "POWERGRID",
+    "date": "2026-02-09",
+    "volume": 13114576
+  },
+  {
+    "symbol": "RELIANCE",
+    "date": "2026-02-09",
+    "volume": 5775864
+  },
+  {
+    "symbol": "SBILIFE",
+    "date": "2026-02-09",
+    "volume": 1266623
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "date": "2026-02-09",
+    "volume": 8667620
+  },
+  {
+    "symbol": "SBIN",
+    "date": "2026-02-09",
+    "volume": 40852966
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "date": "2026-02-09",
+    "volume": 2647031
+  },
+  {
+    "symbol": "TCS",
+    "date": "2026-02-09",
+    "volume": 2380318
+  },
+  {
+    "symbol": "TATACONSUM",
+    "date": "2026-02-09",
+    "volume": 1105510
+  },
+  {
+    "symbol": "TATASTEEL",
+    "date": "2026-02-09",
+    "volume": 68967709
+  },
+  {
+    "symbol": "TECHM",
+    "date": "2026-02-09",
+    "volume": 933821
+  },
+  {
+    "symbol": "TITAN",
+    "date": "2026-02-09",
+    "volume": 1092387
+  },
+  {
+    "symbol": "TRENT",
+    "date": "2026-02-09",
+    "volume": 995086
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "date": "2026-02-09",
+    "volume": 235298
+  },
+  {
+    "symbol": "WIPRO",
+    "date": "2026-02-09",
+    "volume": 9112474
   }
 ]
