@@ -126,14 +126,18 @@ class AlertEngine:
 
         # print(f"DEBUG: {symbol} z={z_time:.2f} intensity={row['volume_intensity']}")
 
-        if z_time >= 2.0: # Trigger alert on significant spikes
-            storage.window_alerted_today.add(symbol)
+        # Trigger the alert state but only notify if we are inside the window
+        if z_time >= 2.0:
             row["window_alert_hit"] = True
-
-            self.notifier.notify(
-                symbol,
-                f"UNUSUAL VOLUME | z={z_time:.2f} | vol={vol:,.0f}"
-            )
+            
+            # 🔥 ONLY notify if we are actually currently inside the window (live monitoring)
+            # This prevents "past alerts" from spamming when settings are applied at 15:41 PM
+            if now <= end and symbol not in storage.window_alerted_today:
+                storage.window_alerted_today.add(symbol)
+                self.notifier.notify(
+                    symbol,
+                    f"UNUSUAL VOLUME | z={z_time:.2f} | vol={vol:,.0f}"
+                )
 
     # ---------------- USER ALERTS ----------------
 

@@ -123,8 +123,8 @@ input:checked+.slider:before {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 200px;
-  max-height: 400px;
+  min-height: 150px;
+  max-height: 300px;
 }
 
 .filter-controls {
@@ -316,6 +316,14 @@ body {
   flex-direction: column;
   gap: 12px;
   height: 100%;
+  overflow-y: auto;
+  padding-right: 4px;
+  /* Space for scrollbar */
+}
+
+/* Hide scrollbar for sidebar unless needed */
+.side-panel::-webkit-scrollbar {
+  width: 4px;
 }
 
 .sidebar-panel,
@@ -342,6 +350,14 @@ body {
 .active-alerts-panel-container {
   flex: 1;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  /* Constrain list height */
+}
+
+.alert-toggles-container {
+  flex: 0 0 auto;
 }
 
 /* Right column logging */
@@ -554,10 +570,16 @@ tr:hover {
 }
 
 /* ===== Components: Active Alerts ===== */
+.active-alerts-panel {
+  flex: 1;
+  min-height: 0;
+}
+
 .active-alerts-list {
   padding: 12px;
   overflow-y: auto;
   flex: 1;
+  min-height: 0;
 }
 
 .alert-item {
