@@ -287,16 +287,21 @@ tr:hover {
 }
 
 .system-logs-panel {
-  flex: 1.5;
+  flex: 1;
+  min-height: 200px;
 }
 
 .create-alert-panel {
   flex: 0 0 auto;
+  min-height: 300px;
+  max-height: 60%;
+  overflow-y: auto;
 }
 
 .active-alerts-panel {
   flex: 1;
-  max-height: 400px;
+  min-height: 150px;
+  overflow-y: auto;
 }
 
 .logs-content {
@@ -337,10 +342,10 @@ tr:hover {
 
 /* Form Controls */
 .alert-form-grid {
-  padding: 24px;
+  padding: 12px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: 0.5fr 0.5fr;
+  gap: 10px;
 }
 
 .col-span-2 {

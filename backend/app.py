@@ -145,9 +145,21 @@ def set_time_range():
 def data():
     return jsonify(storage.get_all_volumes())
 
+@app.route("/verify-window")
+def verify_window():
+    import datetime
+    now = datetime.datetime.now().time()
+    return jsonify({
+        "current_server_time": str(now),
+        "window_start": str(storage.window_start_time),
+        "window_end": str(storage.window_end_time),
+        "in_window": storage.in_selected_time_window(),
+        "sample_stock": list(storage.symbol_data.items())[0] if storage.symbol_data else "NO DATA"
+    })
+
 def start_ws():
     ws.connect_ws()
 
 if __name__ == "__main__":
     threading.Thread(target=start_ws, daemon=True).start()
-    app.run(debug=False)
+    app.run(debug=False, port=7000)

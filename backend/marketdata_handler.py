@@ -14,10 +14,12 @@ class MarketDataHandler:
         self.storage.reset_if_new_day()
         self.storage.update_tick(token, ttq)
 
+        # 🕒 Record history for minute-level tracking
         symbol = self.storage.symbols.get(token)
-        if not symbol:
-            return
+        if symbol:
+            self.storage.record_volume(symbol, ttq)
 
+        # Trigger alert evaluation
         row = self.storage.symbol_data.get(symbol)
         if not row:
             return
