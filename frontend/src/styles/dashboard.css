@@ -51,10 +51,14 @@
 .toggle-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 14px;
+  gap: 8px;
+  /* Reduced gap */
+  font-size: 13px;
+  /* Reduced font size */
   color: var(--text-primary);
   cursor: pointer;
+  padding: 4px 0;
+  /* Added compact padding */
   transition: color 0.2s ease;
 }
 
@@ -356,8 +360,16 @@ body {
   /* Constrain list height */
 }
 
-.alert-toggles-container {
+.side-panel-row {
+  display: flex;
+  gap: 12px;
   flex: 0 0 auto;
+}
+
+.intensity-filters-container,
+.alert-toggles-container {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Right column logging */
@@ -375,7 +387,8 @@ body {
 
 /* ===== Panel Headers ===== */
 .panel-header {
-  padding: 12px 16px;
+  padding: 8px 12px;
+  /* Reduced padding */
   background-color: var(--bg-header);
   border-bottom: 1px solid var(--border-subtle);
   font-size: 12px;
@@ -411,7 +424,7 @@ thead {
 th {
   padding: 12px 16px;
   /* Increased padding */
-  text-align: right;
+  text-align: center;
   font-size: 13px;
   /* Increased from 11px */
   color: var(--text-secondary);
@@ -433,7 +446,7 @@ td {
   font-family: var(--font-data);
   font-size: 15px;
   /* Increased from 13px */
-  text-align: right;
+  text-align: center;
   color: var(--text-active);
   vertical-align: middle;
   transition: background-color 0.1s ease;

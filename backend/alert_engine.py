@@ -122,7 +122,7 @@ class AlertEngine:
         elif z_time < 1.5:
             row["volume_intensity"] = "HIGH"
         else:
-            row["volume_intensity"] = "SPIKE"
+            row["volume_intensity"] = "VERY HIGH"
 
         # print(f"DEBUG: {symbol} z={z_time:.2f} intensity={row['volume_intensity']}")
 

@@ -14,7 +14,10 @@ with open(out_file, 'rb') as f:
     data = json.load(f)
 
 for contract in data:
-    symbol = contract['s']
+    symbol = contract['s'].strip().upper()
+    # Filter out TATAMOTORS and any variations like TATAMOTORS-EQ
+    if "TATAMOTORS" in symbol:
+        continue
     token = contract['t']
     NIFTY50_STOCKS.append({"symbol": symbol, "token": token, "exchange": "NSECM"})
 

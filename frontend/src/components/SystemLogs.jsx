@@ -7,7 +7,7 @@ const SystemLogs = () => {
 
     const getLogClass = (msg) => {
         const m = msg.toUpperCase();
-        if (m.includes("ALERT") || m.includes("SPIKE") || m.includes("INSTITUTIONAL")) return "log-alert";
+        if (m.includes("ALERT") || m.includes("VERY HIGH") || m.includes("INSTITUTIONAL")) return "log-alert";
         if (m.includes("STATUS CHANGE") || m.includes("ABOVE")) return "log-status";
         if (m.includes("CREATED") || m.includes("REMOVED")) return "log-info";
         return "log-default";

@@ -25,8 +25,11 @@ except Exception as e:
 loader = HistoricalVolumeLoader("data/historical_volumes.json")
 hist = loader.load()
 
+monitored_symbols = {s["symbol"].strip().upper() for s in NIFTY50_STOCKS}
 for symbol, metrics in hist.items():
-    storage.set_historical_metrics(symbol, metrics)
+    clean_sym = symbol.strip().upper()
+    if clean_sym in monitored_symbols:
+        storage.set_historical_metrics(clean_sym, metrics)
 
 for stock in NIFTY50_STOCKS:
     token = stock["token"]

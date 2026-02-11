@@ -9,7 +9,7 @@ export const getRowPriority = (row) => {
     if (row.status === "ALERT") return 4;
 
     // Institutional / volume anomalies
-    if (row.volume_intensity === "SPIKE") return 3;
+    if (row.volume_intensity === "VERY HIGH") return 3;
     if (row.volume_intensity === "HIGH") return 2;
 
     // Relative volume strength

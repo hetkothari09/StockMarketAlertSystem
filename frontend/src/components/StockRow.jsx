@@ -5,7 +5,7 @@ const StockRow = ({ stock, onClick }) => {
     // Determine if the row should be highlighted as an alert
     const isAlert =
         stock.status === "ALERT" ||
-        stock.volume_intensity === "SPIKE" ||
+        stock.volume_intensity === "VERY HIGH" ||
         stock.volume_intensity === "HIGH" ||
         (stock.status && stock.status.startsWith("ABOVE"));
 
@@ -13,7 +13,7 @@ const StockRow = ({ stock, onClick }) => {
 
     // Badge styling based on volume intensity
     let badgeClass = "badge-normal";
-    if (stock.volume_intensity === "SPIKE") badgeClass = "badge-spike";
+    if (stock.volume_intensity === "VERY HIGH") badgeClass = "badge-spike";
     if (stock.volume_intensity === "HIGH") badgeClass = "badge-high";
     if (stock.volume_intensity === "WAITING") badgeClass = "badge-wait";
 

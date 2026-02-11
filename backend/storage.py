@@ -218,7 +218,7 @@ class Storage:
                     # Re-evaluate status immediately
                     row = self.symbol_data.get(symbol)
                     if row:
-                        any_hit = any(alert.evaluate(row) for alert in alerts)
+                        any_hit = any(alert.triggered for alert in alerts)
                         if not any_hit:
                             row["user_alert_hit"] = False
                             if row.get("status") == "ALERT":

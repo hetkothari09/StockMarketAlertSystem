@@ -35,7 +35,7 @@ const AlertToggles = () => {
 
     return (
         <div className="panel alert-toggles-panel">
-            <h3 className="panel-header">Global Alert Toggles</h3>
+            <h3 className="panel-header">Alert Settings</h3>
             <div className="toggle-group">
                 <label className="toggle-item">
                     <div className="toggle-switch">
@@ -46,7 +46,7 @@ const AlertToggles = () => {
                         />
                         <span className="slider"></span>
                     </div>
-                    <span>Above Prev Day</span>
+                    <span>Prev Day</span>
                 </label>
 
                 <label className="toggle-item">
@@ -58,7 +58,7 @@ const AlertToggles = () => {
                         />
                         <span className="slider"></span>
                     </div>
-                    <span>Above Weekly Avg</span>
+                    <span>Weekly Avg</span>
                 </label>
 
                 <label className="toggle-item">
@@ -70,7 +70,7 @@ const AlertToggles = () => {
                         />
                         <span className="slider"></span>
                     </div>
-                    <span>Above Monthly Avg</span>
+                    <span>Monthly Avg</span>
                 </label>
             </div>
         </div>
