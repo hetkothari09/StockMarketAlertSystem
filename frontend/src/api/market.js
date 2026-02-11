@@ -23,5 +23,15 @@ export async function updateAlertSettings(settings) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(settings)
     });
+    const data = await res.json();
+    return data;
+}
+
+export async function addStock(symbol, days = 30) {
+    const res = await fetch("http://localhost:7000/add-stock", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ symbol, days })
+    });
     return res.json();
 }

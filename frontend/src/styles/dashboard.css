@@ -38,27 +38,24 @@
 
 /* ===== Alert Toggles ===== */
 .alert-toggles-container {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .toggle-group {
-  padding: 12px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .toggle-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  /* Reduced gap */
-  font-size: 13px;
-  /* Reduced font size */
+  gap: 6px;
+  font-size: 11px;
   color: var(--text-primary);
   cursor: pointer;
-  padding: 4px 0;
-  /* Added compact padding */
+  padding: 2px 0;
   transition: color 0.2s ease;
 }
 
@@ -70,8 +67,8 @@
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 20px;
+  width: 32px;
+  height: 16px;
 }
 
 .toggle-switch input {
@@ -96,9 +93,9 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 14px;
-  width: 14px;
-  left: 3px;
+  height: 12px;
+  width: 12px;
+  left: 2px;
   bottom: 2px;
   background-color: var(--text-secondary);
   transition: .4s;
@@ -111,7 +108,7 @@ input:checked+.slider {
 }
 
 input:checked+.slider:before {
-  transform: translateX(20px);
+  transform: translateX(16px);
   background-color: #fff;
 }
 
@@ -318,7 +315,7 @@ body {
   min-width: 350px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   height: 100%;
   overflow-y: auto;
   padding-right: 4px;
@@ -362,7 +359,7 @@ body {
 
 .side-panel-row {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex: 0 0 auto;
 }
 
@@ -387,7 +384,7 @@ body {
 
 /* ===== Panel Headers ===== */
 .panel-header {
-  padding: 8px 12px;
+  padding: 6px 12px;
   /* Reduced padding */
   background-color: var(--bg-header);
   border-bottom: 1px solid var(--border-subtle);
@@ -662,7 +659,7 @@ button.primary-btn {
   background-color: var(--color-info);
   color: white;
   border: none;
-  padding: 14px;
+  padding: 9px;
   /* Increased padding */
   border-radius: 4px;
   font-weight: 600;
@@ -787,4 +784,46 @@ button.primary-btn:hover {
 
 .toast-warning {
   border-left-color: var(--color-accent);
+}
+
+/* ===== Time Input Styling ===== */
+input[type="time"] {
+  background-color: var(--bg-input);
+  color: var(--text-active);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: var(--font-data);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="time"]:hover {
+  border-color: var(--color-info);
+}
+
+input[type="time"]:focus {
+  outline: none;
+  border-color: var(--color-info);
+  box-shadow: 0 0 0 2px rgba(56, 97, 251, 0.1);
+}
+
+/* Make clock icon visible */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Firefox time input styling */
+input[type="time"]::-moz-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.7;
+  cursor: pointer;
 }

@@ -50,11 +50,6 @@
     "volume": 7464725
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-04",
-    "volume": 1590247
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-04",
     "volume": 11476290
@@ -153,11 +148,6 @@
     "symbol": "NTPC",
     "date": "2026-02-04",
     "volume": 15515053
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-02-04",
-    "volume": 26628393
   },
   {
     "symbol": "POWERGRID",
@@ -280,11 +270,6 @@
     "volume": 6915795
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-03",
-    "volume": 2711571
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-03",
     "volume": 13955805
@@ -383,11 +368,6 @@
     "symbol": "NTPC",
     "date": "2026-02-03",
     "volume": 11559806
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-02-03",
-    "volume": 19213406
   },
   {
     "symbol": "POWERGRID",
@@ -510,11 +490,6 @@
     "volume": 5326225
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-02",
-    "volume": 1832963
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-02",
     "volume": 9618062
@@ -613,11 +588,6 @@
     "symbol": "NTPC",
     "date": "2026-02-02",
     "volume": 12622760
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-02-02",
-    "volume": 17015974
   },
   {
     "symbol": "POWERGRID",
@@ -740,11 +710,6 @@
     "volume": 2926225
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-01",
-    "volume": 1117982
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-01",
     "volume": 6197770
@@ -843,11 +808,6 @@
     "symbol": "NTPC",
     "date": "2026-02-01",
     "volume": 13976105
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-02-01",
-    "volume": 17179276
   },
   {
     "symbol": "POWERGRID",
@@ -970,11 +930,6 @@
     "volume": 7683747
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-30",
-    "volume": 2157826
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-30",
     "volume": 10191610
@@ -1073,11 +1028,6 @@
     "symbol": "NTPC",
     "date": "2026-01-30",
     "volume": 22641103
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-30",
-    "volume": 24420043
   },
   {
     "symbol": "POWERGRID",
@@ -1200,11 +1150,6 @@
     "volume": 6065044
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-29",
-    "volume": 2099306
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-29",
     "volume": 16915601
@@ -1303,11 +1248,6 @@
     "symbol": "NTPC",
     "date": "2026-01-29",
     "volume": 20624409
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-29",
-    "volume": 48267023
   },
   {
     "symbol": "POWERGRID",
@@ -1430,11 +1370,6 @@
     "volume": 9426909
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-28",
-    "volume": 1535898
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-28",
     "volume": 17496873
@@ -1533,11 +1468,6 @@
     "symbol": "NTPC",
     "date": "2026-01-28",
     "volume": 13566973
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-28",
-    "volume": 73427983
   },
   {
     "symbol": "POWERGRID",
@@ -1660,11 +1590,6 @@
     "volume": 10510891
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-27",
-    "volume": 4109525
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-27",
     "volume": 8749844
@@ -1763,11 +1688,6 @@
     "symbol": "NTPC",
     "date": "2026-01-27",
     "volume": 12203590
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-27",
-    "volume": 15915509
   },
   {
     "symbol": "POWERGRID",
@@ -1890,11 +1810,6 @@
     "volume": 4340925
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-23",
-    "volume": 6590032
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-23",
     "volume": 6520896
@@ -1993,11 +1908,6 @@
     "symbol": "NTPC",
     "date": "2026-01-23",
     "volume": 10084314
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-23",
-    "volume": 8080247
   },
   {
     "symbol": "POWERGRID",
@@ -2120,11 +2030,6 @@
     "volume": 6722567
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-22",
-    "volume": 1536604
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-22",
     "volume": 11497522
@@ -2223,11 +2128,6 @@
     "symbol": "NTPC",
     "date": "2026-01-22",
     "volume": 5885972
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-22",
-    "volume": 10746306
   },
   {
     "symbol": "POWERGRID",
@@ -2350,11 +2250,6 @@
     "volume": 7952295
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-21",
-    "volume": 2306655
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-21",
     "volume": 7312100
@@ -2453,11 +2348,6 @@
     "symbol": "NTPC",
     "date": "2026-01-21",
     "volume": 6948955
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-21",
-    "volume": 9610477
   },
   {
     "symbol": "POWERGRID",
@@ -2580,11 +2470,6 @@
     "volume": 6076838
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-20",
-    "volume": 2040403
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-20",
     "volume": 6768420
@@ -2683,11 +2568,6 @@
     "symbol": "NTPC",
     "date": "2026-01-20",
     "volume": 7718407
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-20",
-    "volume": 6496057
   },
   {
     "symbol": "POWERGRID",
@@ -2810,11 +2690,6 @@
     "volume": 4272071
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-19",
-    "volume": 1653550
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-19",
     "volume": 7105031
@@ -2913,11 +2788,6 @@
     "symbol": "NTPC",
     "date": "2026-01-19",
     "volume": 9974363
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-19",
-    "volume": 6459249
   },
   {
     "symbol": "POWERGRID",
@@ -3040,11 +2910,6 @@
     "volume": 7310676
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-16",
-    "volume": 4333315
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-16",
     "volume": 6410141
@@ -3143,11 +3008,6 @@
     "symbol": "NTPC",
     "date": "2026-01-16",
     "volume": 14275582
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-16",
-    "volume": 12287680
   },
   {
     "symbol": "POWERGRID",
@@ -3270,11 +3130,6 @@
     "volume": 4842964
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-14",
-    "volume": 1775529
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-14",
     "volume": 17125550
@@ -3373,11 +3228,6 @@
     "symbol": "NTPC",
     "date": "2026-01-14",
     "volume": 20389924
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-14",
-    "volume": 33094088
   },
   {
     "symbol": "POWERGRID",
@@ -3500,11 +3350,6 @@
     "volume": 7388496
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-13",
-    "volume": 1909873
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-13",
     "volume": 7104004
@@ -3603,11 +3448,6 @@
     "symbol": "NTPC",
     "date": "2026-01-13",
     "volume": 5583379
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-13",
-    "volume": 22527192
   },
   {
     "symbol": "POWERGRID",
@@ -3730,11 +3570,6 @@
     "volume": 4689135
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-12",
-    "volume": 2380033
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-12",
     "volume": 14407896
@@ -3833,11 +3668,6 @@
     "symbol": "NTPC",
     "date": "2026-01-12",
     "volume": 9406174
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-12",
-    "volume": 9807980
   },
   {
     "symbol": "POWERGRID",
@@ -3960,11 +3790,6 @@
     "volume": 4165409
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-09",
-    "volume": 1804271
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-09",
     "volume": 7306605
@@ -4063,11 +3888,6 @@
     "symbol": "NTPC",
     "date": "2026-01-09",
     "volume": 10161744
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-09",
-    "volume": 12706408
   },
   {
     "symbol": "POWERGRID",
@@ -4190,11 +4010,6 @@
     "volume": 5534929
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-08",
-    "volume": 2651011
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-08",
     "volume": 5991259
@@ -4293,11 +4108,6 @@
     "symbol": "NTPC",
     "date": "2026-01-08",
     "volume": 8805975
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-08",
-    "volume": 9218488
   },
   {
     "symbol": "POWERGRID",
@@ -4420,11 +4230,6 @@
     "volume": 4171371
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-07",
-    "volume": 5076416
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-07",
     "volume": 8920605
@@ -4523,11 +4328,6 @@
     "symbol": "NTPC",
     "date": "2026-01-07",
     "volume": 7165806
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-07",
-    "volume": 8253161
   },
   {
     "symbol": "POWERGRID",
@@ -4650,11 +4450,6 @@
     "volume": 9119265
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-06",
-    "volume": 1614326
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-06",
     "volume": 6308113
@@ -4753,11 +4548,6 @@
     "symbol": "NTPC",
     "date": "2026-01-06",
     "volume": 8641743
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-06",
-    "volume": 10840459
   },
   {
     "symbol": "POWERGRID",
@@ -4880,11 +4670,6 @@
     "volume": 2642580
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-05",
-    "volume": 1532549
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-05",
     "volume": 17258568
@@ -4983,11 +4768,6 @@
     "symbol": "NTPC",
     "date": "2026-01-05",
     "volume": 18248271
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-05",
-    "volume": 21201434
   },
   {
     "symbol": "POWERGRID",
@@ -5110,11 +4890,6 @@
     "volume": 2927138
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-02",
-    "volume": 964611
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-02",
     "volume": 35090129
@@ -5213,11 +4988,6 @@
     "symbol": "NTPC",
     "date": "2026-01-02",
     "volume": 23128940
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-02",
-    "volume": 5925943
   },
   {
     "symbol": "POWERGRID",
@@ -5340,11 +5110,6 @@
     "volume": 2097756
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-01-01",
-    "volume": 228078
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-01-01",
     "volume": 3161157
@@ -5443,11 +5208,6 @@
     "symbol": "NTPC",
     "date": "2026-01-01",
     "volume": 10357315
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-01-01",
-    "volume": 5840586
   },
   {
     "symbol": "POWERGRID",
@@ -5570,11 +5330,6 @@
     "volume": 2991434
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-31",
-    "volume": 883966
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-31",
     "volume": 4644679
@@ -5673,11 +5428,6 @@
     "symbol": "NTPC",
     "date": "2025-12-31",
     "volume": 8497983
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-31",
-    "volume": 11514802
   },
   {
     "symbol": "POWERGRID",
@@ -5800,11 +5550,6 @@
     "volume": 6983390
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-30",
-    "volume": 1993298
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-30",
     "volume": 4418163
@@ -5903,11 +5648,6 @@
     "symbol": "NTPC",
     "date": "2025-12-30",
     "volume": 8035909
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-30",
-    "volume": 6236729
   },
   {
     "symbol": "POWERGRID",
@@ -6030,11 +5770,6 @@
     "volume": 2371034
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-29",
-    "volume": 1077645
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-29",
     "volume": 6105510
@@ -6133,11 +5868,6 @@
     "symbol": "NTPC",
     "date": "2025-12-29",
     "volume": 14043845
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-29",
-    "volume": 12621499
   },
   {
     "symbol": "POWERGRID",
@@ -6260,11 +5990,6 @@
     "volume": 1297870
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-26",
-    "volume": 951555
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-26",
     "volume": 5435637
@@ -6363,11 +6088,6 @@
     "symbol": "NTPC",
     "date": "2025-12-26",
     "volume": 4174183
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-26",
-    "volume": 3710774
   },
   {
     "symbol": "POWERGRID",
@@ -6490,11 +6210,6 @@
     "volume": 3145464
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-24",
-    "volume": 1022767
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-24",
     "volume": 17624423
@@ -6593,11 +6308,6 @@
     "symbol": "NTPC",
     "date": "2025-12-24",
     "volume": 5678004
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-24",
-    "volume": 4114036
   },
   {
     "symbol": "POWERGRID",
@@ -6720,11 +6430,6 @@
     "volume": 4110853
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-23",
-    "volume": 826988
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-23",
     "volume": 18487395
@@ -6823,11 +6528,6 @@
     "symbol": "NTPC",
     "date": "2025-12-23",
     "volume": 6024641
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-23",
-    "volume": 5810236
   },
   {
     "symbol": "POWERGRID",
@@ -6950,11 +6650,6 @@
     "volume": 7670853
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-22",
-    "volume": 757496
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-22",
     "volume": 3112021
@@ -7053,11 +6748,6 @@
     "symbol": "NTPC",
     "date": "2025-12-22",
     "volume": 8925871
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-22",
-    "volume": 4614185
   },
   {
     "symbol": "POWERGRID",
@@ -7180,11 +6870,6 @@
     "volume": 10127415
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-19",
-    "volume": 769045
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-19",
     "volume": 3611941
@@ -7283,11 +6968,6 @@
     "symbol": "NTPC",
     "date": "2025-12-19",
     "volume": 10833662
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-19",
-    "volume": 5070902
   },
   {
     "symbol": "POWERGRID",
@@ -7410,11 +7090,6 @@
     "volume": 3760341
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-18",
-    "volume": 974170
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-18",
     "volume": 2379619
@@ -7513,11 +7188,6 @@
     "symbol": "NTPC",
     "date": "2025-12-18",
     "volume": 5554193
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-18",
-    "volume": 3964839
   },
   {
     "symbol": "POWERGRID",
@@ -7640,11 +7310,6 @@
     "volume": 6412516
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-17",
-    "volume": 1000116
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-17",
     "volume": 3651138
@@ -7743,11 +7408,6 @@
     "symbol": "NTPC",
     "date": "2025-12-17",
     "volume": 5043027
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-17",
-    "volume": 5848233
   },
   {
     "symbol": "POWERGRID",
@@ -7870,11 +7530,6 @@
     "volume": 5756692
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-16",
-    "volume": 789492
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-16",
     "volume": 5109787
@@ -7973,11 +7628,6 @@
     "symbol": "NTPC",
     "date": "2025-12-16",
     "volume": 5241263
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-16",
-    "volume": 7238404
   },
   {
     "symbol": "POWERGRID",
@@ -8100,11 +7750,6 @@
     "volume": 3233614
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-15",
-    "volume": 855508
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-15",
     "volume": 1870236
@@ -8203,11 +7848,6 @@
     "symbol": "NTPC",
     "date": "2025-12-15",
     "volume": 10219819
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-15",
-    "volume": 12334408
   },
   {
     "symbol": "POWERGRID",
@@ -8330,11 +7970,6 @@
     "volume": 2706420
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-12",
-    "volume": 1054050
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-12",
     "volume": 1410201
@@ -8433,11 +8068,6 @@
     "symbol": "NTPC",
     "date": "2025-12-12",
     "volume": 4261023
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-12",
-    "volume": 4252781
   },
   {
     "symbol": "POWERGRID",
@@ -8560,11 +8190,6 @@
     "volume": 3254850
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-11",
-    "volume": 606130
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-11",
     "volume": 2695140
@@ -8663,11 +8288,6 @@
     "symbol": "NTPC",
     "date": "2025-12-11",
     "volume": 6317942
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-11",
-    "volume": 8868641
   },
   {
     "symbol": "POWERGRID",
@@ -8790,11 +8410,6 @@
     "volume": 3987451
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-10",
-    "volume": 1316274
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-10",
     "volume": 4752336
@@ -8893,11 +8508,6 @@
     "symbol": "NTPC",
     "date": "2025-12-10",
     "volume": 5484712
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-10",
-    "volume": 3492031
   },
   {
     "symbol": "POWERGRID",
@@ -9020,11 +8630,6 @@
     "volume": 5139229
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-09",
-    "volume": 1646840
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-09",
     "volume": 4242651
@@ -9123,11 +8728,6 @@
     "symbol": "NTPC",
     "date": "2025-12-09",
     "volume": 7152584
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-09",
-    "volume": 9026401
   },
   {
     "symbol": "POWERGRID",
@@ -9250,11 +8850,6 @@
     "volume": 4327091
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-08",
-    "volume": 1263559
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-08",
     "volume": 3911363
@@ -9353,11 +8948,6 @@
     "symbol": "NTPC",
     "date": "2025-12-08",
     "volume": 7906928
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-08",
-    "volume": 5285903
   },
   {
     "symbol": "POWERGRID",
@@ -9480,11 +9070,6 @@
     "volume": 13870403
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-06",
-    "volume": 1457970
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-06",
     "volume": 4738027
@@ -9583,11 +9168,6 @@
     "symbol": "NTPC",
     "date": "2026-02-06",
     "volume": 7328789
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-02-06",
-    "volume": 10013728
   },
   {
     "symbol": "POWERGRID",
@@ -9710,11 +9290,6 @@
     "volume": 7708690
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-05",
-    "volume": 999810
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-05",
     "volume": 5252658
@@ -9813,11 +9388,6 @@
     "symbol": "NTPC",
     "date": "2026-02-05",
     "volume": 18789794
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-02-05",
-    "volume": 15268335
   },
   {
     "symbol": "POWERGRID",
@@ -9940,11 +9510,6 @@
     "volume": 2938290
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-05",
-    "volume": 813485
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-05",
     "volume": 3154258
@@ -10043,11 +9608,6 @@
     "symbol": "NTPC",
     "date": "2025-12-05",
     "volume": 6574010
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-05",
-    "volume": 7645591
   },
   {
     "symbol": "POWERGRID",
@@ -10170,11 +9730,6 @@
     "volume": 4611819
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-04",
-    "volume": 726473
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-04",
     "volume": 3135061
@@ -10273,11 +9828,6 @@
     "symbol": "NTPC",
     "date": "2025-12-04",
     "volume": 5965357
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-04",
-    "volume": 10825420
   },
   {
     "symbol": "POWERGRID",
@@ -10400,11 +9950,6 @@
     "volume": 4357641
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-03",
-    "volume": 1034323
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-03",
     "volume": 4650434
@@ -10503,11 +10048,6 @@
     "symbol": "NTPC",
     "date": "2025-12-03",
     "volume": 8546132
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-03",
-    "volume": 11829802
   },
   {
     "symbol": "POWERGRID",
@@ -10630,11 +10170,6 @@
     "volume": 6591396
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-02",
-    "volume": 1760512
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-02",
     "volume": 3695491
@@ -10733,11 +10268,6 @@
     "symbol": "NTPC",
     "date": "2025-12-02",
     "volume": 5806943
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-02",
-    "volume": 5413988
   },
   {
     "symbol": "POWERGRID",
@@ -10860,11 +10390,6 @@
     "volume": 5058900
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-12-01",
-    "volume": 1010599
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-12-01",
     "volume": 4217206
@@ -10963,11 +10488,6 @@
     "symbol": "NTPC",
     "date": "2025-12-01",
     "volume": 6936186
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-12-01",
-    "volume": 6307936
   },
   {
     "symbol": "POWERGRID",
@@ -11090,11 +10610,6 @@
     "volume": 6263457
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-28",
-    "volume": 991042
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-28",
     "volume": 4689402
@@ -11193,11 +10708,6 @@
     "symbol": "NTPC",
     "date": "2025-11-28",
     "volume": 8930988
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-28",
-    "volume": 3804191
   },
   {
     "symbol": "POWERGRID",
@@ -11320,11 +10830,6 @@
     "volume": 4444877
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-27",
-    "volume": 810411
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-27",
     "volume": 3330267
@@ -11423,11 +10928,6 @@
     "symbol": "NTPC",
     "date": "2025-11-27",
     "volume": 6755179
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-27",
-    "volume": 5600832
   },
   {
     "symbol": "POWERGRID",
@@ -11550,11 +11050,6 @@
     "volume": 43174047
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-26",
-    "volume": 1087736
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-26",
     "volume": 4102285
@@ -11653,11 +11148,6 @@
     "symbol": "NTPC",
     "date": "2025-11-26",
     "volume": 7101095
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-26",
-    "volume": 7232643
   },
   {
     "symbol": "POWERGRID",
@@ -11780,11 +11270,6 @@
     "volume": 7102592
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-25",
-    "volume": 908386
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-25",
     "volume": 4902920
@@ -11883,11 +11368,6 @@
     "symbol": "NTPC",
     "date": "2025-11-25",
     "volume": 8074651
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-25",
-    "volume": 8983620
   },
   {
     "symbol": "POWERGRID",
@@ -12010,11 +11490,6 @@
     "volume": 9686848
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-24",
-    "volume": 2801854
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-24",
     "volume": 5543493
@@ -12113,11 +11588,6 @@
     "symbol": "NTPC",
     "date": "2025-11-24",
     "volume": 13719726
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-24",
-    "volume": 15875282
   },
   {
     "symbol": "POWERGRID",
@@ -12240,11 +11710,6 @@
     "volume": 6720938
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-21",
-    "volume": 1126820
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-21",
     "volume": 3088629
@@ -12343,11 +11808,6 @@
     "symbol": "NTPC",
     "date": "2025-11-21",
     "volume": 6142545
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-21",
-    "volume": 7589240
   },
   {
     "symbol": "POWERGRID",
@@ -12470,11 +11930,6 @@
     "volume": 7452899
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-20",
-    "volume": 896750
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-20",
     "volume": 3971851
@@ -12573,11 +12028,6 @@
     "symbol": "NTPC",
     "date": "2025-11-20",
     "volume": 5155775
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-20",
-    "volume": 6918642
   },
   {
     "symbol": "POWERGRID",
@@ -12700,11 +12150,6 @@
     "volume": 7419461
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-19",
-    "volume": 1171078
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-19",
     "volume": 5332643
@@ -12803,11 +12248,6 @@
     "symbol": "NTPC",
     "date": "2025-11-19",
     "volume": 6935056
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-19",
-    "volume": 7075882
   },
   {
     "symbol": "POWERGRID",
@@ -12930,11 +12370,6 @@
     "volume": 10972556
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-18",
-    "volume": 747913
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-18",
     "volume": 4462641
@@ -13033,11 +12468,6 @@
     "symbol": "NTPC",
     "date": "2025-11-18",
     "volume": 6776200
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-18",
-    "volume": 7708871
   },
   {
     "symbol": "POWERGRID",
@@ -13160,11 +12590,6 @@
     "volume": 5998770
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-17",
-    "volume": 912322
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-17",
     "volume": 3847261
@@ -13263,11 +12688,6 @@
     "symbol": "NTPC",
     "date": "2025-11-17",
     "volume": 6283156
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-17",
-    "volume": 6281588
   },
   {
     "symbol": "POWERGRID",
@@ -13390,11 +12810,6 @@
     "volume": 6312655
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-14",
-    "volume": 810970
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-14",
     "volume": 3760163
@@ -13493,11 +12908,6 @@
     "symbol": "NTPC",
     "date": "2025-11-14",
     "volume": 9169855
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-14",
-    "volume": 9185042
   },
   {
     "symbol": "POWERGRID",
@@ -13620,11 +13030,6 @@
     "volume": 5958875
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-13",
-    "volume": 1217362
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-13",
     "volume": 3480764
@@ -13723,11 +13128,6 @@
     "symbol": "NTPC",
     "date": "2025-11-13",
     "volume": 7276001
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-13",
-    "volume": 13057927
   },
   {
     "symbol": "POWERGRID",
@@ -13850,11 +13250,6 @@
     "volume": 8210277
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-12",
-    "volume": 1179131
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-12",
     "volume": 4326520
@@ -13953,11 +13348,6 @@
     "symbol": "NTPC",
     "date": "2025-11-12",
     "volume": 6850550
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-12",
-    "volume": 11917811
   },
   {
     "symbol": "POWERGRID",
@@ -14080,11 +13470,6 @@
     "volume": 14825625
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-11",
-    "volume": 850772
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-11",
     "volume": 3299015
@@ -14183,11 +13568,6 @@
     "symbol": "NTPC",
     "date": "2025-11-11",
     "volume": 6103758
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-11",
-    "volume": 16183880
   },
   {
     "symbol": "POWERGRID",
@@ -14310,11 +13690,6 @@
     "volume": 7457061
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-10",
-    "volume": 1143959
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-10",
     "volume": 4451727
@@ -14413,11 +13788,6 @@
     "symbol": "NTPC",
     "date": "2025-11-10",
     "volume": 5246998
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-10",
-    "volume": 7418162
   },
   {
     "symbol": "POWERGRID",
@@ -14540,11 +13910,6 @@
     "volume": 70392750
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-07",
-    "volume": 1037508
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-07",
     "volume": 4650451
@@ -14643,11 +14008,6 @@
     "symbol": "NTPC",
     "date": "2025-11-07",
     "volume": 8578167
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-07",
-    "volume": 4449104
   },
   {
     "symbol": "POWERGRID",
@@ -14770,11 +14130,6 @@
     "volume": 9546299
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-06",
-    "volume": 1596245
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-06",
     "volume": 6648689
@@ -14873,11 +14228,6 @@
     "symbol": "NTPC",
     "date": "2025-11-06",
     "volume": 11587302
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-06",
-    "volume": 6987258
   },
   {
     "symbol": "POWERGRID",
@@ -15000,11 +14350,6 @@
     "volume": 12263078
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-04",
-    "volume": 1590643
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-04",
     "volume": 10536699
@@ -15103,11 +14448,6 @@
     "symbol": "NTPC",
     "date": "2025-11-04",
     "volume": 11887651
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-04",
-    "volume": 6006851
   },
   {
     "symbol": "POWERGRID",
@@ -15230,11 +14570,6 @@
     "volume": 2979629
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-11-03",
-    "volume": 1505905
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-11-03",
     "volume": 14152223
@@ -15333,11 +14668,6 @@
     "symbol": "NTPC",
     "date": "2025-11-03",
     "volume": 10242245
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-11-03",
-    "volume": 5450040
   },
   {
     "symbol": "POWERGRID",
@@ -15460,11 +14790,6 @@
     "volume": 4659723
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-31",
-    "volume": 3365093
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-31",
     "volume": 13103909
@@ -15563,11 +14888,6 @@
     "symbol": "NTPC",
     "date": "2025-10-31",
     "volume": 18651312
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-31",
-    "volume": 7199008
   },
   {
     "symbol": "POWERGRID",
@@ -15690,11 +15010,6 @@
     "volume": 4222189
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-30",
-    "volume": 4053965
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-30",
     "volume": 15154040
@@ -15793,11 +15108,6 @@
     "symbol": "NTPC",
     "date": "2025-10-30",
     "volume": 6721032
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-30",
-    "volume": 5266883
   },
   {
     "symbol": "POWERGRID",
@@ -15920,11 +15230,6 @@
     "volume": 2742750
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-29",
-    "volume": 898965
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-29",
     "volume": 26856509
@@ -16023,11 +15328,6 @@
     "symbol": "NTPC",
     "date": "2025-10-29",
     "volume": 15423201
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-29",
-    "volume": 8806213
   },
   {
     "symbol": "POWERGRID",
@@ -16150,11 +15450,6 @@
     "volume": 9891522
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-28",
-    "volume": 1489133
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-28",
     "volume": 7672258
@@ -16253,11 +15548,6 @@
     "symbol": "NTPC",
     "date": "2025-10-28",
     "volume": 13186584
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-28",
-    "volume": 8529692
   },
   {
     "symbol": "POWERGRID",
@@ -16380,11 +15670,6 @@
     "volume": 5796831
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-27",
-    "volume": 1213749
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-27",
     "volume": 5438773
@@ -16483,11 +15768,6 @@
     "symbol": "NTPC",
     "date": "2025-10-27",
     "volume": 6752390
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-27",
-    "volume": 7889080
   },
   {
     "symbol": "POWERGRID",
@@ -16610,11 +15890,6 @@
     "volume": 3236799
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-24",
-    "volume": 2941997
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-24",
     "volume": 4070949
@@ -16713,11 +15988,6 @@
     "symbol": "NTPC",
     "date": "2025-10-24",
     "volume": 7584711
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-24",
-    "volume": 17882209
   },
   {
     "symbol": "POWERGRID",
@@ -16840,11 +16110,6 @@
     "volume": 8790128
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-23",
-    "volume": 2150725
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-23",
     "volume": 4311356
@@ -16943,11 +16208,6 @@
     "symbol": "NTPC",
     "date": "2025-10-23",
     "volume": 8710859
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-23",
-    "volume": 13879042
   },
   {
     "symbol": "POWERGRID",
@@ -17075,11 +16335,6 @@
     "volume": 240850
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-21",
-    "volume": 709223
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-21",
     "volume": 678084
@@ -17178,11 +16433,6 @@
     "symbol": "NTPC",
     "date": "2025-10-21",
     "volume": 346988
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-21",
-    "volume": 569979
   },
   {
     "symbol": "POWERGRID",
@@ -17310,11 +16560,6 @@
     "volume": 7387180
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-20",
-    "volume": 3372906
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-20",
     "volume": 4007425
@@ -17413,11 +16658,6 @@
     "symbol": "NTPC",
     "date": "2025-10-20",
     "volume": 6896835
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-20",
-    "volume": 10920554
   },
   {
     "symbol": "POWERGRID",
@@ -17545,11 +16785,6 @@
     "volume": 6743801
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-17",
-    "volume": 1222051
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-17",
     "volume": 4093872
@@ -17648,11 +16883,6 @@
     "symbol": "NTPC",
     "date": "2025-10-17",
     "volume": 7032129
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-17",
-    "volume": 14250215
   },
   {
     "symbol": "POWERGRID",
@@ -17780,11 +17010,6 @@
     "volume": 3700674
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-16",
-    "volume": 989785
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-16",
     "volume": 3513302
@@ -17883,11 +17108,6 @@
     "symbol": "NTPC",
     "date": "2025-10-16",
     "volume": 6788416
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-16",
-    "volume": 6083826
   },
   {
     "symbol": "POWERGRID",
@@ -18015,11 +17235,6 @@
     "volume": 3447352
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-15",
-    "volume": 1638237
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-15",
     "volume": 6135157
@@ -18118,11 +17333,6 @@
     "symbol": "NTPC",
     "date": "2025-10-15",
     "volume": 8121744
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-15",
-    "volume": 8520238
   },
   {
     "symbol": "POWERGRID",
@@ -18250,11 +17460,6 @@
     "volume": 4454239
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-14",
-    "volume": 1056222
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-14",
     "volume": 4288494
@@ -18353,11 +17558,6 @@
     "symbol": "NTPC",
     "date": "2025-10-14",
     "volume": 7545848
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-14",
-    "volume": 13865005
   },
   {
     "symbol": "POWERGRID",
@@ -18485,11 +17685,6 @@
     "volume": 3672419
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-13",
-    "volume": 671620
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-13",
     "volume": 4750043
@@ -18588,11 +17783,6 @@
     "symbol": "NTPC",
     "date": "2025-10-13",
     "volume": 6663149
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-13",
-    "volume": 12607116
   },
   {
     "symbol": "POWERGRID",
@@ -18720,11 +17910,6 @@
     "volume": 2512581
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-10",
-    "volume": 1495524
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-10",
     "volume": 5061600
@@ -18823,11 +18008,6 @@
     "symbol": "NTPC",
     "date": "2025-10-10",
     "volume": 8970962
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-10",
-    "volume": 9050771
   },
   {
     "symbol": "POWERGRID",
@@ -18955,11 +18135,6 @@
     "volume": 3945737
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-09",
-    "volume": 878167
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-09",
     "volume": 4628511
@@ -19058,11 +18233,6 @@
     "symbol": "NTPC",
     "date": "2025-10-09",
     "volume": 6824759
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-09",
-    "volume": 9292031
   },
   {
     "symbol": "POWERGRID",
@@ -19190,11 +18360,6 @@
     "volume": 4957406
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-08",
-    "volume": 1068066
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-08",
     "volume": 3642904
@@ -19293,11 +18458,6 @@
     "symbol": "NTPC",
     "date": "2025-10-08",
     "volume": 13223442
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-08",
-    "volume": 5073558
   },
   {
     "symbol": "POWERGRID",
@@ -19425,11 +18585,6 @@
     "volume": 5713060
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-07",
-    "volume": 834623
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-07",
     "volume": 7895734
@@ -19528,11 +18683,6 @@
     "symbol": "NTPC",
     "date": "2025-10-07",
     "volume": 16130172
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-07",
-    "volume": 12498420
   },
   {
     "symbol": "POWERGRID",
@@ -19660,11 +18810,6 @@
     "volume": 2809218
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-06",
-    "volume": 772031
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-06",
     "volume": 7022052
@@ -19763,11 +18908,6 @@
     "symbol": "NTPC",
     "date": "2025-10-06",
     "volume": 8436245
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-06",
-    "volume": 9465503
   },
   {
     "symbol": "POWERGRID",
@@ -19895,11 +19035,6 @@
     "volume": 5828332
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-03",
-    "volume": 1070489
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-03",
     "volume": 7431240
@@ -19998,11 +19133,6 @@
     "symbol": "NTPC",
     "date": "2025-10-03",
     "volume": 8506827
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-03",
-    "volume": 10702610
   },
   {
     "symbol": "POWERGRID",
@@ -20130,11 +19260,6 @@
     "volume": 5675393
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-10-01",
-    "volume": 1000285
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-10-01",
     "volume": 4976933
@@ -20233,11 +19358,6 @@
     "symbol": "NTPC",
     "date": "2025-10-01",
     "volume": 6022078
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-10-01",
-    "volume": 10375310
   },
   {
     "symbol": "POWERGRID",
@@ -20365,11 +19485,6 @@
     "volume": 5945625
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-30",
-    "volume": 1040806
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-30",
     "volume": 5362610
@@ -20468,11 +19583,6 @@
     "symbol": "NTPC",
     "date": "2025-09-30",
     "volume": 8308029
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-30",
-    "volume": 7167687
   },
   {
     "symbol": "POWERGRID",
@@ -20600,11 +19710,6 @@
     "volume": 5072608
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-29",
-    "volume": 1778220
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-29",
     "volume": 6606409
@@ -20703,11 +19808,6 @@
     "symbol": "NTPC",
     "date": "2025-09-29",
     "volume": 16922231
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-29",
-    "volume": 10631271
   },
   {
     "symbol": "POWERGRID",
@@ -20835,11 +19935,6 @@
     "volume": 3239306
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-26",
-    "volume": 2653841
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-26",
     "volume": 4698693
@@ -20938,11 +20033,6 @@
     "symbol": "NTPC",
     "date": "2025-09-26",
     "volume": 6337702
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-26",
-    "volume": 6349466
   },
   {
     "symbol": "POWERGRID",
@@ -21070,11 +20160,6 @@
     "volume": 7133365
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-25",
-    "volume": 2502680
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-25",
     "volume": 4563970
@@ -21173,11 +20258,6 @@
     "symbol": "NTPC",
     "date": "2025-09-25",
     "volume": 13228081
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-25",
-    "volume": 10150654
   },
   {
     "symbol": "POWERGRID",
@@ -21305,11 +20385,6 @@
     "volume": 5237977
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-24",
-    "volume": 943785
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-24",
     "volume": 5139791
@@ -21408,11 +20483,6 @@
     "symbol": "NTPC",
     "date": "2025-09-24",
     "volume": 14653575
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-24",
-    "volume": 8299331
   },
   {
     "symbol": "POWERGRID",
@@ -21540,11 +20610,6 @@
     "volume": 4348633
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-23",
-    "volume": 1487350
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-23",
     "volume": 4720322
@@ -21643,11 +20708,6 @@
     "symbol": "NTPC",
     "date": "2025-09-23",
     "volume": 10738268
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-23",
-    "volume": 7014239
   },
   {
     "symbol": "POWERGRID",
@@ -21775,11 +20835,6 @@
     "volume": 4469137
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-22",
-    "volume": 1257495
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-22",
     "volume": 3399517
@@ -21878,11 +20933,6 @@
     "symbol": "NTPC",
     "date": "2025-09-22",
     "volume": 6966213
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-22",
-    "volume": 9962796
   },
   {
     "symbol": "POWERGRID",
@@ -22010,11 +21060,6 @@
     "volume": 11287603
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-19",
-    "volume": 1464121
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-19",
     "volume": 5272435
@@ -22115,11 +21160,6 @@
     "volume": 10646331
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-09-19",
-    "volume": 16484017
-  },
-  {
     "symbol": "POWERGRID",
     "date": "2025-09-19",
     "volume": 14993879
@@ -22198,11 +21238,6 @@
     "symbol": "TITAN",
     "date": "2025-09-18",
     "volume": 829442
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-18",
-    "volume": 6497852
   },
   {
     "symbol": "HDFCBANK",
@@ -22355,11 +21390,6 @@
     "volume": 3484116
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-18",
-    "volume": 874860
-  },
-  {
     "symbol": "EICHERMOT",
     "date": "2025-09-18",
     "volume": 224356
@@ -22480,11 +21510,6 @@
     "volume": 4234637
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-17",
-    "volume": 785651
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-17",
     "volume": 5970395
@@ -22583,11 +21608,6 @@
     "symbol": "NTPC",
     "date": "2025-09-17",
     "volume": 7936518
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-17",
-    "volume": 7628371
   },
   {
     "symbol": "POWERGRID",
@@ -22715,11 +21735,6 @@
     "volume": 5427586
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-16",
-    "volume": 471395
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-16",
     "volume": 2581384
@@ -22818,11 +21833,6 @@
     "symbol": "NTPC",
     "date": "2025-09-16",
     "volume": 8784889
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-16",
-    "volume": 7319921
   },
   {
     "symbol": "POWERGRID",
@@ -22950,11 +21960,6 @@
     "volume": 3553258
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-15",
-    "volume": 758979
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-15",
     "volume": 4618798
@@ -23053,11 +22058,6 @@
     "symbol": "NTPC",
     "date": "2025-09-15",
     "volume": 6566824
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-15",
-    "volume": 6153784
   },
   {
     "symbol": "POWERGRID",
@@ -23185,11 +22185,6 @@
     "volume": 3192824
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-12",
-    "volume": 785508
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-12",
     "volume": 4276055
@@ -23288,11 +22283,6 @@
     "symbol": "NTPC",
     "date": "2025-09-12",
     "volume": 5257048
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-12",
-    "volume": 6073522
   },
   {
     "symbol": "POWERGRID",
@@ -23420,11 +22410,6 @@
     "volume": 4718266
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-11",
-    "volume": 732911
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-11",
     "volume": 3442373
@@ -23523,11 +22508,6 @@
     "symbol": "NTPC",
     "date": "2025-09-11",
     "volume": 10309925
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-11",
-    "volume": 11047708
   },
   {
     "symbol": "POWERGRID",
@@ -23655,11 +22635,6 @@
     "volume": 3566139
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-10",
-    "volume": 718311
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-10",
     "volume": 4285507
@@ -23758,11 +22733,6 @@
     "symbol": "NTPC",
     "date": "2025-09-10",
     "volume": 6509477
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-10",
-    "volume": 11775053
   },
   {
     "symbol": "POWERGRID",
@@ -23890,11 +22860,6 @@
     "volume": 4517793
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-09",
-    "volume": 788242
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-09",
     "volume": 4376579
@@ -23993,11 +22958,6 @@
     "symbol": "NTPC",
     "date": "2025-09-09",
     "volume": 9735495
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-09",
-    "volume": 11665314
   },
   {
     "symbol": "POWERGRID",
@@ -24125,11 +23085,6 @@
     "volume": 2547552
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-08",
-    "volume": 588546
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-08",
     "volume": 4607020
@@ -24228,11 +23183,6 @@
     "symbol": "NTPC",
     "date": "2025-09-08",
     "volume": 5239184
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-08",
-    "volume": 8418326
   },
   {
     "symbol": "POWERGRID",
@@ -24360,11 +23310,6 @@
     "volume": 2620140
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-05",
-    "volume": 701865
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-05",
     "volume": 4535470
@@ -24463,11 +23408,6 @@
     "symbol": "NTPC",
     "date": "2025-09-05",
     "volume": 5678244
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-05",
-    "volume": 7210683
   },
   {
     "symbol": "POWERGRID",
@@ -24595,11 +23535,6 @@
     "volume": 5205333
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-04",
-    "volume": 614470
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-04",
     "volume": 5515006
@@ -24698,11 +23633,6 @@
     "symbol": "NTPC",
     "date": "2025-09-04",
     "volume": 7934237
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-04",
-    "volume": 8778730
   },
   {
     "symbol": "POWERGRID",
@@ -24830,11 +23760,6 @@
     "volume": 3803044
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-03",
-    "volume": 1160380
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-03",
     "volume": 8111851
@@ -24933,11 +23858,6 @@
     "symbol": "NTPC",
     "date": "2025-09-03",
     "volume": 10778333
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-03",
-    "volume": 4364007
   },
   {
     "symbol": "POWERGRID",
@@ -25065,11 +23985,6 @@
     "volume": 4423049
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-02",
-    "volume": 1161872
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-02",
     "volume": 7511709
@@ -25168,11 +24083,6 @@
     "symbol": "NTPC",
     "date": "2025-09-02",
     "volume": 9224639
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-02",
-    "volume": 5921193
   },
   {
     "symbol": "POWERGRID",
@@ -25300,11 +24210,6 @@
     "volume": 3421488
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-09-01",
-    "volume": 783524
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-09-01",
     "volume": 2829114
@@ -25403,11 +24308,6 @@
     "symbol": "NTPC",
     "date": "2025-09-01",
     "volume": 6897558
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-09-01",
-    "volume": 4366396
   },
   {
     "symbol": "POWERGRID",
@@ -25535,11 +24435,6 @@
     "volume": 4339042
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-29",
-    "volume": 1342344
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-29",
     "volume": 4578400
@@ -25638,11 +24533,6 @@
     "symbol": "NTPC",
     "date": "2025-08-29",
     "volume": 11813425
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-29",
-    "volume": 9928988
   },
   {
     "symbol": "POWERGRID",
@@ -25770,11 +24660,6 @@
     "volume": 5494113
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-28",
-    "volume": 1903230
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-28",
     "volume": 4372269
@@ -25873,11 +24758,6 @@
     "symbol": "NTPC",
     "date": "2025-08-28",
     "volume": 10486948
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-28",
-    "volume": 13870643
   },
   {
     "symbol": "POWERGRID",
@@ -26005,11 +24885,6 @@
     "volume": 5984656
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-26",
-    "volume": 2332380
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-26",
     "volume": 6381642
@@ -26108,11 +24983,6 @@
     "symbol": "NTPC",
     "date": "2025-08-26",
     "volume": 13113388
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-26",
-    "volume": 14671897
   },
   {
     "symbol": "POWERGRID",
@@ -26240,11 +25110,6 @@
     "volume": 2451388
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-25",
-    "volume": 1298471
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-25",
     "volume": 4349832
@@ -26343,11 +25208,6 @@
     "symbol": "NTPC",
     "date": "2025-08-25",
     "volume": 7142387
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-25",
-    "volume": 8854258
   },
   {
     "symbol": "POWERGRID",
@@ -26475,11 +25335,6 @@
     "volume": 3271920
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-22",
-    "volume": 1574526
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-22",
     "volume": 4699261
@@ -26578,11 +25433,6 @@
     "symbol": "NTPC",
     "date": "2025-08-22",
     "volume": 8534844
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-22",
-    "volume": 5423818
   },
   {
     "symbol": "POWERGRID",
@@ -26710,11 +25560,6 @@
     "volume": 3376913
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-21",
-    "volume": 1698280
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-21",
     "volume": 6212604
@@ -26813,11 +25658,6 @@
     "symbol": "NTPC",
     "date": "2025-08-21",
     "volume": 11135121
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-21",
-    "volume": 8111371
   },
   {
     "symbol": "POWERGRID",
@@ -26945,11 +25785,6 @@
     "volume": 6962619
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-20",
-    "volume": 936556
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-20",
     "volume": 4904231
@@ -27048,11 +25883,6 @@
     "symbol": "NTPC",
     "date": "2025-08-20",
     "volume": 10824544
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-20",
-    "volume": 7438061
   },
   {
     "symbol": "POWERGRID",
@@ -27180,11 +26010,6 @@
     "volume": 5706265
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-19",
-    "volume": 898746
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-19",
     "volume": 5219052
@@ -27283,11 +26108,6 @@
     "symbol": "NTPC",
     "date": "2025-08-19",
     "volume": 10316115
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-19",
-    "volume": 5538059
   },
   {
     "symbol": "POWERGRID",
@@ -27415,11 +26235,6 @@
     "volume": 7146376
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-18",
-    "volume": 1783835
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-18",
     "volume": 3520271
@@ -27518,11 +26333,6 @@
     "symbol": "NTPC",
     "date": "2025-08-18",
     "volume": 6511340
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-18",
-    "volume": 8501972
   },
   {
     "symbol": "POWERGRID",
@@ -27650,11 +26460,6 @@
     "volume": 3958631
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-14",
-    "volume": 2535958
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-14",
     "volume": 4034887
@@ -27753,11 +26558,6 @@
     "symbol": "NTPC",
     "date": "2025-08-14",
     "volume": 5689423
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-14",
-    "volume": 7258450
   },
   {
     "symbol": "POWERGRID",
@@ -27885,11 +26685,6 @@
     "volume": 6697206
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-13",
-    "volume": 1859765
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-13",
     "volume": 4216888
@@ -27988,11 +26783,6 @@
     "symbol": "NTPC",
     "date": "2025-08-13",
     "volume": 5417151
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-13",
-    "volume": 8501906
   },
   {
     "symbol": "POWERGRID",
@@ -28120,11 +26910,6 @@
     "volume": 4645011
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-12",
-    "volume": 910349
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-12",
     "volume": 4860757
@@ -28223,11 +27008,6 @@
     "symbol": "NTPC",
     "date": "2025-08-12",
     "volume": 7221182
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-12",
-    "volume": 7036778
   },
   {
     "symbol": "POWERGRID",
@@ -28355,11 +27135,6 @@
     "volume": 5266532
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-11",
-    "volume": 898160
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-11",
     "volume": 5740719
@@ -28458,11 +27233,6 @@
     "symbol": "NTPC",
     "date": "2025-08-11",
     "volume": 11993280
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-11",
-    "volume": 4699743
   },
   {
     "symbol": "POWERGRID",
@@ -28590,11 +27360,6 @@
     "volume": 93801105
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-08",
-    "volume": 920270
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-08",
     "volume": 4172600
@@ -28693,11 +27458,6 @@
     "symbol": "NTPC",
     "date": "2025-08-08",
     "volume": 11247218
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-08",
-    "volume": 5249568
   },
   {
     "symbol": "POWERGRID",
@@ -28825,11 +27585,6 @@
     "volume": 4268534
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-07",
-    "volume": 1882304
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-07",
     "volume": 3468573
@@ -28928,11 +27683,6 @@
     "symbol": "NTPC",
     "date": "2025-08-07",
     "volume": 8731389
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-07",
-    "volume": 5560413
   },
   {
     "symbol": "POWERGRID",
@@ -29060,11 +27810,6 @@
     "volume": 5461349
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-06",
-    "volume": 1157300
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-06",
     "volume": 5808208
@@ -29163,11 +27908,6 @@
     "symbol": "NTPC",
     "date": "2025-08-06",
     "volume": 13872826
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-06",
-    "volume": 7568954
   },
   {
     "symbol": "POWERGRID",
@@ -29295,11 +28035,6 @@
     "volume": 5167672
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-05",
-    "volume": 1156528
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-05",
     "volume": 6846687
@@ -29398,11 +28133,6 @@
     "symbol": "NTPC",
     "date": "2025-08-05",
     "volume": 9855535
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-05",
-    "volume": 9562689
   },
   {
     "symbol": "POWERGRID",
@@ -29530,11 +28260,6 @@
     "volume": 3074380
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-04",
-    "volume": 549494
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-04",
     "volume": 19756930
@@ -29633,11 +28358,6 @@
     "symbol": "NTPC",
     "date": "2025-08-04",
     "volume": 8193399
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-04",
-    "volume": 16174972
   },
   {
     "symbol": "POWERGRID",
@@ -29765,11 +28485,6 @@
     "volume": 5192594
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-08-01",
-    "volume": 2109707
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-08-01",
     "volume": 13769152
@@ -29868,11 +28583,6 @@
     "symbol": "NTPC",
     "date": "2025-08-01",
     "volume": 7107542
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-08-01",
-    "volume": 12629251
   },
   {
     "symbol": "POWERGRID",
@@ -30000,11 +28710,6 @@
     "volume": 4674966
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-31",
-    "volume": 2457841
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-31",
     "volume": 6461803
@@ -30103,11 +28808,6 @@
     "symbol": "NTPC",
     "date": "2025-07-31",
     "volume": 8935384
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-31",
-    "volume": 10254214
   },
   {
     "symbol": "POWERGRID",
@@ -30235,11 +28935,6 @@
     "volume": 5044683
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-30",
-    "volume": 1390012
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-30",
     "volume": 5107774
@@ -30338,11 +29033,6 @@
     "symbol": "NTPC",
     "date": "2025-07-30",
     "volume": 12537358
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-30",
-    "volume": 8767763
   },
   {
     "symbol": "POWERGRID",
@@ -30470,11 +29160,6 @@
     "volume": 3748040
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-29",
-    "volume": 1303888
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-29",
     "volume": 4872086
@@ -30573,11 +29258,6 @@
     "symbol": "NTPC",
     "date": "2025-07-29",
     "volume": 7551356
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-29",
-    "volume": 6157824
   },
   {
     "symbol": "POWERGRID",
@@ -30705,11 +29385,6 @@
     "volume": 3575044
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-28",
-    "volume": 3843168
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-28",
     "volume": 4521716
@@ -30808,11 +29483,6 @@
     "symbol": "NTPC",
     "date": "2025-07-28",
     "volume": 4605823
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-28",
-    "volume": 6865890
   },
   {
     "symbol": "POWERGRID",
@@ -30940,11 +29610,6 @@
     "volume": 3896884
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-25",
-    "volume": 5226395
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-25",
     "volume": 4616856
@@ -31043,11 +29708,6 @@
     "symbol": "NTPC",
     "date": "2025-07-25",
     "volume": 7790739
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-25",
-    "volume": 7427827
   },
   {
     "symbol": "POWERGRID",
@@ -31175,11 +29835,6 @@
     "volume": 4150685
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-24",
-    "volume": 1389152
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-24",
     "volume": 4022204
@@ -31278,11 +29933,6 @@
     "symbol": "NTPC",
     "date": "2025-07-24",
     "volume": 9098453
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-24",
-    "volume": 4590999
   },
   {
     "symbol": "POWERGRID",
@@ -31410,11 +30060,6 @@
     "volume": 5194282
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-23",
-    "volume": 1268156
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-23",
     "volume": 3670943
@@ -31513,11 +30158,6 @@
     "symbol": "NTPC",
     "date": "2025-07-23",
     "volume": 5058422
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-23",
-    "volume": 7357753
   },
   {
     "symbol": "POWERGRID",
@@ -31645,11 +30285,6 @@
     "volume": 4513541
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-22",
-    "volume": 1908949
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-22",
     "volume": 5043629
@@ -31748,11 +30383,6 @@
     "symbol": "NTPC",
     "date": "2025-07-22",
     "volume": 4728372
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-22",
-    "volume": 5869862
   },
   {
     "symbol": "POWERGRID",
@@ -31880,11 +30510,6 @@
     "volume": 5109654
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-21",
-    "volume": 1198993
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-21",
     "volume": 4396850
@@ -31983,11 +30608,6 @@
     "symbol": "NTPC",
     "date": "2025-07-21",
     "volume": 4463318
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-21",
-    "volume": 5424455
   },
   {
     "symbol": "POWERGRID",
@@ -32115,11 +30735,6 @@
     "volume": 4643961
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-18",
-    "volume": 1001794
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-18",
     "volume": 5172481
@@ -32218,11 +30833,6 @@
     "symbol": "NTPC",
     "date": "2025-07-18",
     "volume": 6370338
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-18",
-    "volume": 10293817
   },
   {
     "symbol": "POWERGRID",
@@ -32350,11 +30960,6 @@
     "volume": 6256455
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-17",
-    "volume": 1349535
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-17",
     "volume": 3749218
@@ -32453,11 +31058,6 @@
     "symbol": "NTPC",
     "date": "2025-07-17",
     "volume": 7562006
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-17",
-    "volume": 7006298
   },
   {
     "symbol": "POWERGRID",
@@ -32585,11 +31185,6 @@
     "volume": 4211258
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-16",
-    "volume": 1569604
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-16",
     "volume": 5205724
@@ -32688,11 +31283,6 @@
     "symbol": "NTPC",
     "date": "2025-07-16",
     "volume": 6001484
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-16",
-    "volume": 5656962
   },
   {
     "symbol": "POWERGRID",
@@ -32820,11 +31410,6 @@
     "volume": 4163140
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-15",
-    "volume": 1203850
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-15",
     "volume": 4586811
@@ -32923,11 +31508,6 @@
     "symbol": "NTPC",
     "date": "2025-07-15",
     "volume": 8450777
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-15",
-    "volume": 7843083
   },
   {
     "symbol": "POWERGRID",
@@ -33055,11 +31635,6 @@
     "volume": 5269381
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-14",
-    "volume": 1554680
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-14",
     "volume": 5109504
@@ -33158,11 +31733,6 @@
     "symbol": "NTPC",
     "date": "2025-07-14",
     "volume": 11516965
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-14",
-    "volume": 7568906
   },
   {
     "symbol": "POWERGRID",
@@ -33290,11 +31860,6 @@
     "volume": 13103980
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-11",
-    "volume": 920651
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-11",
     "volume": 4677164
@@ -33393,11 +31958,6 @@
     "symbol": "NTPC",
     "date": "2025-07-11",
     "volume": 17234194
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-11",
-    "volume": 5608382
   },
   {
     "symbol": "POWERGRID",
@@ -33525,11 +32085,6 @@
     "volume": 5695845
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-10",
-    "volume": 2178068
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-10",
     "volume": 4668066
@@ -33628,11 +32183,6 @@
     "symbol": "NTPC",
     "date": "2025-07-10",
     "volume": 6426072
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-10",
-    "volume": 8012201
   },
   {
     "symbol": "POWERGRID",
@@ -33760,11 +32310,6 @@
     "volume": 2937734
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-09",
-    "volume": 1364142
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-09",
     "volume": 4497121
@@ -33863,11 +32408,6 @@
     "symbol": "NTPC",
     "date": "2025-07-09",
     "volume": 9079872
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-09",
-    "volume": 9590680
   },
   {
     "symbol": "POWERGRID",
@@ -33995,11 +32535,6 @@
     "volume": 3624619
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-08",
-    "volume": 2197699
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-08",
     "volume": 5231160
@@ -34098,11 +32633,6 @@
     "symbol": "NTPC",
     "date": "2025-07-08",
     "volume": 12092302
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-08",
-    "volume": 7537067
   },
   {
     "symbol": "POWERGRID",
@@ -34230,11 +32760,6 @@
     "volume": 4165432
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-07",
-    "volume": 1061434
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-07",
     "volume": 2810768
@@ -34333,11 +32858,6 @@
     "symbol": "NTPC",
     "date": "2025-07-07",
     "volume": 9454556
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-07",
-    "volume": 9222263
   },
   {
     "symbol": "POWERGRID",
@@ -34465,11 +32985,6 @@
     "volume": 2178315
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-04",
-    "volume": 1118483
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-04",
     "volume": 3990767
@@ -34568,11 +33083,6 @@
     "symbol": "NTPC",
     "date": "2025-07-04",
     "volume": 5899185
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-04",
-    "volume": 7717259
   },
   {
     "symbol": "POWERGRID",
@@ -34700,11 +33210,6 @@
     "volume": 5558647
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-03",
-    "volume": 869963
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-03",
     "volume": 3851213
@@ -34803,11 +33308,6 @@
     "symbol": "NTPC",
     "date": "2025-07-03",
     "volume": 15786429
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-03",
-    "volume": 13891239
   },
   {
     "symbol": "POWERGRID",
@@ -34935,11 +33435,6 @@
     "volume": 6513288
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-02",
-    "volume": 1273704
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-02",
     "volume": 7752338
@@ -35038,11 +33533,6 @@
     "symbol": "NTPC",
     "date": "2025-07-02",
     "volume": 11326880
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-02",
-    "volume": 10419419
   },
   {
     "symbol": "POWERGRID",
@@ -35170,11 +33660,6 @@
     "volume": 3769165
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-07-01",
-    "volume": 1112637
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-07-01",
     "volume": 5997283
@@ -35273,11 +33758,6 @@
     "symbol": "NTPC",
     "date": "2025-07-01",
     "volume": 8903292
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-07-01",
-    "volume": 8470489
   },
   {
     "symbol": "POWERGRID",
@@ -35405,11 +33885,6 @@
     "volume": 5597484
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-30",
-    "volume": 1053681
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-30",
     "volume": 4870935
@@ -35508,11 +33983,6 @@
     "symbol": "NTPC",
     "date": "2025-06-30",
     "volume": 11858890
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-30",
-    "volume": 8783448
   },
   {
     "symbol": "POWERGRID",
@@ -35640,11 +34110,6 @@
     "volume": 6405854
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-27",
-    "volume": 1851991
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-27",
     "volume": 16253653
@@ -35743,11 +34208,6 @@
     "symbol": "NTPC",
     "date": "2025-06-27",
     "volume": 50845169
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-27",
-    "volume": 21691960
   },
   {
     "symbol": "POWERGRID",
@@ -35875,11 +34335,6 @@
     "volume": 9413241
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-26",
-    "volume": 1440423
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-26",
     "volume": 5569101
@@ -35978,11 +34433,6 @@
     "symbol": "NTPC",
     "date": "2025-06-26",
     "volume": 13754087
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-26",
-    "volume": 15769123
   },
   {
     "symbol": "POWERGRID",
@@ -36110,11 +34560,6 @@
     "volume": 4152765
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-25",
-    "volume": 1032762
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-25",
     "volume": 4672204
@@ -36213,11 +34658,6 @@
     "symbol": "NTPC",
     "date": "2025-06-25",
     "volume": 17963666
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-25",
-    "volume": 13056178
   },
   {
     "symbol": "POWERGRID",
@@ -36345,11 +34785,6 @@
     "volume": 6837210
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-24",
-    "volume": 1351552
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-24",
     "volume": 4606984
@@ -36448,11 +34883,6 @@
     "symbol": "NTPC",
     "date": "2025-06-24",
     "volume": 100814893
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-24",
-    "volume": 22215004
   },
   {
     "symbol": "POWERGRID",
@@ -36580,11 +35010,6 @@
     "volume": 2946463
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-23",
-    "volume": 657381
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-23",
     "volume": 3359491
@@ -36683,11 +35108,6 @@
     "symbol": "NTPC",
     "date": "2025-06-23",
     "volume": 8277787
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-23",
-    "volume": 16776881
   },
   {
     "symbol": "POWERGRID",
@@ -36815,11 +35235,6 @@
     "volume": 16228526
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-20",
-    "volume": 1917041
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-20",
     "volume": 6531957
@@ -36918,11 +35333,6 @@
     "symbol": "NTPC",
     "date": "2025-06-20",
     "volume": 16592862
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-20",
-    "volume": 15907673
   },
   {
     "symbol": "POWERGRID",
@@ -37050,11 +35460,6 @@
     "volume": 4712312
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-19",
-    "volume": 1124204
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-19",
     "volume": 4416367
@@ -37153,11 +35558,6 @@
     "symbol": "NTPC",
     "date": "2025-06-19",
     "volume": 11610604
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-19",
-    "volume": 10790997
   },
   {
     "symbol": "POWERGRID",
@@ -37285,11 +35685,6 @@
     "volume": 5069427
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-18",
-    "volume": 1075494
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-18",
     "volume": 4118145
@@ -37388,11 +35783,6 @@
     "symbol": "NTPC",
     "date": "2025-06-18",
     "volume": 17835507
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-18",
-    "volume": 12691905
   },
   {
     "symbol": "POWERGRID",
@@ -37520,11 +35910,6 @@
     "volume": 6561555
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-17",
-    "volume": 1334810
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-17",
     "volume": 3248476
@@ -37623,11 +36008,6 @@
     "symbol": "NTPC",
     "date": "2025-06-17",
     "volume": 6796992
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-17",
-    "volume": 18781097
   },
   {
     "symbol": "POWERGRID",
@@ -37755,11 +36135,6 @@
     "volume": 5722187
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-16",
-    "volume": 2679763
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-16",
     "volume": 3706240
@@ -37858,11 +36233,6 @@
     "symbol": "NTPC",
     "date": "2025-06-16",
     "volume": 8065112
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-16",
-    "volume": 41444122
   },
   {
     "symbol": "POWERGRID",
@@ -37990,11 +36360,6 @@
     "volume": 4613000
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-13",
-    "volume": 874315
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-13",
     "volume": 5253032
@@ -38093,11 +36458,6 @@
     "symbol": "NTPC",
     "date": "2025-06-13",
     "volume": 11711773
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-13",
-    "volume": 39320377
   },
   {
     "symbol": "POWERGRID",
@@ -38225,11 +36585,6 @@
     "volume": 7346031
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-12",
-    "volume": 1199034
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-12",
     "volume": 11262656
@@ -38328,11 +36683,6 @@
     "symbol": "NTPC",
     "date": "2025-06-12",
     "volume": 11881618
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-12",
-    "volume": 35613271
   },
   {
     "symbol": "POWERGRID",
@@ -38460,11 +36810,6 @@
     "volume": 8907265
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-11",
-    "volume": 1046396
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-11",
     "volume": 11946342
@@ -38563,11 +36908,6 @@
     "symbol": "NTPC",
     "date": "2025-06-11",
     "volume": 10807496
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-11",
-    "volume": 20842417
   },
   {
     "symbol": "POWERGRID",
@@ -38695,11 +37035,6 @@
     "volume": 7925901
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-10",
-    "volume": 929786
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-10",
     "volume": 6362912
@@ -38798,11 +37133,6 @@
     "symbol": "NTPC",
     "date": "2025-06-10",
     "volume": 12061248
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-10",
-    "volume": 7659657
   },
   {
     "symbol": "POWERGRID",
@@ -38930,11 +37260,6 @@
     "volume": 3649505
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-09",
-    "volume": 689631
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-09",
     "volume": 9626374
@@ -39033,11 +37358,6 @@
     "symbol": "NTPC",
     "date": "2025-06-09",
     "volume": 19416373
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-09",
-    "volume": 7719525
   },
   {
     "symbol": "POWERGRID",
@@ -39165,11 +37485,6 @@
     "volume": 4644174
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-06",
-    "volume": 861882
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-06",
     "volume": 7633919
@@ -39268,11 +37583,6 @@
     "symbol": "NTPC",
     "date": "2025-06-06",
     "volume": 11402511
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-06",
-    "volume": 5985346
   },
   {
     "symbol": "POWERGRID",
@@ -39400,11 +37710,6 @@
     "volume": 8999675
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-05",
-    "volume": 1570159
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-05",
     "volume": 6097293
@@ -39503,11 +37808,6 @@
     "symbol": "NTPC",
     "date": "2025-06-05",
     "volume": 16270360
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-05",
-    "volume": 8941808
   },
   {
     "symbol": "POWERGRID",
@@ -39635,11 +37935,6 @@
     "volume": 5892170
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-04",
-    "volume": 1297075
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-04",
     "volume": 3861957
@@ -39738,11 +38033,6 @@
     "symbol": "NTPC",
     "date": "2025-06-04",
     "volume": 15654279
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-04",
-    "volume": 6733580
   },
   {
     "symbol": "POWERGRID",
@@ -39870,11 +38160,6 @@
     "volume": 5596977
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-03",
-    "volume": 870331
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-03",
     "volume": 7360608
@@ -39973,11 +38258,6 @@
     "symbol": "NTPC",
     "date": "2025-06-03",
     "volume": 14081719
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-03",
-    "volume": 9515918
   },
   {
     "symbol": "POWERGRID",
@@ -40105,11 +38385,6 @@
     "volume": 3199499
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-06-02",
-    "volume": 962897
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-06-02",
     "volume": 6119571
@@ -40208,11 +38483,6 @@
     "symbol": "NTPC",
     "date": "2025-06-02",
     "volume": 29479727
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-06-02",
-    "volume": 6278145
   },
   {
     "symbol": "POWERGRID",
@@ -40340,11 +38610,6 @@
     "volume": 16712960
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-30",
-    "volume": 7040777
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-30",
     "volume": 6565658
@@ -40443,11 +38708,6 @@
     "symbol": "NTPC",
     "date": "2025-05-30",
     "volume": 19143010
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-30",
-    "volume": 10108840
   },
   {
     "symbol": "POWERGRID",
@@ -40575,11 +38835,6 @@
     "volume": 5786774
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-29",
-    "volume": 1384536
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-29",
     "volume": 7724668
@@ -40678,11 +38933,6 @@
     "symbol": "NTPC",
     "date": "2025-05-29",
     "volume": 15884093
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-29",
-    "volume": 12938112
   },
   {
     "symbol": "POWERGRID",
@@ -40810,11 +39060,6 @@
     "volume": 3713699
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-28",
-    "volume": 1090511
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-28",
     "volume": 6002200
@@ -40913,11 +39158,6 @@
     "symbol": "NTPC",
     "date": "2025-05-28",
     "volume": 10985957
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-28",
-    "volume": 7385958
   },
   {
     "symbol": "POWERGRID",
@@ -41045,11 +39285,6 @@
     "volume": 5847725
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-27",
-    "volume": 881728
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-27",
     "volume": 6553758
@@ -41148,11 +39383,6 @@
     "symbol": "NTPC",
     "date": "2025-05-27",
     "volume": 24937330
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-27",
-    "volume": 9712093
   },
   {
     "symbol": "POWERGRID",
@@ -41280,11 +39510,6 @@
     "volume": 3254715
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-26",
-    "volume": 885022
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-26",
     "volume": 6067873
@@ -41383,11 +39608,6 @@
     "symbol": "NTPC",
     "date": "2025-05-26",
     "volume": 16655082
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-26",
-    "volume": 7159571
   },
   {
     "symbol": "POWERGRID",
@@ -41515,11 +39735,6 @@
     "volume": 3460945
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-23",
-    "volume": 915286
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-23",
     "volume": 4178408
@@ -41618,11 +39833,6 @@
     "symbol": "NTPC",
     "date": "2025-05-23",
     "volume": 4045937
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-23",
-    "volume": 8725218
   },
   {
     "symbol": "POWERGRID",
@@ -41750,11 +39960,6 @@
     "volume": 6496923
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-22",
-    "volume": 1804507
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-22",
     "volume": 7936875
@@ -41853,11 +40058,6 @@
     "symbol": "NTPC",
     "date": "2025-05-22",
     "volume": 8717514
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-22",
-    "volume": 18502235
   },
   {
     "symbol": "POWERGRID",
@@ -41985,11 +40185,6 @@
     "volume": 6849562
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-21",
-    "volume": 2001251
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-21",
     "volume": 7393102
@@ -42088,11 +40283,6 @@
     "symbol": "NTPC",
     "date": "2025-05-21",
     "volume": 5930972
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-21",
-    "volume": 7158307
   },
   {
     "symbol": "POWERGRID",
@@ -42220,11 +40410,6 @@
     "volume": 12512596
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-20",
-    "volume": 3573210
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-20",
     "volume": 18755291
@@ -42323,11 +40508,6 @@
     "symbol": "NTPC",
     "date": "2025-05-20",
     "volume": 9986143
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-20",
-    "volume": 13183059
   },
   {
     "symbol": "POWERGRID",
@@ -42455,11 +40635,6 @@
     "volume": 5799804
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-19",
-    "volume": 1857648
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-19",
     "volume": 5446656
@@ -42558,11 +40733,6 @@
     "symbol": "NTPC",
     "date": "2025-05-19",
     "volume": 6218209
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-19",
-    "volume": 8043270
   },
   {
     "symbol": "POWERGRID",
@@ -42690,11 +40860,6 @@
     "volume": 100662047
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-16",
-    "volume": 1660861
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-16",
     "volume": 4702603
@@ -42793,11 +40958,6 @@
     "symbol": "NTPC",
     "date": "2025-05-16",
     "volume": 6920351
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-16",
-    "volume": 8030229
   },
   {
     "symbol": "POWERGRID",
@@ -42925,11 +41085,6 @@
     "volume": 8788351
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-15",
-    "volume": 3918531
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-15",
     "volume": 10511989
@@ -43028,11 +41183,6 @@
     "symbol": "NTPC",
     "date": "2025-05-15",
     "volume": 43307763
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-15",
-    "volume": 16812750
   },
   {
     "symbol": "POWERGRID",
@@ -43160,11 +41310,6 @@
     "volume": 7401614
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-14",
-    "volume": 3417567
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-14",
     "volume": 6822756
@@ -43263,11 +41408,6 @@
     "symbol": "NTPC",
     "date": "2025-05-14",
     "volume": 22485535
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-14",
-    "volume": 8234859
   },
   {
     "symbol": "POWERGRID",
@@ -43395,11 +41535,6 @@
     "volume": 8817763
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-13",
-    "volume": 4042184
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-13",
     "volume": 6307140
@@ -43498,11 +41633,6 @@
     "symbol": "NTPC",
     "date": "2025-05-13",
     "volume": 14738980
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-13",
-    "volume": 9336026
   },
   {
     "symbol": "POWERGRID",
@@ -43630,11 +41760,6 @@
     "volume": 3936019
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-12",
-    "volume": 1706217
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-12",
     "volume": 6743279
@@ -43733,11 +41858,6 @@
     "symbol": "NTPC",
     "date": "2025-05-12",
     "volume": 7978210
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-12",
-    "volume": 11374237
   },
   {
     "symbol": "POWERGRID",
@@ -43865,11 +41985,6 @@
     "volume": 3686209
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-09",
-    "volume": 1042380
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-09",
     "volume": 3809943
@@ -43968,11 +42083,6 @@
     "symbol": "NTPC",
     "date": "2025-05-09",
     "volume": 11322011
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-09",
-    "volume": 11184507
   },
   {
     "symbol": "POWERGRID",
@@ -44100,11 +42210,6 @@
     "volume": 5500724
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-08",
-    "volume": 2773328
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-08",
     "volume": 14258083
@@ -44203,11 +42308,6 @@
     "symbol": "NTPC",
     "date": "2025-05-08",
     "volume": 14286109
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-08",
-    "volume": 15026122
   },
   {
     "symbol": "POWERGRID",
@@ -44335,11 +42435,6 @@
     "volume": 5554616
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-07",
-    "volume": 1424662
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-07",
     "volume": 9162368
@@ -44438,11 +42533,6 @@
     "symbol": "NTPC",
     "date": "2025-05-07",
     "volume": 8465490
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-07",
-    "volume": 16689539
   },
   {
     "symbol": "POWERGRID",
@@ -44570,11 +42660,6 @@
     "volume": 8597920
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-06",
-    "volume": 1788719
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-06",
     "volume": 5982166
@@ -44673,11 +42758,6 @@
     "symbol": "NTPC",
     "date": "2025-05-06",
     "volume": 8904223
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-06",
-    "volume": 11350559
   },
   {
     "symbol": "POWERGRID",
@@ -44805,11 +42885,6 @@
     "volume": 3548839
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-05",
-    "volume": 786898
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-05",
     "volume": 6395704
@@ -44908,11 +42983,6 @@
     "symbol": "NTPC",
     "date": "2025-05-05",
     "volume": 9492646
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-05",
-    "volume": 20086323
   },
   {
     "symbol": "POWERGRID",
@@ -45040,11 +43110,6 @@
     "volume": 5528529
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-05-02",
-    "volume": 2020145
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-05-02",
     "volume": 6455015
@@ -45143,11 +43208,6 @@
     "symbol": "NTPC",
     "date": "2025-05-02",
     "volume": 11165220
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-05-02",
-    "volume": 12347590
   },
   {
     "symbol": "POWERGRID",
@@ -45275,11 +43335,6 @@
     "volume": 9139821
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-30",
-    "volume": 2315010
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-30",
     "volume": 4559122
@@ -45378,11 +43433,6 @@
     "symbol": "NTPC",
     "date": "2025-04-30",
     "volume": 16739088
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-30",
-    "volume": 9822483
   },
   {
     "symbol": "POWERGRID",
@@ -45510,11 +43560,6 @@
     "volume": 4684155
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-29",
-    "volume": 1385331
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-29",
     "volume": 6274213
@@ -45613,11 +43658,6 @@
     "symbol": "NTPC",
     "date": "2025-04-29",
     "volume": 9472828
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-29",
-    "volume": 8030552
   },
   {
     "symbol": "POWERGRID",
@@ -45745,11 +43785,6 @@
     "volume": 3301891
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-28",
-    "volume": 1207247
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-28",
     "volume": 3458518
@@ -45848,11 +43883,6 @@
     "symbol": "NTPC",
     "date": "2025-04-28",
     "volume": 5315840
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-28",
-    "volume": 7669983
   },
   {
     "symbol": "POWERGRID",
@@ -45980,11 +44010,6 @@
     "volume": 4570083
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-25",
-    "volume": 1353813
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-25",
     "volume": 7337588
@@ -46083,11 +44108,6 @@
     "symbol": "NTPC",
     "date": "2025-04-25",
     "volume": 9785640
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-25",
-    "volume": 15616265
   },
   {
     "symbol": "POWERGRID",
@@ -46215,11 +44235,6 @@
     "volume": 5180688
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-24",
-    "volume": 1590469
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-24",
     "volume": 5762303
@@ -46318,11 +44333,6 @@
     "symbol": "NTPC",
     "date": "2025-04-24",
     "volume": 7491123
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-24",
-    "volume": 6538518
   },
   {
     "symbol": "POWERGRID",
@@ -46450,11 +44460,6 @@
     "volume": 6855027
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-23",
-    "volume": 819016
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-23",
     "volume": 7429142
@@ -46553,11 +44558,6 @@
     "symbol": "NTPC",
     "date": "2025-04-23",
     "volume": 9719205
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-23",
-    "volume": 16555874
   },
   {
     "symbol": "POWERGRID",
@@ -46685,11 +44685,6 @@
     "volume": 6155127
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-22",
-    "volume": 954974
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-22",
     "volume": 7558174
@@ -46788,11 +44783,6 @@
     "symbol": "NTPC",
     "date": "2025-04-22",
     "volume": 12077119
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-22",
-    "volume": 9896443
   },
   {
     "symbol": "POWERGRID",
@@ -46920,11 +44910,6 @@
     "volume": 3501123
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-21",
-    "volume": 570266
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-21",
     "volume": 8987570
@@ -47023,11 +45008,6 @@
     "symbol": "NTPC",
     "date": "2025-04-21",
     "volume": 7375594
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-21",
-    "volume": 11698653
   },
   {
     "symbol": "POWERGRID",
@@ -47155,11 +45135,6 @@
     "volume": 10894325
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-17",
-    "volume": 1211601
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-17",
     "volume": 8364450
@@ -47258,11 +45233,6 @@
     "symbol": "NTPC",
     "date": "2025-04-17",
     "volume": 12288196
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-17",
-    "volume": 12891813
   },
   {
     "symbol": "POWERGRID",
@@ -47390,11 +45360,6 @@
     "volume": 6180958
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-16",
-    "volume": 1023697
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-16",
     "volume": 4992290
@@ -47493,11 +45458,6 @@
     "symbol": "NTPC",
     "date": "2025-04-16",
     "volume": 11541484
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-16",
-    "volume": 18748952
   },
   {
     "symbol": "POWERGRID",
@@ -47625,11 +45585,6 @@
     "volume": 10313411
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-15",
-    "volume": 1720323
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-15",
     "volume": 4371156
@@ -47728,11 +45683,6 @@
     "symbol": "NTPC",
     "date": "2025-04-15",
     "volume": 17497327
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-15",
-    "volume": 12102239
   },
   {
     "symbol": "POWERGRID",
@@ -47860,11 +45810,6 @@
     "volume": 8340002
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-11",
-    "volume": 2311803
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-11",
     "volume": 6185984
@@ -47963,11 +45908,6 @@
     "symbol": "NTPC",
     "date": "2025-04-11",
     "volume": 11246077
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-11",
-    "volume": 13886447
   },
   {
     "symbol": "POWERGRID",
@@ -48095,11 +46035,6 @@
     "volume": 5600666
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-09",
-    "volume": 1701314
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-09",
     "volume": 5781453
@@ -48198,11 +46133,6 @@
     "symbol": "NTPC",
     "date": "2025-04-09",
     "volume": 7462119
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-09",
-    "volume": 16889575
   },
   {
     "symbol": "POWERGRID",
@@ -48330,11 +46260,6 @@
     "volume": 7206935
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-08",
-    "volume": 1324180
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-08",
     "volume": 3577328
@@ -48433,11 +46358,6 @@
     "symbol": "NTPC",
     "date": "2025-04-08",
     "volume": 17506712
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-08",
-    "volume": 11309092
   },
   {
     "symbol": "POWERGRID",
@@ -48565,11 +46485,6 @@
     "volume": 14870388
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-07",
-    "volume": 1604721
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-07",
     "volume": 10202400
@@ -48668,11 +46583,6 @@
     "symbol": "NTPC",
     "date": "2025-04-07",
     "volume": 18025165
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-07",
-    "volume": 27024128
   },
   {
     "symbol": "POWERGRID",
@@ -48800,11 +46710,6 @@
     "volume": 7817334
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-04",
-    "volume": 2768438
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-04",
     "volume": 6718760
@@ -48903,11 +46808,6 @@
     "symbol": "NTPC",
     "date": "2025-04-04",
     "volume": 10872963
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-04",
-    "volume": 38336194
   },
   {
     "symbol": "POWERGRID",
@@ -49035,11 +46935,6 @@
     "volume": 2341989
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-03",
-    "volume": 3488899
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-03",
     "volume": 4970602
@@ -49138,11 +47033,6 @@
     "symbol": "NTPC",
     "date": "2025-04-03",
     "volume": 10317410
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-03",
-    "volume": 11141370
   },
   {
     "symbol": "POWERGRID",
@@ -49270,11 +47160,6 @@
     "volume": 6431226
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-02",
-    "volume": 1054143
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-02",
     "volume": 4197123
@@ -49373,11 +47258,6 @@
     "symbol": "NTPC",
     "date": "2025-04-02",
     "volume": 13593404
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-02",
-    "volume": 15337906
   },
   {
     "symbol": "POWERGRID",
@@ -49505,11 +47385,6 @@
     "volume": 6773056
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-04-01",
-    "volume": 1080262
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-04-01",
     "volume": 4332950
@@ -49608,11 +47483,6 @@
     "symbol": "NTPC",
     "date": "2025-04-01",
     "volume": 18736320
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-04-01",
-    "volume": 11258957
   },
   {
     "symbol": "POWERGRID",
@@ -49740,11 +47610,6 @@
     "volume": 4133264
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-28",
-    "volume": 1495932
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-28",
     "volume": 6923988
@@ -49843,11 +47708,6 @@
     "symbol": "NTPC",
     "date": "2025-03-28",
     "volume": 11327077
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-28",
-    "volume": 32905564
   },
   {
     "symbol": "POWERGRID",
@@ -49975,11 +47835,6 @@
     "volume": 6222339
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-27",
-    "volume": 1848444
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-27",
     "volume": 7697174
@@ -50078,11 +47933,6 @@
     "symbol": "NTPC",
     "date": "2025-03-27",
     "volume": 37930538
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-27",
-    "volume": 9935664
   },
   {
     "symbol": "POWERGRID",
@@ -50210,11 +48060,6 @@
     "volume": 7142394
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-26",
-    "volume": 1375794
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-26",
     "volume": 5025274
@@ -50313,11 +48158,6 @@
     "symbol": "NTPC",
     "date": "2025-03-26",
     "volume": 18668095
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-26",
-    "volume": 7543985
   },
   {
     "symbol": "POWERGRID",
@@ -50445,11 +48285,6 @@
     "volume": 4857399
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-25",
-    "volume": 1092805
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-25",
     "volume": 5636291
@@ -50548,11 +48383,6 @@
     "symbol": "NTPC",
     "date": "2025-03-25",
     "volume": 23189083
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-25",
-    "volume": 8915800
   },
   {
     "symbol": "POWERGRID",
@@ -50680,11 +48510,6 @@
     "volume": 4120999
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-24",
-    "volume": 826040
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-24",
     "volume": 5260300
@@ -50783,11 +48608,6 @@
     "symbol": "NTPC",
     "date": "2025-03-24",
     "volume": 24588471
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-24",
-    "volume": 10566066
   },
   {
     "symbol": "POWERGRID",
@@ -50915,11 +48735,6 @@
     "volume": 14715349
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-21",
-    "volume": 2846648
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-21",
     "volume": 16564019
@@ -51018,11 +48833,6 @@
     "symbol": "NTPC",
     "date": "2025-03-21",
     "volume": 36406837
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-21",
-    "volume": 29285333
   },
   {
     "symbol": "POWERGRID",
@@ -51150,11 +48960,6 @@
     "volume": 12074465
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-20",
-    "volume": 984355
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-20",
     "volume": 7025398
@@ -51253,11 +49058,6 @@
     "symbol": "NTPC",
     "date": "2025-03-20",
     "volume": 15002119
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-20",
-    "volume": 18955995
   },
   {
     "symbol": "POWERGRID",
@@ -51385,11 +49185,6 @@
     "volume": 6283464
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-19",
-    "volume": 1015731
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-19",
     "volume": 5827114
@@ -51488,11 +49283,6 @@
     "symbol": "NTPC",
     "date": "2025-03-19",
     "volume": 30582397
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-19",
-    "volume": 8626593
   },
   {
     "symbol": "POWERGRID",
@@ -51620,11 +49410,6 @@
     "volume": 6539954
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-18",
-    "volume": 1571087
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-18",
     "volume": 6211943
@@ -51723,11 +49508,6 @@
     "symbol": "NTPC",
     "date": "2025-03-18",
     "volume": 8580255
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-18",
-    "volume": 9647391
   },
   {
     "symbol": "POWERGRID",
@@ -51855,11 +49635,6 @@
     "volume": 6405525
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-17",
-    "volume": 1329904
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-17",
     "volume": 5456631
@@ -51958,11 +49733,6 @@
     "symbol": "NTPC",
     "date": "2025-03-17",
     "volume": 4353562
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-17",
-    "volume": 8789001
   },
   {
     "symbol": "POWERGRID",
@@ -52073,11 +49843,6 @@
     "symbol": "EICHERMOT",
     "date": "2025-03-13",
     "volume": 265867
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-03-13",
-    "volume": 804032
   },
   {
     "symbol": "ULTRACEMCO",
@@ -52255,11 +50020,6 @@
     "volume": 785215
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-03-13",
-    "volume": 16105085
-  },
-  {
     "symbol": "NTPC",
     "date": "2025-03-13",
     "volume": 8965150
@@ -52415,11 +50175,6 @@
     "volume": 6704494
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-12",
-    "volume": 1254797
-  },
-  {
     "symbol": "EICHERMOT",
     "date": "2025-03-12",
     "volume": 235018
@@ -52463,11 +50218,6 @@
     "symbol": "ADANIPORTS",
     "date": "2025-03-12",
     "volume": 2842848
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-12",
-    "volume": 6994310
   },
   {
     "symbol": "TITAN",
@@ -52680,11 +50430,6 @@
     "volume": 5340552
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-03-11",
-    "volume": 10941588
-  },
-  {
     "symbol": "TITAN",
     "date": "2025-03-11",
     "volume": 576260
@@ -52723,11 +50468,6 @@
     "symbol": "KOTAKBANK",
     "date": "2025-03-11",
     "volume": 3207052
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-03-11",
-    "volume": 1231247
   },
   {
     "symbol": "EICHERMOT",
@@ -52833,11 +50573,6 @@
     "symbol": "BEL",
     "date": "2025-03-10",
     "volume": 20986855
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-03-10",
-    "volume": 905854
   },
   {
     "symbol": "EICHERMOT",
@@ -52950,11 +50685,6 @@
     "volume": 2520931
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-03-10",
-    "volume": 16489167
-  },
-  {
     "symbol": "TITAN",
     "date": "2025-03-10",
     "volume": 855408
@@ -53028,11 +50758,6 @@
     "symbol": "BHARTIARTL",
     "date": "2025-03-07",
     "volume": 3035558
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-03-07",
-    "volume": 678497
   },
   {
     "symbol": "COALINDIA",
@@ -53133,11 +50858,6 @@
     "symbol": "NTPC",
     "date": "2025-03-07",
     "volume": 8992315
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-07",
-    "volume": 9079049
   },
   {
     "symbol": "POWERGRID",
@@ -53265,11 +50985,6 @@
     "volume": 5174009
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-06",
-    "volume": 1525159
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-06",
     "volume": 11247215
@@ -53368,11 +51083,6 @@
     "symbol": "NTPC",
     "date": "2025-03-06",
     "volume": 26294903
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-06",
-    "volume": 10439208
   },
   {
     "symbol": "POWERGRID",
@@ -53500,11 +51210,6 @@
     "volume": 6295425
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-05",
-    "volume": 2187830
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-05",
     "volume": 5730797
@@ -53603,11 +51308,6 @@
     "symbol": "NTPC",
     "date": "2025-03-05",
     "volume": 10493615
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-05",
-    "volume": 7466729
   },
   {
     "symbol": "POWERGRID",
@@ -53735,11 +51435,6 @@
     "volume": 5219668
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-04",
-    "volume": 1456530
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-04",
     "volume": 5535218
@@ -53838,11 +51533,6 @@
     "symbol": "NTPC",
     "date": "2025-03-04",
     "volume": 8734999
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-04",
-    "volume": 12428265
   },
   {
     "symbol": "POWERGRID",
@@ -53970,11 +51660,6 @@
     "volume": 6993525
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-03-03",
-    "volume": 854264
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-03-03",
     "volume": 12675744
@@ -54073,11 +51758,6 @@
     "symbol": "NTPC",
     "date": "2025-03-03",
     "volume": 9779703
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-03-03",
-    "volume": 11928529
   },
   {
     "symbol": "POWERGRID",
@@ -54205,11 +51885,6 @@
     "volume": 13640211
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-28",
-    "volume": 3340343
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-28",
     "volume": 21899478
@@ -54308,11 +51983,6 @@
     "symbol": "NTPC",
     "date": "2025-02-28",
     "volume": 21127180
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-28",
-    "volume": 17237276
   },
   {
     "symbol": "POWERGRID",
@@ -54440,11 +52110,6 @@
     "volume": 7568745
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-27",
-    "volume": 1260808
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-27",
     "volume": 6196610
@@ -54543,11 +52208,6 @@
     "symbol": "NTPC",
     "date": "2025-02-27",
     "volume": 7302366
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-27",
-    "volume": 9664032
   },
   {
     "symbol": "POWERGRID",
@@ -54675,11 +52335,6 @@
     "volume": 6286808
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-25",
-    "volume": 992994
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-25",
     "volume": 4525493
@@ -54778,11 +52433,6 @@
     "symbol": "NTPC",
     "date": "2025-02-25",
     "volume": 10686112
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-25",
-    "volume": 5519036
   },
   {
     "symbol": "POWERGRID",
@@ -54910,11 +52560,6 @@
     "volume": 4673190
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-24",
-    "volume": 1403090
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-24",
     "volume": 4533486
@@ -55013,11 +52658,6 @@
     "symbol": "NTPC",
     "date": "2025-02-24",
     "volume": 6034113
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-24",
-    "volume": 6883143
   },
   {
     "symbol": "POWERGRID",
@@ -55145,11 +52785,6 @@
     "volume": 5447583
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-21",
-    "volume": 1413123
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-21",
     "volume": 5235241
@@ -55248,11 +52883,6 @@
     "symbol": "NTPC",
     "date": "2025-02-21",
     "volume": 10809296
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-21",
-    "volume": 5697387
   },
   {
     "symbol": "POWERGRID",
@@ -55380,11 +53010,6 @@
     "volume": 5524503
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-20",
-    "volume": 1652209
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-20",
     "volume": 4624287
@@ -55483,11 +53108,6 @@
     "symbol": "NTPC",
     "date": "2025-02-20",
     "volume": 22888146
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-20",
-    "volume": 8929816
   },
   {
     "symbol": "POWERGRID",
@@ -55615,11 +53235,6 @@
     "volume": 7776555
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-19",
-    "volume": 1210464
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-19",
     "volume": 3097726
@@ -55718,11 +53333,6 @@
     "symbol": "NTPC",
     "date": "2025-02-19",
     "volume": 13079903
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-19",
-    "volume": 6168581
   },
   {
     "symbol": "POWERGRID",
@@ -55850,11 +53460,6 @@
     "volume": 7529598
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-18",
-    "volume": 967394
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-18",
     "volume": 3843725
@@ -55953,11 +53558,6 @@
     "symbol": "NTPC",
     "date": "2025-02-18",
     "volume": 15793327
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-18",
-    "volume": 6170974
   },
   {
     "symbol": "POWERGRID",
@@ -56085,11 +53685,6 @@
     "volume": 4906462
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-17",
-    "volume": 1113888
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-17",
     "volume": 6017586
@@ -56188,11 +53783,6 @@
     "symbol": "NTPC",
     "date": "2025-02-17",
     "volume": 6464173
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-17",
-    "volume": 6692422
   },
   {
     "symbol": "POWERGRID",
@@ -56320,11 +53910,6 @@
     "volume": 5125863
   },
   {
-    "symbol": "CIPLA",
-    "date": "2025-02-14",
-    "volume": 1703559
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2025-02-14",
     "volume": 4464446
@@ -56423,11 +54008,6 @@
     "symbol": "NTPC",
     "date": "2025-02-14",
     "volume": 7446248
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2025-02-14",
-    "volume": 8065352
   },
   {
     "symbol": "POWERGRID",
@@ -56560,11 +54140,6 @@
     "volume": 1838463
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-02-13",
-    "volume": 10079210
-  },
-  {
     "symbol": "POWERGRID",
     "date": "2025-02-13",
     "volume": 12257226
@@ -56578,11 +54153,6 @@
     "symbol": "BAJAJ-AUTO",
     "date": "2025-02-13",
     "volume": 206920
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-02-13",
-    "volume": 1879916
   },
   {
     "symbol": "DRREDDY",
@@ -56795,11 +54365,6 @@
     "volume": 2214307
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-02-12",
-    "volume": 5985956
-  },
-  {
     "symbol": "POWERGRID",
     "date": "2025-02-12",
     "volume": 17861265
@@ -56813,11 +54378,6 @@
     "symbol": "BAJAJ-AUTO",
     "date": "2025-02-12",
     "volume": 411042
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-02-12",
-    "volume": 1791670
   },
   {
     "symbol": "DRREDDY",
@@ -57030,11 +54590,6 @@
     "volume": 1702553
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-02-11",
-    "volume": 6711630
-  },
-  {
     "symbol": "POWERGRID",
     "date": "2025-02-11",
     "volume": 22083955
@@ -57048,11 +54603,6 @@
     "symbol": "BAJAJ-AUTO",
     "date": "2025-02-11",
     "volume": 282926
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-02-11",
-    "volume": 1938792
   },
   {
     "symbol": "DRREDDY",
@@ -57265,11 +54815,6 @@
     "volume": 1823071
   },
   {
-    "symbol": "ONGC",
-    "date": "2025-02-10",
-    "volume": 7582536
-  },
-  {
     "symbol": "POWERGRID",
     "date": "2025-02-10",
     "volume": 16709670
@@ -57283,11 +54828,6 @@
     "symbol": "BAJAJ-AUTO",
     "date": "2025-02-10",
     "volume": 192650
-  },
-  {
-    "symbol": "CIPLA",
-    "date": "2025-02-10",
-    "volume": 1282801
   },
   {
     "symbol": "DRREDDY",
@@ -61005,11 +58545,6 @@
     "volume": 7570161
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-09",
-    "volume": 1936551
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-09",
     "volume": 4512635
@@ -61108,11 +58643,6 @@
     "symbol": "NTPC",
     "date": "2026-02-09",
     "volume": 7983235
-  },
-  {
-    "symbol": "ONGC",
-    "date": "2026-02-09",
-    "volume": 10824044
   },
   {
     "symbol": "POWERGRID",
@@ -61235,11 +58765,6 @@
     "volume": 9077763
   },
   {
-    "symbol": "CIPLA",
-    "date": "2026-02-10",
-    "volume": 1053439
-  },
-  {
     "symbol": "COALINDIA",
     "date": "2026-02-10",
     "volume": 5103221
@@ -61355,11 +58880,6 @@
     "volume": 8319282
   },
   {
-    "symbol": "ONGC",
-    "date": "2026-02-10",
-    "volume": 13459684
-  },
-  {
     "symbol": "POWERGRID",
     "date": "2026-02-10",
     "volume": 21823214
@@ -61428,5 +58948,1265 @@
     "symbol": "WIPRO",
     "date": "2026-02-10",
     "volume": 12435622
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-10",
+    "volume": 2024887
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-09",
+    "volume": 2322006
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-06",
+    "volume": 858040
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-05",
+    "volume": 800062
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-04",
+    "volume": 1086658
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-03",
+    "volume": 1829127
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-02",
+    "volume": 2775827
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-02-01",
+    "volume": 4853161
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-30",
+    "volume": 19968423
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-29",
+    "volume": 1178622
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-28",
+    "volume": 1932410
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-27",
+    "volume": 8546208
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-23",
+    "volume": 1514985
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-22",
+    "volume": 1181975
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-21",
+    "volume": 2204385
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-20",
+    "volume": 1505263
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-19",
+    "volume": 811954
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-16",
+    "volume": 800450
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-14",
+    "volume": 745375
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-13",
+    "volume": 729165
+  },
+  {
+    "symbol": "MTNL",
+    "date": "2026-01-12",
+    "volume": 1154922
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-10",
+    "volume": 221269
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-09",
+    "volume": 188041
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-06",
+    "volume": 111992
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-05",
+    "volume": 289781
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-04",
+    "volume": 1316849
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-03",
+    "volume": 284339
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-02",
+    "volume": 158917
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-02-01",
+    "volume": 146637
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-30",
+    "volume": 152747
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-29",
+    "volume": 334944
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-28",
+    "volume": 314819
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-27",
+    "volume": 286256
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-23",
+    "volume": 482296
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-22",
+    "volume": 192179
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-21",
+    "volume": 479044
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-20",
+    "volume": 254126
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-19",
+    "volume": 358285
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-16",
+    "volume": 219071
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-14",
+    "volume": 318214
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-13",
+    "volume": 233965
+  },
+  {
+    "symbol": "NDTV",
+    "date": "2026-01-12",
+    "volume": 1075340
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-10",
+    "volume": 2152371
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-09",
+    "volume": 613961
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-06",
+    "volume": 228001
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-05",
+    "volume": 330945
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-04",
+    "volume": 791059
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-03",
+    "volume": 626285
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-02",
+    "volume": 571159
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-02-01",
+    "volume": 286844
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-30",
+    "volume": 249013
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-29",
+    "volume": 373581
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-28",
+    "volume": 293985
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-27",
+    "volume": 436426
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-23",
+    "volume": 259368
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-22",
+    "volume": 320173
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-21",
+    "volume": 694792
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-20",
+    "volume": 479884
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-19",
+    "volume": 449246
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-16",
+    "volume": 628321
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-14",
+    "volume": 326215
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-13",
+    "volume": 269809
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-12",
+    "volume": 712356
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-09",
+    "volume": 538432
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-08",
+    "volume": 623559
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-07",
+    "volume": 1537496
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-06",
+    "volume": 958247
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-05",
+    "volume": 1876769
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-02",
+    "volume": 455850
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2026-01-01",
+    "volume": 449860
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2025-12-31",
+    "volume": 2189568
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "date": "2025-12-30",
+    "volume": 1435368
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-10",
+    "volume": 1053439
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-09",
+    "volume": 1936551
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-06",
+    "volume": 1457970
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-05",
+    "volume": 999810
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-04",
+    "volume": 1590247
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-03",
+    "volume": 2711571
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-02",
+    "volume": 1832963
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-01",
+    "volume": 1117982
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-30",
+    "volume": 2157826
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-29",
+    "volume": 2099306
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-28",
+    "volume": 1535898
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-27",
+    "volume": 4109525
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-23",
+    "volume": 6590032
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-22",
+    "volume": 1536604
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-21",
+    "volume": 2306655
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-20",
+    "volume": 2040403
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-19",
+    "volume": 1653550
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-16",
+    "volume": 4333315
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-14",
+    "volume": 1775529
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-13",
+    "volume": 1909873
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-12",
+    "volume": 2380033
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-09",
+    "volume": 1804271
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-08",
+    "volume": 2651011
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-07",
+    "volume": 5076416
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-06",
+    "volume": 1614326
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-05",
+    "volume": 1532549
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-02",
+    "volume": 964611
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-01-01",
+    "volume": 228078
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-31",
+    "volume": 883966
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-30",
+    "volume": 1993298
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-29",
+    "volume": 1077645
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-26",
+    "volume": 951555
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-24",
+    "volume": 1022767
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-23",
+    "volume": 826988
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-22",
+    "volume": 757496
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-19",
+    "volume": 769045
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-18",
+    "volume": 974170
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-17",
+    "volume": 1000116
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-16",
+    "volume": 789492
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-15",
+    "volume": 855508
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-12",
+    "volume": 1054050
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-11",
+    "volume": 606130
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-10",
+    "volume": 1316274
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-09",
+    "volume": 1646840
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-08",
+    "volume": 1263559
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-05",
+    "volume": 813485
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-04",
+    "volume": 726473
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-03",
+    "volume": 1034323
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-02",
+    "volume": 1760512
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-12-01",
+    "volume": 1010599
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-28",
+    "volume": 991042
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-27",
+    "volume": 810411
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-26",
+    "volume": 1087736
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-25",
+    "volume": 908386
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-24",
+    "volume": 2801854
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-21",
+    "volume": 1126820
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-20",
+    "volume": 896750
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-19",
+    "volume": 1171078
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-18",
+    "volume": 747913
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-17",
+    "volume": 912322
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-14",
+    "volume": 810970
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-13",
+    "volume": 1217362
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-12",
+    "volume": 1179131
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-11",
+    "volume": 850772
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-10",
+    "volume": 1143959
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-07",
+    "volume": 1037508
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-06",
+    "volume": 1596245
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-04",
+    "volume": 1590643
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-11-03",
+    "volume": 1505905
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-31",
+    "volume": 3365093
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-30",
+    "volume": 4053965
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-29",
+    "volume": 898965
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-28",
+    "volume": 1489133
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-27",
+    "volume": 1213749
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-24",
+    "volume": 2941997
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-23",
+    "volume": 2150725
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-21",
+    "volume": 709223
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-20",
+    "volume": 3372906
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-17",
+    "volume": 1222051
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-16",
+    "volume": 989785
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-15",
+    "volume": 1638237
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-14",
+    "volume": 1056222
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-13",
+    "volume": 671620
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-10",
+    "volume": 1495524
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-09",
+    "volume": 878167
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-08",
+    "volume": 1068066
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-07",
+    "volume": 834623
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-06",
+    "volume": 772031
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-03",
+    "volume": 1070489
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2025-10-01",
+    "volume": 1000285
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-10",
+    "volume": 13459684
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-09",
+    "volume": 10824044
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-06",
+    "volume": 10013728
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-05",
+    "volume": 15268335
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-04",
+    "volume": 26628393
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-03",
+    "volume": 19213406
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-02",
+    "volume": 17015974
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-01",
+    "volume": 17179276
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-30",
+    "volume": 24420043
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-29",
+    "volume": 48267023
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-28",
+    "volume": 73427983
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-27",
+    "volume": 15915509
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-23",
+    "volume": 8080247
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-22",
+    "volume": 10746306
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-21",
+    "volume": 9610477
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-20",
+    "volume": 6496057
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-19",
+    "volume": 6459249
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-16",
+    "volume": 12287680
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-14",
+    "volume": 33094088
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-13",
+    "volume": 22527192
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-12",
+    "volume": 9807980
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-09",
+    "volume": 12706408
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-08",
+    "volume": 9218488
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-07",
+    "volume": 8253161
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-06",
+    "volume": 10840459
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-05",
+    "volume": 21201434
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-02",
+    "volume": 5925943
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-01-01",
+    "volume": 5840586
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-31",
+    "volume": 11514802
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-30",
+    "volume": 6236729
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-29",
+    "volume": 12621499
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-26",
+    "volume": 3710774
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-24",
+    "volume": 4114036
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-23",
+    "volume": 5810236
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-22",
+    "volume": 4614185
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-19",
+    "volume": 5070902
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-18",
+    "volume": 3964839
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-17",
+    "volume": 5848233
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-16",
+    "volume": 7238404
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-15",
+    "volume": 12334408
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-12",
+    "volume": 4252781
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-11",
+    "volume": 8868641
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-10",
+    "volume": 3492031
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-09",
+    "volume": 9026401
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-08",
+    "volume": 5285903
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-05",
+    "volume": 7645591
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-04",
+    "volume": 10825420
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-03",
+    "volume": 11829802
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-02",
+    "volume": 5413988
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-12-01",
+    "volume": 6307936
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-28",
+    "volume": 3804191
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-27",
+    "volume": 5600832
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-26",
+    "volume": 7232643
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-25",
+    "volume": 8983620
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-24",
+    "volume": 15875282
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-21",
+    "volume": 7589240
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-20",
+    "volume": 6918642
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-19",
+    "volume": 7075882
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-18",
+    "volume": 7708871
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-17",
+    "volume": 6281588
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-14",
+    "volume": 9185042
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-13",
+    "volume": 13057927
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-12",
+    "volume": 11917811
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-11",
+    "volume": 16183880
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-10",
+    "volume": 7418162
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-07",
+    "volume": 4449104
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-06",
+    "volume": 6987258
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-04",
+    "volume": 6006851
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-11-03",
+    "volume": 5450040
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-31",
+    "volume": 7199008
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-30",
+    "volume": 5266883
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-29",
+    "volume": 8806213
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-28",
+    "volume": 8529692
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-27",
+    "volume": 7889080
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-24",
+    "volume": 17882209
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-23",
+    "volume": 13879042
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-21",
+    "volume": 569979
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-20",
+    "volume": 10920554
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-17",
+    "volume": 14250215
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-16",
+    "volume": 6083826
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-15",
+    "volume": 8520238
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-14",
+    "volume": 13865005
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-13",
+    "volume": 12607116
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-10",
+    "volume": 9050771
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-09",
+    "volume": 9292031
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-08",
+    "volume": 5073558
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-07",
+    "volume": 12498420
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-06",
+    "volume": 9465503
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-03",
+    "volume": 10702610
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2025-10-01",
+    "volume": 10375310
   }
 ]

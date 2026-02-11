@@ -8,20 +8,26 @@ class MarketDataHandler:
         self.alert_engine = AlertEngine(Notifier)
 
     def handle(self, data):
-        token = data["Tkn"]
-        ttq = data["TTQ"]
+        try:
+            token = str(data.get("Tkn"))
+            ttq = data.get("TTQ", 0)
 
-        self.storage.reset_if_new_day()
-        self.storage.update_tick(token, ttq)
+            if not token:
+                return
 
-        # 🕒 Record history for minute-level tracking
-        symbol = self.storage.symbols.get(token)
-        if symbol:
-            self.storage.record_volume(symbol, ttq)
+            self.storage.reset_if_new_day()
+            self.storage.update_tick(token, ttq)
 
-        # Trigger alert evaluation
-        row = self.storage.symbol_data.get(symbol)
-        if not row:
-            return
+            # 🕒 Record history for minute-level tracking
+            symbol = self.storage.symbols.get(token)
+            if symbol:
+                self.storage.record_volume(symbol, ttq)
 
-        self.alert_engine.evaluate(symbol, row, self.storage)
+            # Trigger alert evaluation
+            row = self.storage.symbol_data.get(symbol)
+            if not row:
+                return
+
+            self.alert_engine.evaluate(symbol, row, self.storage)
+        except Exception as e:
+            print(f"Error handling tick: {e}")

@@ -1,4 +1,5 @@
 import threading
+from datetime import datetime
 from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 
@@ -13,13 +14,9 @@ storage = Storage()
 handler = MarketDataHandler(storage=storage)
 ws = MTWebSocketClient(market_handler=handler)
 
-from scripts.ingest_bhavcopy import run_auto_ingest
-
-# ---- Auto Ingest Latest Bhavcopy ----
-try:
-    run_auto_ingest()
-except Exception as e:
-    print(f"⚠️ Auto-ingest failed: {e}")
+from scripts.ingest_bhavcopy import run_auto_ingest, backfill_symbol
+import token_lookup
+import extract_token_no
 
 # ---- Load historical data ----
 loader = HistoricalVolumeLoader("data/historical_volumes.json")
@@ -173,6 +170,80 @@ def alert_settings():
 def data():
     return jsonify(storage.get_all_volumes())
 
+@app.route("/add-stock", methods=["POST"])
+def add_stock():
+    try:
+        data = request.json
+        symbol = data.get("symbol", "").strip().upper()
+        days = data.get("days", 30)  # Default to 30 days if not specified
+        
+        if not symbol:
+            return jsonify({"status": "error", "message": "Symbol is required"}), 400
+            
+        # 1. Lookup Token (synchronous - must succeed before proceeding)
+        details = token_lookup.get_token_details(symbol)
+        if not details:
+            return jsonify({"status": "error", "message": f"Symbol {symbol} not found in NSE contracts."}), 404
+            
+        token = details["token"]
+        exchange = "NSECM"
+
+        # 2. Immediately register in Storage & WebSocket
+        # This allows the stock to appear in the UI right away
+        storage.register_stock(symbol=symbol, token=token)
+        ws.add_subscription(symbol=symbol, token=token, exchange=exchange)
+        
+        storage.add_log(f"STOCK ADDED: {symbol} (backfilling {days} days in background)")
+        
+        # 3. Launch background thread for backfill and validation
+        def background_backfill():
+            try:
+                print(f"🚀 Background backfill started for {symbol} ({days} days)")
+                backfill_symbol(symbol, days=days)
+                
+                # Reload and validate
+                new_hist = loader.load()
+                metrics = new_hist.get(symbol)
+                
+                if not metrics:
+                    storage.add_log(f"⚠️ {symbol}: No historical data found after backfill")
+                    return
+                
+                # Recency check
+                all_dates = [m.get("last_date") for m in new_hist.values() if m.get("last_date")]
+                if all_dates:
+                    max_market_date = max(all_dates)
+                    symbol_last_date = metrics.get("last_date")
+                    
+                    d1 = datetime.strptime(max_market_date, "%Y-%m-%d")
+                    d2 = datetime.strptime(symbol_last_date, "%Y-%m-%d")
+                    
+                    if (d1 - d2).days > 7:
+                        storage.add_log(f"⚠️ {symbol}: Appears inactive (last trade: {symbol_last_date})")
+                        return
+                
+                # Success - update metrics
+                storage.set_historical_metrics(symbol, metrics)
+                storage.add_log(f"✅ {symbol}: Historical data loaded ({days} days)")
+                print(f"✅ Background backfill completed for {symbol}")
+                
+            except Exception as e:
+                storage.add_log(f"❌ {symbol}: Backfill failed - {str(e)}")
+                print(f"Error in background backfill for {symbol}: {e}")
+        
+        # Start background thread
+        threading.Thread(target=background_backfill, daemon=True).start()
+        
+        return jsonify({
+            "status": "ok", 
+            "message": f"Added {symbol}. Fetching {days} days of history in background...",
+            "details": details
+        })
+
+    except Exception as e:
+        print(f"Error adding stock: {e}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 @app.route("/verify-window")
 def verify_window():
     import datetime
@@ -186,8 +257,13 @@ def verify_window():
     })
 
 def start_ws():
+    # Run auto-ingest in background before connecting WS
+    try:
+        run_auto_ingest()
+    except Exception as e:
+        print(f"⚠️ Background auto-ingest failed: {e}")
     ws.connect_ws()
 
 if __name__ == "__main__":
     threading.Thread(target=start_ws, daemon=True).start()
-    app.run(debug=False, port=7000)
+    app.run(debug=False, host="0.0.0.0", port=7000)

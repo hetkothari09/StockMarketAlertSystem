@@ -68,7 +68,7 @@ def save_existing(data):
 # INGESTION (SINGLE DAY)
 # =====================================================
 
-def ingest_for_date(target_date, existing):
+def ingest_for_date(target_date, existing, allowed_symbols=None):
     date_str = target_date.strftime("%Y%m%d")
 
     bhavcopy_url = (
@@ -95,13 +95,18 @@ def ingest_for_date(target_date, existing):
                 reader = csv.DictReader(io.TextIOWrapper(csv_file))
 
                 for row in reader:
-                    symbol = row.get("TckrSymb", "").strip()
-                    series = row.get("SctySrs", "").strip()
+                    symbol = row.get("TckrSymb", "").strip().upper()
+                    series = row.get("SctySrs", "").strip().upper()
 
                     if series != "EQ":
                         continue
 
-                    if symbol not in NIFTY_SYMBOLS:
+                    # If specific symbols allowed, only process those
+                    # Otherwise default to NIFTY_SYMBOLS list
+                    if allowed_symbols:
+                         if symbol not in allowed_symbols:
+                             continue
+                    elif symbol not in NIFTY_SYMBOLS:
                         continue
 
                     try:
@@ -127,9 +132,71 @@ def ingest_for_date(target_date, existing):
         existing.extend(new_records)
         save_existing(existing)
         print(f"✅ {target_date} → added {len(new_records)} records")
+        if verbose_output:
+             print(f"   Sample: {new_records[0]}")
         return True
 
     return False
+
+# =====================================================
+# BACKFILL CONTROLLER
+# =====================================================
+verbose_output = False
+
+def backfill_last_two_months():
+    print("Starting bhavcopy backfill")
+    existing = load_existing()
+    today = date.today()
+
+    for i in range(1, DAYS_TO_BACKFILL + 1):
+        target_date = today - timedelta(days=i)
+        ingest_for_date(target_date, existing)
+
+    print("✅ Backfill completed")
+
+def backfill_symbol(symbol, days=30):
+    """
+    Backfills data for a specific single symbol for the last N days.
+    Used when a user adds a stock dynamically.
+    """
+    print(f"🚀 Starting backfill for single symbol: {symbol} ({days} days)")
+    existing = load_existing()
+    today = date.today()
+    
+    # We pass a set containing just this symbol as allowed
+    allowed = {symbol}
+    
+    global verbose_output
+    verbose_output = True
+
+    count = 0
+    # Search last 'days' days (calendar days, to account for weekends/holidays)
+    # We search more days than requested to ensure we get enough trading days
+    search_range = min(days * 2, 730)  # Cap at 2 years max
+    for i in range(1, search_range + 1):
+        target_date = today - timedelta(days=i)
+        if ingest_for_date(target_date, existing, allowed_symbols=allowed):
+            count += 1
+            
+    # Now trim the data to keep only the most recent 'days' trading days
+    existing = load_existing()
+    symbol_records = [r for r in existing if r["symbol"] == symbol]
+    
+    if symbol_records:
+        # Sort by date descending and keep only the most recent 'days' records
+        symbol_records.sort(key=lambda x: x["date"], reverse=True)
+        keep_records = symbol_records[:days]
+        
+        # Remove old records for this symbol and add back the trimmed ones
+        other_records = [r for r in existing if r["symbol"] != symbol]
+        trimmed_data = other_records + keep_records
+        save_existing(trimmed_data)
+        
+        print(f"✅ Single symbol backfill completed. Kept {len(keep_records)} most recent trading days (requested: {days}).")
+    else:
+        print(f"⚠️ No data found for {symbol}")
+        
+    return True
 
 def run_auto_ingest():
     """
@@ -140,32 +207,18 @@ def run_auto_ingest():
     existing = load_existing()
     today = date.today()
     
-    # Try last 5 days until we find a valid business day bhavcopy
-    for i in range(1, 6):
+    # Try last 15 days to ensure we catch all missing business days
+    found_any = False
+    for i in range(1, 16):
         target_date = today - timedelta(days=i)
         success = ingest_for_date(target_date, existing)
         if success:
-            print(f"✅ Auto-ingest successful for {target_date}")
-            break
-    else:
-        print("ℹ️ Auto-ingest: No new bhavcopy data found (already up to date or holiday).")
+            found_any = True
+            print(f"✅ Auto-ingest found data for {target_date}")
+    
+    if not found_any:
+        print("ℹ️ Auto-ingest: No new bhavcopy data found in the last 15 days.")
 
-# =====================================================
-# BACKFILL CONTROLLER
-# =====================================================
-
-def backfill_last_two_months():
-    print("Starting bhavcopy backfill")
-
-    existing = load_existing()
-
-    today = date.today()
-
-    for i in range(1, DAYS_TO_BACKFILL + 1):
-        target_date = today - timedelta(days=i)
-        ingest_for_date(target_date, existing)
-
-    print("✅ Backfill completed")
 
 # =====================================================
 # RUN

@@ -10,6 +10,23 @@ NIFTY50_STOCKS = []
 
 out_file = r"C:\Users\SMARTTOUCH\Downloads\contracts_nsefo.json"
 
+# Tasks for UI/UX improvements
+# - [/] Feature: Refine Dynamic Stock Addition <!-- id: 64 -->
+#     - [x] Add backend validation for live data availability <!-- id: 65 -->
+#     - [x] Refine `AddStockModal` UI (Glassmorphism & Centering) <!-- id: 66 -->
+#     - [x] Optimize "Add Stock" button placement <!-- id: 67 -->
+# - [/] UI Polish: Compact Sidebar Filters <!-- id: 68 -->
+#     - [ ] Reduce padding and gaps in `.toggle-group` <!-- id: 69 -->
+#     - [ ] Shrink `.toggle-switch` and font sizes in `.toggle-item` <!-- id: 70 -->
+#     - [ ] Tighten up sidebar panel spacing <!-- id: 71 -->
+# - [/] UI Polish: Shrink Movement Filters <!-- id: 72 -->
+#     - [ ] Reduce padding and gaps in `.movement-filter-group` <!-- id: 73 -->
+#     - [ ] Shrink `.movement-filter-item` and font sizes <!-- id: 74 -->
+# - [/] UI Polish: Shrink Alert Settings <!-- id: 75 -->
+#     - [ ] Reduce padding and gaps in `.alert-settings-group` <!-- id: 76 -->
+#     - [ ] Shrink `.alert-setting-item` and font sizes <!-- id: 77 -->
+# - [x] Feature: Dynamic Stock Addition <!-- id: 58 -->
+
 with open(out_file, 'rb') as f:
     data = json.load(f)
 

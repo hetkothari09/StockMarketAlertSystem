@@ -9,10 +9,12 @@ import AlertToggles from './components/AlertToggles';
 import IntensityFilters from './components/IntensityFilters';
 import SymbolFilter from './components/SymbolFilter';
 import SystemLogs from './components/SystemLogs';
+import AddStockModal from './components/AddStockModal';
 import useMarketData from './hooks/useMarketData';
 
 function App() {
     const [selectedSymbol, setSelectedSymbol] = useState(null);
+    const [showAddStock, setShowAddStock] = useState(false);
     const [hiddenSymbols, setHiddenSymbols] = useState(new Set());
     const [intensityFilters, setIntensityFilters] = useState(new Set(['NORMAL', 'HIGH', 'VERY HIGH', 'WAITING']));
     const marketData = useMarketData();
@@ -52,7 +54,9 @@ function App() {
             <div className="app-container">
                 <div className="navbar">
                     <div className="logo">VOL<span>ALERT</span></div>
-                    <TimeRangeSelector />
+                    <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                        <TimeRangeSelector />
+                    </div>
                 </div>
 
                 <div className="dashboard-container">
@@ -92,6 +96,7 @@ function App() {
                         hiddenSymbols={hiddenSymbols}
                         intensityFilters={intensityFilters}
                         onStockClick={setSelectedSymbol}
+                        onAddStock={() => setShowAddStock(true)}
                     />
 
                     {/* RIGHT: System Logs Column */}
@@ -104,6 +109,13 @@ function App() {
 
                 {selectedSymbol && (
                     <ChartModal symbol={selectedSymbol} onClose={() => setSelectedSymbol(null)} />
+                )}
+
+                {showAddStock && (
+                    <AddStockModal
+                        onClose={() => setShowAddStock(false)}
+                        onSuccess={() => {/* Maybe refresh data? MarketTable updates via useMarketData hook automatically */ }}
+                    />
                 )}
             </div>
         </ToastProvider>
