@@ -13,8 +13,10 @@ class MTWebSocketClient:
         self.ws = None
         self.market_handler = market_handler
         self.last_activity = time.time()
-
         self.subscriptions_list = []
+        self.is_connected = False
+        self.reconnect_attempts = 0
+        self.max_reconnect_delay = 60  # Max 60 seconds between reconnects
 
 
     def connect_ws(self):
@@ -28,15 +30,20 @@ class MTWebSocketClient:
         self.ws.run_forever()
 
     def on_open(self, ws):
-        print("WebSocket is connected")
+        print("✅ WebSocket connected")
+        self.is_connected = True
+        self.reconnect_attempts = 0
         self.login()
-        self.heartbeat()
+        self.start_heartbeat()
     
     def on_close(self, ws, *args):
-        print("WebSocket is closed!")
+        print("⚠️ WebSocket closed!")
+        self.is_connected = False
+        self.attempt_reconnect()
     
     def on_error(self, ws, error):
-        print("Error occured ", error)
+        print(f"❌ WebSocket error: {error}")
+        self.is_connected = False
 
     def on_message(self, ws, message):
         self.last_activity = time.time()
@@ -65,7 +72,7 @@ class MTWebSocketClient:
     
     def add_subscription(self, token, exchange, symbol):
         self.subscriptions_list.append({
-            "token": token,
+            "token": str(token),
             "exchange": exchange,
             "symbol": symbol
         })
@@ -98,34 +105,59 @@ class MTWebSocketClient:
                 stock["symbol"]
             )
 
+    def attempt_reconnect(self):
+        """Attempt to reconnect with exponential backoff."""
+        if self.reconnect_attempts >= 10:
+            print("❌ Max reconnection attempts reached. Giving up.")
+            return
+        
+        # Exponential backoff: 2^attempts seconds, capped at max_reconnect_delay
+        delay = min(2 ** self.reconnect_attempts, self.max_reconnect_delay)
+        self.reconnect_attempts += 1
+        
+        print(f"🔄 Reconnecting in {delay} seconds (attempt {self.reconnect_attempts}/10)...")
+        time.sleep(delay)
+        
+        try:
+            threading.Thread(target=self.connect_ws, daemon=True).start()
+        except Exception as e:
+            print(f"❌ Reconnection failed: {e}")
+            self.attempt_reconnect()
+
+    def remove_subscription(self, token):
+        """Remove a subscription from the list."""
+        self.subscriptions_list = [
+            sub for sub in self.subscriptions_list 
+            if sub["token"] != str(token)
+        ]
+
     def login(self):
         payload = {
             "Type": "Login",
             "Data": {
-                "LoginId": "het",
-                "Password": "het"
+                "LoginId": LOGIN_ID,
+                "Password": PASSWORD
             }
         }
         self.ws.send(json.dumps(payload))
         print("Login Request sent!")
 
-    def heartbeat(self):
-        payload = {
-            "Type": "Info",
-            "Data": {
-                "InfoType": "HB",
-                "InfoMsg": "Heartbeat"
-            }
-        }
-        self.ws.send(json.dumps(payload))
-        print("Heartbeat Sent!")
-
     def start_heartbeat(self):
         def heartbeat_loop():
             while True:
                 time.sleep(HEARTBEAT_INTERVAL)
-                if time.time() - self.last_activity >= HEARTBEAT_INTERVAL:
-                    self.heartbeat()
-        
-        thread = threading.Thread(target=heartbeat_loop, daemon=True)
-        thread.start()            
+                if self.ws and self.is_connected:
+                    try:
+                        payload = {
+                            "Type": "Info",
+                            "Data": {
+                                "InfoType": "HB",
+                                "InfoMsg": "Heartbeat"
+                            }
+                        }
+                        self.ws.send(json.dumps(payload))
+                    except Exception as e:
+                        print(f"Heartbeat failed: {e}")
+                        self.is_connected = False
+
+        threading.Thread(target=heartbeat_loop, daemon=True).start()

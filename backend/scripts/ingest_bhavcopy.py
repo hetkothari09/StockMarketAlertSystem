@@ -156,10 +156,11 @@ def backfill_last_two_months():
 
 def backfill_symbol(symbol, days=30):
     """
-    Backfills data for a specific single symbol for the last N days.
+    Backfills data for a specific single symbol for the last N trading days.
+    Stops searching once N trading days are found.
     Used when a user adds a stock dynamically.
     """
-    print(f"🚀 Starting backfill for single symbol: {symbol} ({days} days)")
+    print(f"🚀 Starting backfill for single symbol: {symbol} ({days} trading days)")
     existing = load_existing()
     today = date.today()
     
@@ -169,34 +170,38 @@ def backfill_symbol(symbol, days=30):
     global verbose_output
     verbose_output = True
 
-    count = 0
-    # Search last 'days' days (calendar days, to account for weekends/holidays)
-    # We search more days than requested to ensure we get enough trading days
-    search_range = min(days * 2, 730)  # Cap at 2 years max
-    for i in range(1, search_range + 1):
+    trading_days_found = 0
+    max_search_days = 730  # Cap at 2 years max to prevent infinite loops
+    
+    for i in range(1, max_search_days + 1):
         target_date = today - timedelta(days=i)
+        
+        # Check if we found data for this date
         if ingest_for_date(target_date, existing, allowed_symbols=allowed):
-            count += 1
+            trading_days_found += 1
+            print(f"  Found trading day {trading_days_found}/{days} for {target_date}")
             
-    # Now trim the data to keep only the most recent 'days' trading days
+            # Stop once we have enough trading days
+            if trading_days_found >= days:
+                print(f"✅ Found {days} trading days, stopping search")
+                break
+    
+    if trading_days_found < days:
+        print(f"⚠️ Only found {trading_days_found} trading days (requested: {days})")
+    
+    # Reload and verify the data
     existing = load_existing()
     symbol_records = [r for r in existing if r["symbol"] == symbol]
     
     if symbol_records:
-        # Sort by date descending and keep only the most recent 'days' records
+        # Sort by date descending
         symbol_records.sort(key=lambda x: x["date"], reverse=True)
-        keep_records = symbol_records[:days]
-        
-        # Remove old records for this symbol and add back the trimmed ones
-        other_records = [r for r in existing if r["symbol"] != symbol]
-        trimmed_data = other_records + keep_records
-        save_existing(trimmed_data)
-        
-        print(f"✅ Single symbol backfill completed. Kept {len(keep_records)} most recent trading days (requested: {days}).")
+        print(f"✅ Backfill completed. Total records for {symbol}: {len(symbol_records)}")
     else:
         print(f"⚠️ No data found for {symbol}")
         
-    return True
+    return trading_days_found > 0
+
 
 def run_auto_ingest():
     """

@@ -33,7 +33,7 @@ for stock in NIFTY50_STOCKS:
     symbol = stock["symbol"]
     exchange = stock["exchange"]
 
-    storage.register_stock(symbol=symbol, token=token)
+    storage.register_stock(symbol=symbol, token=token, log=False)
     ws.add_subscription(symbol=symbol, token=token, exchange=exchange)
 
 app = Flask(__name__)
@@ -199,27 +199,45 @@ def add_stock():
         
         if not symbol:
             return jsonify({"status": "error", "message": "Symbol is required"}), 400
-            
-        # 1. Lookup Token (synchronous - must succeed before proceeding)
-        details = token_lookup.get_token_details(symbol)
-        if not details:
-            return jsonify({"status": "error", "message": f"Symbol {symbol} not found in NSE contracts."}), 404
-            
-        token = details["token"]
-        exchange = "NSECM"
-
-        # 2. Immediately register in Storage & WebSocket
-        # This allows the stock to appear in the UI right away
-        storage.register_stock(symbol=symbol, token=token)
-        ws.add_subscription(symbol=symbol, token=token, exchange=exchange)
         
-        storage.add_log(f"STOCK ADDED: {symbol} (backfilling {days} days in background)")
+        # Get token details
+        token_info = token_lookup.get_token_details(symbol)
+        if not token_info:
+            return jsonify({
+                "status": "error", 
+                "message": f"Symbol {symbol} not found in NSE contracts."
+            }), 404
+        
+        token = token_info["token"]
+        exchange = "NSECM"  # Default exchange for NSE stocks
+
+        # Check if already monitoring - if so, just extend the historical data
+        is_existing = symbol in storage.symbols.values()
+        
+        if is_existing:
+            storage.add_log(f"📊 {symbol}: Extending historical data to {days} days")
+        else:
+            # 2. Immediately register in Storage & WebSocket for new symbols
+            # This allows the stock to appear in the UI right away
+            storage.register_stock(symbol=symbol, token=token)
+            ws.add_subscription(symbol=symbol, token=token, exchange=exchange)
+            storage.add_log(f"STOCK ADDED: {symbol} (backfilling {days} days in background)")
+        
         
         # 3. Launch background thread for backfill and validation
         def background_backfill():
             try:
                 print(f"🚀 Background backfill started for {symbol} ({days} days)")
-                backfill_symbol(symbol, days=days)
+                success = backfill_symbol(symbol, days=days)
+                
+                if not success:
+                    storage.add_log(f"❌ {symbol}: Backfill failed - no data found")
+                    # Only remove if it's a NEW symbol (not existing)
+                    if not is_existing:
+                        token_removed = storage.remove_stock(symbol)
+                        if token_removed:
+                            ws.remove_subscription(token_removed)
+                    return
                 
                 # Reload and validate
                 new_hist = loader.load()
@@ -227,20 +245,30 @@ def add_stock():
                 
                 if not metrics:
                     storage.add_log(f"⚠️ {symbol}: No historical data found after backfill")
+                    # Only remove if it's a NEW symbol
+                    if not is_existing:
+                        token_removed = storage.remove_stock(symbol)
+                        if token_removed:
+                            ws.remove_subscription(token_removed)
                     return
                 
-                # Recency check
-                all_dates = [m.get("last_date") for m in new_hist.values() if m.get("last_date")]
-                if all_dates:
-                    max_market_date = max(all_dates)
-                    symbol_last_date = metrics.get("last_date")
-                    
-                    d1 = datetime.strptime(max_market_date, "%Y-%m-%d")
-                    d2 = datetime.strptime(symbol_last_date, "%Y-%m-%d")
-                    
-                    if (d1 - d2).days > 7:
-                        storage.add_log(f"⚠️ {symbol}: Appears inactive (last trade: {symbol_last_date})")
-                        return
+                # Recency check - ONLY for new symbols
+                if not is_existing:
+                    all_dates = [m.get("last_date") for m in new_hist.values() if m.get("last_date")]
+                    if all_dates:
+                        max_market_date = max(all_dates)
+                        symbol_last_date = metrics.get("last_date")
+                        
+                        if symbol_last_date:
+                            d1 = datetime.strptime(max_market_date, "%Y-%m-%d")
+                            d2 = datetime.strptime(symbol_last_date, "%Y-%m-%d")
+                            
+                            if (d1 - d2).days > 7:
+                                storage.add_log(f"⚠️ {symbol}: Appears inactive (last trade: {symbol_last_date})")
+                                token_removed = storage.remove_stock(symbol)
+                                if token_removed:
+                                    ws.remove_subscription(token_removed)
+                                return
                 
                 # Success - update metrics
                 storage.set_historical_metrics(symbol, metrics)
@@ -250,6 +278,14 @@ def add_stock():
             except Exception as e:
                 storage.add_log(f"❌ {symbol}: Backfill failed - {str(e)}")
                 print(f"Error in background backfill for {symbol}: {e}")
+                # Only remove NEW symbols on critical failure
+                if not is_existing:
+                    try:
+                        token_removed = storage.remove_stock(symbol)
+                        if token_removed:
+                            ws.remove_subscription(token_removed)
+                    except Exception as cleanup_error:
+                        print(f"Error cleaning up {symbol}: {cleanup_error}")
         
         # Start background thread
         threading.Thread(target=background_backfill, daemon=True).start()
@@ -257,7 +293,7 @@ def add_stock():
         return jsonify({
             "status": "ok", 
             "message": f"Added {symbol}. Fetching {days} days of history in background...",
-            "details": details
+            "token_info": token_info
         })
 
     except Exception as e:

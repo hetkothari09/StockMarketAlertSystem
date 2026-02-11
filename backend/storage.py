@@ -1,16 +1,18 @@
-from datetime import datetime, time
+from datetime import datetime, time as datetime_time
 import random
+import time
 
 class Storage:
     def __init__(self):
         self.symbols = {}
         self.last_ttq = {}
         self.symbol_data = {}
+        self.historical_metrics = {} # Added to fix AttributeError
         self.logs = []
 
         # 🔥 USER-SELECTED TIME RANGE
-        self.window_start_time = time(9, 15)   # Default start
-        self.window_end_time = time(15, 30)     # Default end
+        self.window_start_time = datetime_time(9, 15)   # Default start
+        self.window_end_time = datetime_time(15, 30)     # Default end
 
         # 🕒 MINUTE-LEVEL HISTORY (Built live)
         # Format: { symbol: [ { "time": datetime, "vol": int }, ... ] }
@@ -153,21 +155,70 @@ class Storage:
 
     # ---------------- REGISTRATION ----------------
 
-    def register_stock(self, token, symbol):
-        self.symbols[token] = symbol
-        self.symbol_data.setdefault(symbol, {
-            "live_volume": 0,
-            "window_volume": 0,
-            "window_alert_hit": False,
-            "user_alert_hit": False,
-            "is_red_alert": False,
-            "window_zscore": None,
-            "volume_intensity": "WAITING",
-            "status": "NORMAL",
-            "last_status": None,
-        })
+    def register_stock(self, symbol, token, log=True):
+        """Register a new stock for monitoring."""
+        token_str = str(token)
+        self.symbols[token_str] = symbol
+        
+        # Only initialize if symbol doesn't exist, otherwise preserve existing data
+        if symbol not in self.symbol_data:
+            self.symbol_data[symbol] = {
+                "symbol": symbol,
+                "token": token_str,
+                "live_volume": 0,
+                "window_volume": 0,
+                "window_zscore": 0,
+                "volume_intensity": "NORMAL",
+                "user_alert_hit": False,
+                "window_mean": 0,
+                "window_std": 0,
+                "prev_day": 0,
+                "weekly_avg": 0,
+                "monthly_avg": 0,
+                "historical_series": []
+            }
+            # Only log if requested AND it's NOT a stock being loaded with historical metrics
+            if log and symbol not in self.historical_metrics:
+                self.add_log(f"Registered {symbol} (token: {token_str})")
+        else:
+            # Just update the token mapping, don't log again
+            self.symbol_data[symbol]["token"] = token_str
+            # Ensure all keys exist (defensive against partial update from historical metrics)
+            defaults = {
+                "live_volume": 0, "window_volume": 0, "window_zscore": 0, 
+                "volume_intensity": "NORMAL", "user_alert_hit": False,
+                "window_mean": 0, "window_std": 0, "prev_day": 0,
+                "weekly_avg": 0, "monthly_avg": 0, "historical_series": []
+            }
+            for k, v in defaults.items():
+                if k not in self.symbol_data[symbol]:
+                    self.symbol_data[symbol][k] = v
+    
+    def remove_stock(self, symbol):
+        """Remove a stock from monitoring."""
+        # Find and remove from symbols dict
+        token_to_remove = None
+        for token, sym in list(self.symbols.items()):
+            if sym == symbol:
+                token_to_remove = token
+                break
+        
+        if token_to_remove:
+            del self.symbols[token_to_remove]
+            self.add_log(f"Removed {symbol} from monitoring (token: {token_to_remove})")
+        
+        # Remove from symbol_data
+        if symbol in self.symbol_data:
+            del self.symbol_data[symbol]
+        
+        # Remove from historical metrics
+        if symbol in self.historical_metrics: # Note: historical_metrics is not initialized in __init__
+            del self.historical_metrics[symbol]
+        
+        return token_to_remove
 
     def set_historical_metrics(self, symbol, metrics):
+        self.historical_metrics[symbol] = metrics # Track for registration suppression
         self.symbol_data.setdefault(symbol, {}).update(metrics)
 
     # ---------------- TICKS ----------------
@@ -199,6 +250,10 @@ class Storage:
             
         if is_inside:
             row["window_volume"] += delta
+        
+        # Track last update time
+        row["last_update"] = time.time()
+        row["is_stale"] = False # Any update means it's not stale right now
 
     # ---------------- ALERTS ----------------
 
@@ -244,6 +299,16 @@ class Storage:
         rows = []
 
         for symbol, row in self.symbol_data.items():
+            # Staleness check on read
+            last_upd = row.get("last_update", 0)
+            if last_upd > 0:
+                time_since_last = time.time() - last_upd
+                # Only flag as stale if market is open and no update for 5 mins
+                if time_since_last > 300 and self.in_selected_time_window():
+                    row["is_stale"] = True
+                else:
+                    row["is_stale"] = False
+
             lv = row.get("live_volume", 0)
 
             # ================= STATUS (RELATIVE LEVELS) =================

@@ -95,7 +95,7 @@ class AlertEngine:
         # (User's preferred logic from prev_files)
         # fraction_of_window = elapsed_in_window / total_window
         
-        # Actually, prev_files logic was: expected_volume = mean * (elapsed / total_window)
+        # Actually, prev_files logic was: expected_volume = mean * (elap    sed / total_window)
         # This implies 'mean' is the expected volume for the *entire window*.
         # In historical_volume.py, 'window_mean' is the DAILY mean.
         # So this formula implies: Expected_Current = Daily_Mean * (Elapsed_In_Window / Window_Duration)
