@@ -35,3 +35,8 @@ export async function addStock(symbol, days = 30) {
     });
     return res.json();
 }
+
+export async function fetchAvailableSymbols() {
+    const res = await fetch("http://localhost:7000/available-symbols");
+    return res.json();
+}

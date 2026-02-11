@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { addStock } from '../api/market';
 import { useToast } from './ToastContext';
+import SymbolBrowser from './SymbolBrowser';
 
 const AddStockModal = ({ onClose, onSuccess }) => {
     const [symbol, setSymbol] = useState('');
     const [days, setDays] = useState(30); // Default to 1 month
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showBrowser, setShowBrowser] = useState(false);
     const { showToast } = useToast();
 
     const handleSubmit = async (e) => {
@@ -81,6 +83,28 @@ const AddStockModal = ({ onClose, onSuccess }) => {
                                 fontSize: '1rem'
                             }}
                         />
+                        <button
+                            type="button"
+                            onClick={() => setShowBrowser(true)}
+                            style={{
+                                marginTop: '8px',
+                                background: 'none',
+                                border: 'none',
+                                color: '#60a5fa',
+                                fontSize: '0.85rem',
+                                cursor: 'pointer',
+                                padding: '4px 0',
+                                textDecoration: 'none',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '4px',
+                                transition: 'color 0.2s ease'
+                            }}
+                            onMouseEnter={(e) => e.target.style.color = '#3b82f6'}
+                            onMouseLeave={(e) => e.target.style.color = '#60a5fa'}
+                        >
+                            Browse all symbols →
+                        </button>
                     </div>
 
                     <div className="form-group" style={{ marginBottom: '20px' }}>
@@ -165,6 +189,13 @@ const AddStockModal = ({ onClose, onSuccess }) => {
                     </div>
                 </form>
             </div>
+
+            {showBrowser && (
+                <SymbolBrowser
+                    onClose={() => setShowBrowser(false)}
+                    onSelect={(selectedSymbol) => setSymbol(selectedSymbol)}
+                />
+            )}
         </div>
     );
 };

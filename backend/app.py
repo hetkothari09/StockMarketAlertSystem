@@ -170,6 +170,26 @@ def alert_settings():
 def data():
     return jsonify(storage.get_all_volumes())
 
+@app.route("/available-symbols")
+def available_symbols():
+    """
+    Returns all available NSE EQ symbols from NSECM.xml.
+    Results are cached for performance.
+    """
+    try:
+        symbols = token_lookup.get_all_symbols()
+        return jsonify({
+            "status": "ok",
+            "count": len(symbols),
+            "symbols": symbols
+        })
+    except Exception as e:
+        print(f"Error fetching symbols: {e}")
+        return jsonify({
+            "status": "error",
+            "message": str(e)
+        }), 500
+
 @app.route("/add-stock", methods=["POST"])
 def add_stock():
     try:
