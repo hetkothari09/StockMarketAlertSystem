@@ -8,7 +8,11 @@ HEARTBEAT_INTERVAL = 60  # Heartbeat interval in seconds
 NIFTY50_STOCKS = []
 
 
-out_file = r"C:\Users\SMARTTOUCH\Downloads\contracts_nsefo.json"
+import os
+
+# Use relative path for Render deployment
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+out_file = os.path.join(BASE_DIR, "data", "contracts_nsefo.json")
 
 # Tasks for UI/UX improvements
 # - [/] Feature: Refine Dynamic Stock Addition <!-- id: 64 -->
