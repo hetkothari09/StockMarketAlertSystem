@@ -83,7 +83,7 @@ def add_alert():
                     storage.add_log(f"ALERT TRIGGERED IMMEDIATELY: {symbol}")
             except Exception as eval_err:
                 print(f"Error evaluating immediate trigger: {eval_err}")
-
+    
         storage.add_log(f"ALERT CREATED: {symbol}")
         return jsonify({"status": "ok"})
 
@@ -313,11 +313,12 @@ def verify_window():
     })
 
 def start_ws():
-    # Run auto-ingest in background before connecting WS
+    # 🔥 Restore daily catch-up (last 15 days) but keep 1-year backfill removed
     try:
         run_auto_ingest()
     except Exception as e:
         print(f"⚠️ Background auto-ingest failed: {e}")
+    
     ws.connect_ws()
 
 if __name__ == "__main__":

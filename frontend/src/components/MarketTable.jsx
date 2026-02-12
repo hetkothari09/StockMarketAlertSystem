@@ -7,15 +7,27 @@ const MarketTable = ({ marketData, hiddenSymbols, intensityFilters, onStockClick
     const sortedData = useMemo(() => {
         return marketData
             .filter(stock => !hiddenSymbols.has(stock.symbol))
-            .filter(stock => {
-                const intensity = stock.volume_intensity || 'WAITING';
-                return intensityFilters.has(intensity);
+            .map(stock => {
+                const originalIntensity = stock.volume_intensity || 'WAITING';
+                const isFilteredOut = !intensityFilters.has(originalIntensity);
+
+                // If filtered out, effectively treat it as "NORMAL" for both display and sorting
+                // This ensures it "acts like a normal stock" and sorts by volume with others
+                // UNLESS it has an alert (handled by getRowPriority via status)
+                const effectiveIntensity = isFilteredOut ? "NORMAL" : originalIntensity;
+
+                return {
+                    ...stock,
+                    volume_intensity: effectiveIntensity,
+                    // Remove isDemoted and displayIntensity as we are modifying the source property directly
+                    // for consistent behavior across Sort and Display
+                };
             })
             .sort((a, b) => {
                 const pa = getRowPriority(a);
                 const pb = getRowPriority(b);
 
-                if (pa !== pb) return pb - pa;  // higher priority first
+                if (pa !== pb) return pb - pa;
 
                 // Secondary sort by live volume
                 return (b.live_volume || 0) - (a.live_volume || 0);

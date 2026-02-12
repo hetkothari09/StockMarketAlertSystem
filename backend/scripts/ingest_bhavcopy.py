@@ -203,6 +203,52 @@ def backfill_symbol(symbol, days=30):
     return trading_days_found > 0
 
 
+def backfill_batch(symbols, target_days=250):
+    """
+    Efficiently backfills data for multiple symbols by downloading bhavcopy
+    once per day and updating all symbols in the batch.
+    Concludes when all symbols reached target_days or max search reached.
+    """
+    print(f"🚀 Starting batch backfill for {len(symbols)} symbols (target: {target_days} trading days)")
+    existing = load_existing()
+    today = date.today()
+    
+    symbols_set = {s.upper() for s in symbols}
+    
+    # Track progress per symbol
+    # format: { symbol: count }
+    progress = {}
+    for s in symbols_set:
+        progress[s] = len([r for r in existing if r["symbol"] == s])
+    
+    max_search_days = 730
+    
+    for i in range(1, max_search_days + 1):
+        # Check if we are done
+        undone = [s for s, count in progress.items() if count < target_days]
+        if not undone:
+            print(f"✅ All {len(symbols)} symbols reached {target_days} days. Batch backfill done.")
+            break
+            
+        target_date = today - timedelta(days=i)
+        
+        # We only care about downloading if at least one symbol needs data for this date
+        # (Though ingest_for_date already checks existence, we can be more efficient)
+        if ingest_for_date(target_date, existing, allowed_symbols=symbols_set):
+            # Update progress for all symbols in batch
+            # Actually ingest_for_date updates the 'existing' list
+            # We just need to refresh our counts for symbols that were actually added
+            # For simplicity, we can just re-check the undone list
+            for s in undone:
+                progress[s] = len([r for r in existing if r["symbol"] == s])
+            
+            completed_now = [s for s in undone if progress[s] >= target_days]
+            if completed_now:
+                print(f"  ✨ {len(completed_now)} more symbols reached target (total {len([s for s in progress if progress[s] >= target_days])}/{len(symbols)})")
+
+    print(f"🏁 Batch backfill process finished after searching {i} days.")
+    return True
+
 def run_auto_ingest():
     """
     Called on startup. Tries to fetch bhavcopy for the last few business days
@@ -222,7 +268,7 @@ def run_auto_ingest():
             print(f"✅ Auto-ingest found data for {target_date}")
     
     if not found_any:
-        print("ℹ️ Auto-ingest: No new bhavcopy data found in the last 15 days.")
+        print("ℹ️ Auto-ingest: No new bhavcopy data found.")
 
 
 # =====================================================

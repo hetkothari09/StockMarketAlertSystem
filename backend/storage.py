@@ -110,8 +110,8 @@ class Storage:
         h1, m1 = map(int, start_str.split(":"))
         h2, m2 = map(int, end_str.split(":"))
 
-        self.window_start_time = time(h1, m1)
-        self.window_end_time = time(h2, m2)
+        self.window_start_time = datetime_time(h1, m1)
+        self.window_end_time = datetime_time(h2, m2)
 
         print(f"DEBUG: Timerange set to {self.window_start_time} - {self.window_end_time}")
 
@@ -124,7 +124,7 @@ class Storage:
             start_vol = self.get_volume_at(symbol, self.window_start_time)
             
             # If window start is 09:15, start_vol should be 0 (market open)
-            if self.window_start_time == time(9, 15):
+            if self.window_start_time == datetime_time(9, 15):
                 start_vol = 0
             
             # Window Volume = Today's Total - Volume at Window Start
