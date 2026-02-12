@@ -27,27 +27,25 @@ out_file = r"C:\Users\SMARTTOUCH\Downloads\contracts_nsefo.json"
 #     - [ ] Shrink `.alert-setting-item` and font sizes <!-- id: 77 -->
 # - [x] Feature: Dynamic Stock Addition <!-- id: 58 -->
 
+# Hardcoded NIFTY 50 Symbols (to ensure clean default state)
+NIFTY_50_SYMBOLS = {
+    "RELIANCE", "TCS", "HDFCBANK", "ICICIBANK", "INFY", "SBIN", "HINDUNILVR", "ITC", 
+    "BHARTIARTL", "L&T", "KOTAKBANK", "AXISBANK", "HCLTECH", "ADANIENT", "MARUTI", 
+    "SUNPHARMA", "TATAMOTORS", "ULTRACEMCO", "TITAN", "ONGC", "NTPC", "POWERGRID", 
+    "M&M", "ADANIPORTS", "COALINDIA", "BAJFINANCE", "WIPRO", "BPCL", "TATASTEEL", 
+    "HDFCLIFE", "SBILIFE", "DRREDDY", "HINDALCO", "TATACONSUM", "TECHM", "GRASIM", 
+    "CIPLA", "DIVISLAB", "HEROMOTOCO", "APOLLOHOSP", "BRITANNIA", "EICHERMOT", "UPL", 
+    "BAJAJFINSV", "NESTLEIND", "ASIANPAINT", "INDUSINDBK", "BAJAJ-AUTO", "JSWSTEEL", 
+    "TRENT", "BEL", "TATACHEM" 
+}
+
 with open(out_file, 'rb') as f:
     data = json.load(f)
 
 for contract in data:
     symbol = contract['s'].strip().upper()
-    # Filter out TATAMOTORS and any variations like TATAMOTORS-EQ
-    if "TATAMOTORS" in symbol:
-        continue
-    token = contract['t']
-    NIFTY50_STOCKS.append({"symbol": symbol, "token": token, "exchange": "NSECM"})
-
-
-# print(NIFTY50_STOCKS)
-
-# NIFTY50_STOCKS = [
-#     {"symbol": "RELIANCE", "token": "2885", "exchange": "NSECM"},
-#     {"symbol": "TCS", "token": "11536", "exchange": "NSECM"},
-#     # {"symbol": "INFY", "token": "1594", "exchange": "NSECM"},
-#     # {"symbol": "HDFCBANK", "token": "3417", "exchange": "NSECM"},
-#     # {"symbol": "HDFC", "token": "5020", "exchange": "NSECM"},
-#     # {"symbol": "SBIN", "token": "3045", "exchange": "NSECM"},   
-#     # {"symbol": "MARUTI", "token": "5633", "exchange": "NSECM"},
-#     # {"symbol": "HCLTECH", "token": "1270", "exchange": "NSECM"}
-#     ]
+    
+    # Strict filter: Only allow actual NIFTY 50 symbols
+    if symbol in NIFTY_50_SYMBOLS:
+        token = contract['t']
+        NIFTY50_STOCKS.append({"symbol": symbol, "token": token, "exchange": "NSECM"})

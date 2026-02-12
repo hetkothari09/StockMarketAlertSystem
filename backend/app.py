@@ -15,6 +15,7 @@ handler = MarketDataHandler(storage=storage)
 ws = MTWebSocketClient(market_handler=handler)
 
 from scripts.ingest_bhavcopy import run_auto_ingest, backfill_symbol
+import scripts.ingest_bhavcopy as ingest_bhavcopy
 import token_lookup
 import extract_token_no
 
