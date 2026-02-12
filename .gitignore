@@ -13,5 +13,4 @@ instance
 .webassets-cache
 .scrapy
 .pytest_cache/
-.cache
-backend/data/NSECM.xml
+.cache  

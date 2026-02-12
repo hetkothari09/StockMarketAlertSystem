@@ -1,4 +1,5 @@
-import { API_BASE_URL } from "../config";
+import React, { useEffect, useRef } from 'react';
+import { createChart, HistogramSeries } from 'lightweight-charts';
 
 const ChartModal = ({ symbol, onClose }) => {
     const chartContainerRef = useRef();
@@ -29,7 +30,7 @@ const ChartModal = ({ symbol, onClose }) => {
         });
 
         // Fetch historical data
-        fetch(`${API_BASE_URL}/historical/${symbol}`)
+        fetch(`http://localhost:7000/historical/${symbol}`)
             .then(res => res.json())
             .then(data => {
                 if (Array.isArray(data)) {

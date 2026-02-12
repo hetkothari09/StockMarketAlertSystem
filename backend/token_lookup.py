@@ -1,9 +1,8 @@
 import xml.etree.ElementTree as ET
 import os
 
-# # NSECM.xml path (Make sure it exists)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-NSE_XML_PATH = os.path.join(BASE_DIR, "data", "NSECM.xml")
+# NSECM.xml path (Make sure it exists)
+NSE_XML_PATH = r"C:\Users\SMARTTOUCH\Downloads\NSECM.xml"
 
 # Cache for all symbols
 _all_symbols_cache = None
@@ -14,17 +13,8 @@ def get_token_details(target_symbol):
     Returns None if not found or file missing.
     """
     if not os.path.exists(NSE_XML_PATH):
-        # Check for zip file
-        zip_path = NSE_XML_PATH.replace(".xml", ".zip")
-        if os.path.exists(zip_path):
-            print(f"📦 Unzipping {zip_path}...")
-            import zipfile
-            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                zip_ref.extractall(os.path.dirname(NSE_XML_PATH))
-            print(f"✅ Extracted to {NSE_XML_PATH}")
-        else:
-            print(f"Error: NSECM.xml not found at {NSE_XML_PATH}")
-            return None
+        print(f"Error: NSECM.xml not found at {NSE_XML_PATH}")
+        return None
 
     target_symbol = target_symbol.strip().upper()
     

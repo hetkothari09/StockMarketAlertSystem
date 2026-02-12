@@ -1,6 +1,4 @@
-import { API_BASE_URL } from "../config";
-
 export const fetchLogs = async () => {
-    const res = await fetch(`${API_BASE_URL}/logs`);
+    const res = await fetch("http://localhost:7000/logs");
     return res.json();
 };

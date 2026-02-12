@@ -322,12 +322,6 @@ def start_ws():
     
     ws.connect_ws()
 
-# Start WebSocket thread when app is imported (Gunicorn support)
-# We use a simple daemon thread. In production with multiple workers, 
-# this might create multiple connections, but for free tier (1 worker) it's fine.
-threading.Thread(target=start_ws, daemon=True).start()
-
 if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 7000))
-    app.run(debug=False, host="0.0.0.0", port=port)
+    threading.Thread(target=start_ws, daemon=True).start()
+    app.run(debug=False, host="0.0.0.0", port=7000)
