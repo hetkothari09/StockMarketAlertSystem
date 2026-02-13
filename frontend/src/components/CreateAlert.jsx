@@ -21,6 +21,12 @@ const CreateAlert = () => {
     const handleCreate = async () => {
         if (!symbol) return;
 
+        // Validation: Check if value is provided for Fixed/Multiplier types
+        if ((rightType === 'FIXED' || rightType === 'MULTIPLIER_WEEKLY') && !rightValue) {
+            showToast('Please enter a value for this alert type', 'error');
+            return;
+        }
+
         const payload = {
             symbol,
             operator,
