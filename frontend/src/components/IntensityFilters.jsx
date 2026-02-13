@@ -5,7 +5,7 @@ const IntensityFilters = ({ filters, onToggle }) => {
         <div className="panel intensity-filters-panel">
             <h3 className="panel-header">Movement Filters</h3>
             <div className="toggle-group">
-                <label className="toggle-item">
+                {/* <label className="toggle-item">
                     <div className="toggle-switch">
                         <input
                             type="checkbox"
@@ -15,7 +15,7 @@ const IntensityFilters = ({ filters, onToggle }) => {
                         <span className="slider"></span>
                     </div>
                     <span>Normal</span>
-                </label>
+                </label> */}
 
                 <label className="toggle-item">
                     <div className="toggle-switch">
