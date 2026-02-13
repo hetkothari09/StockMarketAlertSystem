@@ -159,9 +159,7 @@ def set_time_range():
 def alert_settings():
     if request.method == "POST":
         data = request.json
-        storage.alert_settings["above_prev_day"] = data.get("above_prev_day", storage.alert_settings["above_prev_day"])
-        storage.alert_settings["above_weekly_avg"] = data.get("above_weekly_avg", storage.alert_settings["above_weekly_avg"])
-        storage.alert_settings["above_monthly_avg"] = data.get("above_monthly_avg", storage.alert_settings["above_monthly_avg"])
+        storage.update_alert_settings(data)
         storage.add_log(f"ALERT SETTINGS UPDATED: {storage.alert_settings}")
         return jsonify({"ok": True, "settings": storage.alert_settings})
     

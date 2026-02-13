@@ -23,11 +23,41 @@ class Storage:
         self._last_day = None
 
         # 🔥 ALERT SETTINGS (Toggles)
-        self.alert_settings = {
+        # 🔥 ALERT SETTINGS (Toggles)
+        self.ALERT_SETTINGS_FILE = "data/alert_settings.json"
+        self.alert_settings = self.load_alert_settings()
+
+    def load_alert_settings(self):
+        import json
+        import os
+        if os.path.exists(self.ALERT_SETTINGS_FILE):
+            try:
+                with open(self.ALERT_SETTINGS_FILE, "r") as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"⚠️ Error loading alert settings: {e}")
+        
+        # Defaults if no file or error
+        return {
             "above_prev_day": True,
             "above_weekly_avg": True,
             "above_monthly_avg": True
         }
+
+    def save_alert_settings(self):
+        import json
+        import os
+        try:
+            os.makedirs(os.path.dirname(self.ALERT_SETTINGS_FILE), exist_ok=True)
+            with open(self.ALERT_SETTINGS_FILE, "w") as f:
+                json.dump(self.alert_settings, f, indent=2)
+        except Exception as e:
+            print(f"⚠️ Error saving alert settings: {e}")
+
+    def update_alert_settings(self, new_settings):
+        """Update settings and persist to disk"""
+        self.alert_settings.update(new_settings)
+        self.save_alert_settings()
 
     # ---------------- HISTORY ----------------
 
