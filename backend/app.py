@@ -38,7 +38,7 @@ for stock in NIFTY50_STOCKS:
     ws.add_subscription(symbol=symbol, token=token, exchange=exchange)
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/")
 def index():

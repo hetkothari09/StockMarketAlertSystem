@@ -122288,5 +122288,650 @@
     "symbol": "WIPRO",
     "date": "2026-02-13",
     "volume": 23721186
+  },
+  {
+    "symbol": "ADANIENT",
+    "date": "2026-02-18",
+    "volume": 1149398
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "date": "2026-02-18",
+    "volume": 1326139
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "date": "2026-02-18",
+    "volume": 385965
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "date": "2026-02-18",
+    "volume": 551809
+  },
+  {
+    "symbol": "AXISBANK",
+    "date": "2026-02-18",
+    "volume": 5556076
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "date": "2026-02-18",
+    "volume": 334455
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "date": "2026-02-18",
+    "volume": 4929647
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "date": "2026-02-18",
+    "volume": 611189
+  },
+  {
+    "symbol": "BEL",
+    "date": "2026-02-18",
+    "volume": 14341134
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "date": "2026-02-18",
+    "volume": 2182669
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-18",
+    "volume": 1119159
+  },
+  {
+    "symbol": "COALINDIA",
+    "date": "2026-02-18",
+    "volume": 4872345
+  },
+  {
+    "symbol": "DRREDDY",
+    "date": "2026-02-18",
+    "volume": 689997
+  },
+  {
+    "symbol": "EICHERMOT",
+    "date": "2026-02-18",
+    "volume": 223326
+  },
+  {
+    "symbol": "GRASIM",
+    "date": "2026-02-18",
+    "volume": 350421
+  },
+  {
+    "symbol": "HCLTECH",
+    "date": "2026-02-18",
+    "volume": 2036245
+  },
+  {
+    "symbol": "HDFCBANK",
+    "date": "2026-02-18",
+    "volume": 12738702
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "date": "2026-02-18",
+    "volume": 4974855
+  },
+  {
+    "symbol": "HINDALCO",
+    "date": "2026-02-18",
+    "volume": 3909665
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "date": "2026-02-18",
+    "volume": 830787
+  },
+  {
+    "symbol": "ICICIBANK",
+    "date": "2026-02-18",
+    "volume": 4758071
+  },
+  {
+    "symbol": "INFY",
+    "date": "2026-02-18",
+    "volume": 20241373
+  },
+  {
+    "symbol": "ITC",
+    "date": "2026-02-18",
+    "volume": 35473203
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "date": "2026-02-18",
+    "volume": 1389762
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "date": "2026-02-18",
+    "volume": 7333331
+  },
+  {
+    "symbol": "M&M",
+    "date": "2026-02-18",
+    "volume": 1682427
+  },
+  {
+    "symbol": "MARUTI",
+    "date": "2026-02-18",
+    "volume": 280772
+  },
+  {
+    "symbol": "NESTLEIND",
+    "date": "2026-02-18",
+    "volume": 446022
+  },
+  {
+    "symbol": "NTPC",
+    "date": "2026-02-18",
+    "volume": 4871319
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-18",
+    "volume": 11621040
+  },
+  {
+    "symbol": "POWERGRID",
+    "date": "2026-02-18",
+    "volume": 9147320
+  },
+  {
+    "symbol": "RELIANCE",
+    "date": "2026-02-18",
+    "volume": 5521096
+  },
+  {
+    "symbol": "SBILIFE",
+    "date": "2026-02-18",
+    "volume": 353144
+  },
+  {
+    "symbol": "SBIN",
+    "date": "2026-02-18",
+    "volume": 10417264
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "date": "2026-02-18",
+    "volume": 1262429
+  },
+  {
+    "symbol": "TCS",
+    "date": "2026-02-18",
+    "volume": 2950820
+  },
+  {
+    "symbol": "TATACONSUM",
+    "date": "2026-02-18",
+    "volume": 641938
+  },
+  {
+    "symbol": "TATASTEEL",
+    "date": "2026-02-18",
+    "volume": 48357001
+  },
+  {
+    "symbol": "TECHM",
+    "date": "2026-02-18",
+    "volume": 1989222
+  },
+  {
+    "symbol": "TITAN",
+    "date": "2026-02-18",
+    "volume": 387328
+  },
+  {
+    "symbol": "TRENT",
+    "date": "2026-02-18",
+    "volume": 372954
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "date": "2026-02-18",
+    "volume": 161603
+  },
+  {
+    "symbol": "WIPRO",
+    "date": "2026-02-18",
+    "volume": 22679760
+  },
+  {
+    "symbol": "ADANIENT",
+    "date": "2026-02-17",
+    "volume": 1931699
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "date": "2026-02-17",
+    "volume": 3168457
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "date": "2026-02-17",
+    "volume": 525344
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "date": "2026-02-17",
+    "volume": 1004356
+  },
+  {
+    "symbol": "AXISBANK",
+    "date": "2026-02-17",
+    "volume": 4513065
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "date": "2026-02-17",
+    "volume": 159113
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "date": "2026-02-17",
+    "volume": 2913899
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "date": "2026-02-17",
+    "volume": 252282
+  },
+  {
+    "symbol": "BEL",
+    "date": "2026-02-17",
+    "volume": 17963084
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "date": "2026-02-17",
+    "volume": 4471158
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-17",
+    "volume": 1413727
+  },
+  {
+    "symbol": "COALINDIA",
+    "date": "2026-02-17",
+    "volume": 4564907
+  },
+  {
+    "symbol": "DRREDDY",
+    "date": "2026-02-17",
+    "volume": 687326
+  },
+  {
+    "symbol": "EICHERMOT",
+    "date": "2026-02-17",
+    "volume": 266572
+  },
+  {
+    "symbol": "GRASIM",
+    "date": "2026-02-17",
+    "volume": 458126
+  },
+  {
+    "symbol": "HCLTECH",
+    "date": "2026-02-17",
+    "volume": 2840341
+  },
+  {
+    "symbol": "HDFCBANK",
+    "date": "2026-02-17",
+    "volume": 22599629
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "date": "2026-02-17",
+    "volume": 1320272
+  },
+  {
+    "symbol": "HINDALCO",
+    "date": "2026-02-17",
+    "volume": 7099432
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "date": "2026-02-17",
+    "volume": 1233244
+  },
+  {
+    "symbol": "ICICIBANK",
+    "date": "2026-02-17",
+    "volume": 11756187
+  },
+  {
+    "symbol": "INFY",
+    "date": "2026-02-17",
+    "volume": 25347684
+  },
+  {
+    "symbol": "ITC",
+    "date": "2026-02-17",
+    "volume": 39360672
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "date": "2026-02-17",
+    "volume": 1115057
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "date": "2026-02-17",
+    "volume": 6427007
+  },
+  {
+    "symbol": "M&M",
+    "date": "2026-02-17",
+    "volume": 1991583
+  },
+  {
+    "symbol": "MARUTI",
+    "date": "2026-02-17",
+    "volume": 166765
+  },
+  {
+    "symbol": "NESTLEIND",
+    "date": "2026-02-17",
+    "volume": 396198
+  },
+  {
+    "symbol": "NTPC",
+    "date": "2026-02-17",
+    "volume": 4442793
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-17",
+    "volume": 21292868
+  },
+  {
+    "symbol": "POWERGRID",
+    "date": "2026-02-17",
+    "volume": 11190989
+  },
+  {
+    "symbol": "RELIANCE",
+    "date": "2026-02-17",
+    "volume": 10731630
+  },
+  {
+    "symbol": "SBILIFE",
+    "date": "2026-02-17",
+    "volume": 377148
+  },
+  {
+    "symbol": "SBIN",
+    "date": "2026-02-17",
+    "volume": 20107196
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "date": "2026-02-17",
+    "volume": 1053855
+  },
+  {
+    "symbol": "TCS",
+    "date": "2026-02-17",
+    "volume": 4209118
+  },
+  {
+    "symbol": "TATACONSUM",
+    "date": "2026-02-17",
+    "volume": 442621
+  },
+  {
+    "symbol": "TATASTEEL",
+    "date": "2026-02-17",
+    "volume": 18506676
+  },
+  {
+    "symbol": "TECHM",
+    "date": "2026-02-17",
+    "volume": 1781501
+  },
+  {
+    "symbol": "TITAN",
+    "date": "2026-02-17",
+    "volume": 464123
+  },
+  {
+    "symbol": "TRENT",
+    "date": "2026-02-17",
+    "volume": 392842
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "date": "2026-02-17",
+    "volume": 136174
+  },
+  {
+    "symbol": "WIPRO",
+    "date": "2026-02-17",
+    "volume": 26941553
+  },
+  {
+    "symbol": "ADANIENT",
+    "date": "2026-02-16",
+    "volume": 1824808
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "date": "2026-02-16",
+    "volume": 1644108
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "date": "2026-02-16",
+    "volume": 494924
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "date": "2026-02-16",
+    "volume": 683108
+  },
+  {
+    "symbol": "AXISBANK",
+    "date": "2026-02-16",
+    "volume": 5082167
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "date": "2026-02-16",
+    "volume": 88321
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "date": "2026-02-16",
+    "volume": 4460636
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "date": "2026-02-16",
+    "volume": 812257
+  },
+  {
+    "symbol": "BEL",
+    "date": "2026-02-16",
+    "volume": 8156650
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "date": "2026-02-16",
+    "volume": 3455964
+  },
+  {
+    "symbol": "CIPLA",
+    "date": "2026-02-16",
+    "volume": 1616868
+  },
+  {
+    "symbol": "COALINDIA",
+    "date": "2026-02-16",
+    "volume": 9719418
+  },
+  {
+    "symbol": "DRREDDY",
+    "date": "2026-02-16",
+    "volume": 469592
+  },
+  {
+    "symbol": "EICHERMOT",
+    "date": "2026-02-16",
+    "volume": 589984
+  },
+  {
+    "symbol": "GRASIM",
+    "date": "2026-02-16",
+    "volume": 285131
+  },
+  {
+    "symbol": "HCLTECH",
+    "date": "2026-02-16",
+    "volume": 2388700
+  },
+  {
+    "symbol": "HDFCBANK",
+    "date": "2026-02-16",
+    "volume": 18806989
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "date": "2026-02-16",
+    "volume": 1975111
+  },
+  {
+    "symbol": "HINDALCO",
+    "date": "2026-02-16",
+    "volume": 6943209
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "date": "2026-02-16",
+    "volume": 2036833
+  },
+  {
+    "symbol": "ICICIBANK",
+    "date": "2026-02-16",
+    "volume": 5000042
+  },
+  {
+    "symbol": "INFY",
+    "date": "2026-02-16",
+    "volume": 14621891
+  },
+  {
+    "symbol": "ITC",
+    "date": "2026-02-16",
+    "volume": 11693763
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "date": "2026-02-16",
+    "volume": 627073
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "date": "2026-02-16",
+    "volume": 12403028
+  },
+  {
+    "symbol": "M&M",
+    "date": "2026-02-16",
+    "volume": 1562001
+  },
+  {
+    "symbol": "MARUTI",
+    "date": "2026-02-16",
+    "volume": 210175
+  },
+  {
+    "symbol": "NESTLEIND",
+    "date": "2026-02-16",
+    "volume": 456222
+  },
+  {
+    "symbol": "NTPC",
+    "date": "2026-02-16",
+    "volume": 6292850
+  },
+  {
+    "symbol": "ONGC",
+    "date": "2026-02-16",
+    "volume": 13247757
+  },
+  {
+    "symbol": "POWERGRID",
+    "date": "2026-02-16",
+    "volume": 22196951
+  },
+  {
+    "symbol": "RELIANCE",
+    "date": "2026-02-16",
+    "volume": 5896514
+  },
+  {
+    "symbol": "SBILIFE",
+    "date": "2026-02-16",
+    "volume": 580680
+  },
+  {
+    "symbol": "SBIN",
+    "date": "2026-02-16",
+    "volume": 14972739
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "date": "2026-02-16",
+    "volume": 1247403
+  },
+  {
+    "symbol": "TCS",
+    "date": "2026-02-16",
+    "volume": 2918730
+  },
+  {
+    "symbol": "TATACONSUM",
+    "date": "2026-02-16",
+    "volume": 780629
+  },
+  {
+    "symbol": "TATASTEEL",
+    "date": "2026-02-16",
+    "volume": 17932490
+  },
+  {
+    "symbol": "TECHM",
+    "date": "2026-02-16",
+    "volume": 1873472
+  },
+  {
+    "symbol": "TITAN",
+    "date": "2026-02-16",
+    "volume": 500349
+  },
+  {
+    "symbol": "TRENT",
+    "date": "2026-02-16",
+    "volume": 698727
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "date": "2026-02-16",
+    "volume": 81768
+  },
+  {
+    "symbol": "WIPRO",
+    "date": "2026-02-16",
+    "volume": 20754327
   }
 ]

@@ -30,7 +30,7 @@ const ChartModal = ({ symbol, onClose }) => {
         });
 
         // Fetch historical data
-        fetch(`http://localhost:7000/historical/${symbol}`)
+        fetch(`http://${window.location.hostname}:7000/historical/${symbol}`)
             .then(res => res.json())
             .then(data => {
                 if (Array.isArray(data)) {
