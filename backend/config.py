@@ -1,8 +1,8 @@
 import json
 
 WS_URL = "ws://115.242.15.134:19102" # WebSocket URL
-LOGIN_ID = "test"
-PASSWORD = "test"
+LOGIN_ID = "hetvol"
+PASSWORD = "hetvol"
 
 HEARTBEAT_INTERVAL = 60  # Heartbeat interval in seconds
 NIFTY50_STOCKS = []

@@ -1,3 +1,4 @@
+import os
 import threading
 from datetime import datetime
 from flask import Flask, jsonify, render_template, request
@@ -322,4 +323,5 @@ def start_ws():
 
 if __name__ == "__main__":
     threading.Thread(target=start_ws, daemon=True).start()
-    app.run(debug=False, host="0.0.0.0", port=7000)
+    port = int(os.environ.get("PORT", 7000))
+    app.run(debug=False, host="0.0.0.0", port=port)
