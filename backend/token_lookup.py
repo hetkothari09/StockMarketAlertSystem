@@ -1,67 +1,15 @@
-import xml.etree.ElementTree as ET
 import os
+import json
 
-# NSECM.xml path (Make sure it exists)
-NSE_XML_PATH = r"C:\Users\SMARTTOUCH\Downloads\NSECM.xml"
+# Path to the cached JSON file
+SYMBOLS_CACHE_PATH = os.path.join(os.path.dirname(__file__), "data", "all_symbols.json")
 
 # Cache for all symbols
 _all_symbols_cache = None
 
-def get_token_details(target_symbol):
-    """
-    Searches NSECM.xml for the given symbol and returns its details.
-    Returns None if not found or file missing.
-    """
-    if not os.path.exists(NSE_XML_PATH):
-        print(f"Error: NSECM.xml not found at {NSE_XML_PATH}")
-        return None
-
-    target_symbol = target_symbol.strip().upper()
-    
-    # Check simple cache first if needed? No, user wants on-the-go. 
-    # Parsing 500MB might be slow, but let's try iterparse.
-    
-    try:
-        context = ET.iterparse(NSE_XML_PATH, events=('end',))
-        
-        for event, elem in context:
-            if elem.tag.endswith("NSECM"): # Ensure we are looking at correct records
-                data = {}
-                for child in elem:
-                    # Remove namespace if any
-                    tag = child.tag.split('}')[-1]
-                    data[tag] = (child.text or "").strip()
-                
-                symbol = data.get('Symbol', '').strip().upper()
-                series = data.get('Series', '').strip().upper()
-
-                # ONLY look for Equity series (EQ, BE, BZ etc. usually EQ is main)
-                # But let's just match Symbol and return mostly EQ if available
-                
-                if symbol == target_symbol and series == "EQ":
-                    token = data.get('TokenNo')
-                    
-                    result = {
-                        "symbol": symbol,
-                        "token": token,
-                        "exchange": "NSECM",
-                        "series": series
-                    }
-                    elem.clear()
-                    return result
-
-                # Clean up to save memory
-                elem.clear()
-                
-    except Exception as e:
-        print(f"Error parsing NSECM.xml: {e}")
-        return None
-
-    return None
-
 def get_all_symbols():
     """
-    Returns a list of all EQ series symbols from NSECM.xml.
+    Returns a list of all EQ series symbols from the cached JSON file.
     Results are cached after first call.
     """
     global _all_symbols_cache
@@ -70,48 +18,40 @@ def get_all_symbols():
     if _all_symbols_cache is not None:
         return _all_symbols_cache
     
-    if not os.path.exists(NSE_XML_PATH):
-        print(f"Error: NSECM.xml not found at {NSE_XML_PATH}")
+    if not os.path.exists(SYMBOLS_CACHE_PATH):
+        print(f"Error: Cached symbols JSON not found at {SYMBOLS_CACHE_PATH}")
         return []
-    
-    symbols = []
     
     try:
-        print("🔍 Parsing NSECM.xml for all symbols (this may take a moment)...")
-        context = ET.iterparse(NSE_XML_PATH, events=('end',))
-        
-        for event, elem in context:
-            if elem.tag.endswith("NSECM"):
-                data = {}
-                for child in elem:
-                    tag = child.tag.split('}')[-1]
-                    data[tag] = (child.text or "").strip()
-                
-                symbol = data.get('Symbol', '').strip().upper()
-                series = data.get('Series', '').strip().upper()
-                
-                # Only include EQ (Equity) series
-                if series == "EQ" and symbol:
-                    token = data.get('TokenNo')
-                    name = data.get('Name', symbol)
-                    
-                    symbols.append({
-                        "symbol": symbol,
-                        "name": name,
-                        "token": token
-                    })
-                
-                elem.clear()
-        
-        # Cache the results
-        _all_symbols_cache = symbols
-        print(f"✅ Found {len(symbols)} EQ symbols")
-        
+        with open(SYMBOLS_CACHE_PATH, "r") as f:
+            symbols = json.load(f)
+            _all_symbols_cache = symbols
+            return symbols
     except Exception as e:
-        print(f"Error parsing NSECM.xml: {e}")
+        print(f"Error reading symbols cache: {e}")
         return []
+
+def get_token_details(target_symbol):
+    """
+    Searches the cached JSON for the given symbol and returns its details.
+    Returns None if not found or file missing.
+    """
+    target_symbol = target_symbol.strip().upper()
     
-    return symbols
+    symbols = get_all_symbols()
+    if not symbols:
+        return None
+        
+    for item in symbols:
+        if item.get("symbol", "").strip().upper() == target_symbol:
+            return {
+                "symbol": item["symbol"],
+                "token": item["token"],
+                "exchange": "NSECM",
+                "series": "EQ"
+            }
+            
+    return None
 
 if __name__ == "__main__":
     # Test
