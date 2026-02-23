@@ -9,14 +9,20 @@ from config import WS_URL, LOGIN_ID, PASSWORD, HEARTBEAT_INTERVAL
 
 
 class MTWebSocketClient:
-    def __init__(self, market_handler):
+    def __init__(self, market_handler, storage=None):
         self.ws = None
         self.market_handler = market_handler
+        self.storage = storage
         self.last_activity = time.time()
         self.subscriptions_list = []
         self.is_connected = False
         self.reconnect_attempts = 0
         self.max_reconnect_delay = 60  # Max 60 seconds between reconnects
+
+    def _log(self, msg):
+        print(msg)
+        if self.storage:
+            self.storage.add_log(msg)
 
 
     def connect_ws(self):
@@ -30,19 +36,19 @@ class MTWebSocketClient:
         self.ws.run_forever()
 
     def on_open(self, ws):
-        print("✅ WebSocket connected")
+        self._log("✅ WebSocket connected")
         self.is_connected = True
         self.reconnect_attempts = 0
         self.login()
         self.start_heartbeat()
     
     def on_close(self, ws, *args):
-        print("⚠️ WebSocket closed!")
+        self._log("⚠️ WebSocket closed!")
         self.is_connected = False
         self.attempt_reconnect()
     
     def on_error(self, ws, error):
-        print(f"❌ WebSocket error: {error}")
+        self._log(f"❌ WebSocket error: {error}")
         self.is_connected = False
 
     def on_message(self, ws, message):
@@ -57,7 +63,7 @@ class MTWebSocketClient:
         msg_type = msg.get("Type")
 
         if msg_type == "Login":
-            print("Login is successful!")
+            self._log("🔑 Login is successful!")
             self.subscribe_all()
 
         elif msg_type == "MarketData":
@@ -140,7 +146,7 @@ class MTWebSocketClient:
             }
         }
         self.ws.send(json.dumps(payload))
-        print("Login Request sent!")
+        self._log("📡 Login Request sent!")
 
     def start_heartbeat(self):
         def heartbeat_loop():

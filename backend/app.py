@@ -13,7 +13,7 @@ from historical_volume import HistoricalVolumeLoader
 
 storage = Storage()
 handler = MarketDataHandler(storage=storage)
-ws = MTWebSocketClient(market_handler=handler)
+ws = MTWebSocketClient(market_handler=handler, storage=storage)
 
 from scripts.ingest_bhavcopy import run_auto_ingest, backfill_symbol
 import scripts.ingest_bhavcopy as ingest_bhavcopy
@@ -313,12 +313,22 @@ def verify_window():
     })
 
 def start_ws():
-    # 🔥 Restore daily catch-up (last 15 days) but keep 1-year backfill removed
-    try:
-        run_auto_ingest()
-    except Exception as e:
-        print(f"⚠️ Background auto-ingest failed: {e}")
+    storage.add_log("🚀 Backend system starting...")
     
+    # Run auto-ingest in a separate thread so it doesn't block the WebSocket connection
+    def ingest_task():
+        try:
+            storage.add_log("📥 Starting auto-ingestion of recent data...")
+            run_auto_ingest()
+            storage.add_log("✅ Auto-ingestion completed.")
+        except Exception as e:
+            msg = f"⚠️ Background auto-ingest failed: {e}"
+            print(msg)
+            storage.add_log(msg)
+            
+    threading.Thread(target=ingest_task, daemon=True).start()
+    
+    storage.add_log(f"🔌 Connecting to WebSocket: {WS_URL}")
     ws.connect_ws()
 
 if __name__ == "__main__":
