@@ -7,7 +7,7 @@ from flask_cors import CORS
 from storage import Storage
 from websocket_client import MTWebSocketClient
 from marketdata_handler import MarketDataHandler
-from config import NIFTY50_STOCKS
+from config import NIFTY50_STOCKS, WS_URL
 from alert_engine import VolumeAlert
 from historical_volume import HistoricalVolumeLoader
 
@@ -328,8 +328,13 @@ def start_ws():
             
     threading.Thread(target=ingest_task, daemon=True).start()
     
-    storage.add_log(f"🔌 Connecting to WebSocket: {WS_URL}")
-    ws.connect_ws()
+    try:
+        storage.add_log(f"🔌 Connecting to WebSocket: {WS_URL}")
+        ws.connect_ws()
+    except Exception as e:
+        msg = f"❌ WebSocket Startup Failed: {e}"
+        print(msg)
+        storage.add_log(msg)
 
 if __name__ == "__main__":
     threading.Thread(target=start_ws, daemon=True).start()
