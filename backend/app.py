@@ -170,6 +170,25 @@ def alert_settings():
 def data():
     return jsonify(storage.get_all_volumes())
 
+@app.route("/relay-data", methods=["POST"])
+def relay_data():
+    """
+    Endpoint for local relay to push incoming WS messages to the cloud backend.
+    """
+    try:
+        msg = request.json
+        if not msg:
+            return jsonify({"status": "error", "message": "No data"}), 400
+        
+        msg_type = msg.get("Type")
+        if msg_type == "MarketData":
+            handler.handle(msg["Data"])
+            return jsonify({"status": "ok"})
+        
+        return jsonify({"status": "ignored", "type": msg_type})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 @app.route("/available-symbols")
 def available_symbols():
     """
